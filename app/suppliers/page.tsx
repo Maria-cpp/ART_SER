@@ -1,56 +1,41 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Section } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { getProjects, getSuppliers } from "@/lib/data";
+import { getSuppliers } from "@/lib/data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
-export default function PortfolioPage() {
+export default function SuppliersPage() {
   const { t, localized } = useLanguage();
-  const projects = getProjects();
   const suppliers = getSuppliers();
   useScrollReveal();
 
+  // Group suppliers by type
   const aluminium = suppliers.filter((s) => s.id !== "sup-004" && s.id !== "sup-005");
   const pvc = suppliers.filter((s) => s.id === "sup-004");
   const shutters = suppliers.filter((s) => s.id === "sup-005");
 
-  const supplierGroups = [
+  const groups = [
     { label: t("suppliers.aluminium"), items: aluminium },
     { label: t("suppliers.pvc"), items: pvc },
     { label: t("suppliers.shutters"), items: shutters },
   ];
+
   return (
     <>
       <div className="container-x pt-6">
-        <Breadcrumbs items={[
-          { label: "breadcrumb.home", href: "/" },
-          { label: "nav.portfolio" },
-        ]} />
+        <Breadcrumbs items={[{ label: "breadcrumb.home", href: "/" }, { label: "nav.suppliers" }]} />
       </div>
-      <Section title={t("portfolio.title")} subtitle={t("portfolio.subtitle")}>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <article key={p.id} className="card">
-              <div className="mb-3 aspect-video rounded-md bg-surface-alt" />
-              <span className="text-xs font-semibold uppercase tracking-wide text-accent">{localized(p.category)}</span>
-              <h3 className="mt-1 text-lg font-semibold text-foreground">{localized(p.title)}</h3>
-              <p className="mt-1 text-sm text-muted">{p.location} · {p.year}</p>
-              <p className="mt-2 text-sm text-muted">{localized(p.summary)}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      {/* Suppliers Section */}
       <Section title={t("suppliers.title")} subtitle={t("suppliers.subtitle")}>
-        {supplierGroups.map((group) => (
+        {groups.map((group) => (
           <div key={group.label} className="mb-14 last:mb-0">
             <h3 className="mb-6 text-xl font-semibold text-accent">{group.label}</h3>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 stagger-children">
               {group.items.map((supplier) => (
                 <article key={supplier.id} className="card flex flex-col">
+                  {/* Header with logo placeholder and name */}
                   <div className="mb-4 flex items-center gap-4">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent font-bold text-lg">
                       {supplier.name.charAt(0)}
@@ -60,9 +45,13 @@ export default function PortfolioPage() {
                       <p className="text-xs text-muted">{supplier.country} · {localized(supplier.type)}</p>
                     </div>
                   </div>
+
+                  {/* Description */}
                   <p className="mb-4 text-sm leading-relaxed text-muted flex-1">
                     {localized(supplier.description)}
                   </p>
+
+                  {/* Products */}
                   <div className="mb-4">
                     <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent">
                       {t("suppliers.products")}
@@ -78,6 +67,8 @@ export default function PortfolioPage() {
                       ))}
                     </div>
                   </div>
+
+                  {/* Website link */}
                   <a
                     href={supplier.website}
                     target="_blank"

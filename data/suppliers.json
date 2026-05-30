@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "id": "sup-001",
+      "name": "AluK",
+      "logo": "/services_providers/aluk.jpg",
+      "country": "Italy",
+      "type": { "en": "Aluminium Systems", "it": "Sistemi in alluminio", "ar": "أنظمة الألمنيوم", "ur": "ایلومینیم سسٹمز" },
+      "description": {
+        "en": "Italian aluminium systems manufacturer with over 70 years of expertise. Specializing in windows, doors, facades, sliding systems, bioclimatic pergolas, and security doors.",
+        "it": "Produttore italiano di sistemi in alluminio con oltre 70 anni di esperienza. Specializzato in finestre, porte, facciate, sistemi scorrevoli, pergole bioclimatiche e porte di sicurezza.",
+        "ar": "شركة تصنيع أنظمة الألمنيوم الإيطالية بخبرة تتجاوز 70 عاماً. متخصصة في النوافذ والأبواب والواجهات والأنظمة المنزلقة والبرجولات الحيوية وأبواب الأمان.",
+        "ur": "70 سال سے زائد تجربے کے ساتھ اطالوی ایلومینیم سسٹمز بنانے والی کمپنی۔ کھڑکیاں، دروازے، فیساد، سلائیڈنگ سسٹمز، بایوکلائمیٹک پرگولاز اور سیکیورٹی دروازوں میں مہارت۔"
+      },
+      "products": ["Windows", "Doors", "Facades", "Sliding Systems", "Bioclimatic Pergolas", "Security Doors"],
+      "website": "https://www.aluk.com"
+    },
+    {
+      "id": "sup-002",
+      "name": "Paesani Group",
+      "logo": "/services_providers/paesani.svg",
+      "country": "Italy",
+      "type": { "en": "Aluminium Systems", "it": "Sistemi in alluminio", "ar": "أنظمة الألمنيوم", "ur": "ایلومینیم سسٹمز" },
+      "description": {
+        "en": "Italian aluminium specialists with 75 years of heritage. Offering hinged windows and doors, sliding systems, continuous facades, and shading solutions. 100% Made in Italy.",
+        "it": "Specialisti italiani dell'alluminio con 75 anni di tradizione. Finestre e porte a battente, sistemi scorrevoli, facciate continue e soluzioni ombreggianti. 100% Made in Italy.",
+        "ar": "متخصصون إيطاليون في الألمنيوم بتراث يمتد لـ 75 عاماً. نوافذ وأبواب مفصلية، أنظمة منزلقة، واجهات مستمرة وحلول تظليل. 100% صنع في إيطاليا.",
+        "ur": "75 سال کی روایت کے ساتھ اطالوی ایلومینیم ماہرین۔ ہنجڈ کھڑکیاں اور دروازے، سلائیڈنگ سسٹمز، مسلسل فیساد اور شیڈنگ حل۔ 100% میڈ اِن اٹلی۔"
+      },
+      "products": ["Hinged Windows", "Hinged Doors", "Sliding Systems", "Continuous Facades", "Shading"],
+      "website": "https://www.paesanigroup.com"
+    },
+    {
+      "id": "sup-003",
+      "name": "Reynaers Aluminium",
+      "logo": "/services_providers/rynaers.jpg",
+      "country": "Belgium",
+      "type": { "en": "Aluminium Systems", "it": "Sistemi in alluminio", "ar": "أنظمة الألمنيوم", "ur": "ایلومینیم سسٹمز" },
+      "description": {
+        "en": "European leader in aluminium windows, doors, curtain walls, sliding systems, and sun screening. Together for better.",
+        "it": "Leader europeo in finestre, porte, facciate continue, sistemi scorrevoli e schermature solari in alluminio. Together for better.",
+        "ar": "رائد أوروبي في نوافذ وأبواب وجدران ستائرية وأنظمة منزلقة وشاشات شمسية من الألمنيوم. معاً نحو الأفضل.",
+        "ur": "ایلومینیم کھڑکیوں، دروازوں، کرٹین والز، سلائیڈنگ سسٹمز اور سن سکریننگ میں یورپی لیڈر۔ ٹوگیدر فار بیٹر۔"
+      },
+      "products": ["Windows", "Doors", "Curtain Walls", "Sliding Systems", "Sun Screening"],
+      "website": "https://www.reynaers.com"
+    },
+    {
+      "id": "sup-004",
+      "name": "Eko-Okna",
+      "logo": "/services_providers/ekookna.jpg",
+      "country": "Poland",
+      "type": { "en": "PVC Systems", "it": "Sistemi in PVC", "ar": "أنظمة PVC", "ur": "PVC سسٹمز" },
+      "description": {
+        "en": "Poland's largest window and door manufacturer. Producing PVC, aluminium, and wood windows and doors, sliding systems, shutters, and pergolas. Exporting to over 40 markets worldwide.",
+        "it": "Il più grande produttore polacco di finestre e porte. Produzione di finestre e porte in PVC, alluminio e legno, sistemi scorrevoli, persiane e pergole. Esportazione in oltre 40 mercati nel mondo.",
+        "ar": "أكبر مصنع للنوافذ والأبواب في بولندا. إنتاج نوافذ وأبواب من PVC والألمنيوم والخشب، أنظمة منزلقة، مصاريع وبرجولات. التصدير إلى أكثر من 40 سوقاً حول العالم.",
+        "ur": "پولینڈ کی سب سے بڑی کھڑکی اور دروازے بنانے والی کمپنی۔ PVC، ایلومینیم اور لکڑی کی کھڑکیاں اور دروازے، سلائیڈنگ سسٹمز، شٹرز اور پرگولاز بناتی ہے۔ دنیا بھر کے 40 سے زائد بازاروں میں برآمد۔"
+      },
+      "products": ["PVC Windows", "PVC Doors", "Aluminium Windows", "Wood Windows", "Sliding Systems", "Shutters", "Pergolas"],
+      "website": "https://www.ekookna.pl"
+    },
+    {
+      "id": "sup-005",
+      "name": "Effezeta (FZ)",
+      "logo": "/services_providers/effezeta.png",
+      "country": "Italy",
+      "type": { "en": "Roller Shutters & Mosquito Nets", "it": "Avvolgibili e zanzariere", "ar": "الستائر الدوارة وشبكات الحشرات", "ur": "رولر شٹرز اور مچھر دانی" },
+      "description": {
+        "en": "Italian specialist in roller shutters, mosquito nets, blinds, and sun protection systems. Premium quality protection and comfort solutions.",
+        "it": "Specialista italiano in avvolgibili, zanzariere, tende e sistemi di protezione solare. Soluzioni premium per protezione e comfort.",
+        "ar": "متخصص إيطالي في الستائر الدوارة وشبكات الحشرات والستائر وأنظمة الحماية من الشمس. حلول حماية وراحة بجودة متميزة.",
+        "ur": "رولر شٹرز، مچھر دانی، بلائنڈز اور سن پروٹیکشن سسٹمز میں اطالوی ماہر۔ پریمیم کوالٹی تحفظ اور آرام کے حل۔"
+      },
+      "products": ["Roller Shutters", "Mosquito Nets", "Blinds", "Sun Protection Systems"],
+      "website": "https://www.effezetasnc.it"
+    }
+  ]
+}

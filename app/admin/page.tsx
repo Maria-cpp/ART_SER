@@ -70,7 +70,7 @@ export default function AdminPage() {
   return (
     <div className="container-x py-12">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-foreground">{t("admin.title")}</h1>
+        <h1 className="text-3xl font-bold text-accent">{t("admin.title")}</h1>
         <p className="mt-2 text-muted">{t("admin.subtitle")}</p>
       </header>
 

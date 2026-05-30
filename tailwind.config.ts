@@ -32,11 +32,21 @@ const config: Config = {
       },
       animation: {
         blink: "blink 0.8s step-end infinite",
+        float: "float 4s ease-in-out infinite",
+        "fade-in-up": "fadeInUp 0.8s ease forwards",
       },
       keyframes: {
         blink: {
           "0%, 50%": { opacity: "1" },
           "51%, 100%": { opacity: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        fadeInUp: {
+          from: { opacity: "0", transform: "translateY(30px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
     }

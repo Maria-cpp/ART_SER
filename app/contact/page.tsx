@@ -4,10 +4,12 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Section } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { getContact } from "@/lib/data";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export default function ContactPage() {
   const { t, localized } = useLanguage();
   const contact = getContact();
+  useScrollReveal();
   return (
     <>
       <div className="container-x pt-6">

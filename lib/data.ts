@@ -17,10 +17,26 @@ import clientsData from "@/data/clients.json";
 import teamData from "@/data/team.json";
 import certificationsData from "@/data/certifications.json";
 import contactData from "@/data/contact.json";
+import suppliersData from "@/data/suppliers.json";
 
 // ---- Types ---------------------------------------------------------------
 
 export interface Stat { value: string; label: Localized; }
+export interface Partner {
+  name: string;
+  website: string;
+  logo: string;
+}
+export interface Journey {
+  beginnings: Localized;
+  independence: Localized;
+  currentWork: Localized;
+  specializations: Localized[];
+  collaborations: Localized;
+  experience: Localized;
+  qualifications: Localized[];
+  partners: Partner[];
+}
 export interface Company {
   name: string;
   legalName: string;
@@ -29,6 +45,7 @@ export interface Company {
   shortDescription: Localized;
   story: Localized;
   stats: Stat[];
+  journey?: Journey;
   mission: Localized;
   vision: Localized;
 }
@@ -47,10 +64,15 @@ export interface GovProject {
 export interface Capability { id: string; title: Localized; description: Localized; }
 export interface Manufacturing { intro: Localized; capabilities: Capability[]; }
 export interface GalleryItem { id: string; image: string; caption: Localized; }
-export interface Client { id: string; name: string; logo: string; sector: Localized; }
+export interface Client { id: string; name: string; logo: string; website?: string; sector: Localized; }
 export interface TeamMember { id: string; name: string; photo: string; role: Localized; bio: Localized; }
 export interface Certification { id: string; name: string; issuer: string; year: number; image: string; description: Localized; }
 export interface Office { city: string; label: Localized; address: string; phone: string; }
+export interface Supplier {
+  id: string; name: string; logo: string; country: string;
+  type: Localized; description: Localized; products: string[];
+  website: string;
+}
 export interface Contact {
   email: string; pec?: string; phone: string; whatsapp: string;
   headquarters: { label: Localized; address: string };
@@ -73,6 +95,7 @@ export const getClients = (): Client[] => (clientsData as { items: Client[] }).i
 export const getTeam = (): TeamMember[] => (teamData as { items: TeamMember[] }).items;
 export const getCertifications = (): Certification[] => (certificationsData as { items: Certification[] }).items;
 export const getContact = (): Contact => contactData as Contact;
+export const getSuppliers = (): Supplier[] => (suppliersData as { items: Supplier[] }).items;
 
 // ---- Admin editable-file registry (allowlist) ---------------------------
 // The admin API will only read/write filenames present here. This prevents
@@ -91,7 +114,8 @@ export const EDITABLE_FILES = [
   "team.json",
   "certifications.json",
   "contact.json",
-  "quotes.json"
+  "quotes.json",
+  "suppliers.json"
 ] as const;
 
 export type EditableFile = (typeof EDITABLE_FILES)[number];

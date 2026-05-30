@@ -7,15 +7,31 @@ export interface ThemeMeta {
   id: ThemeId;
   /** Display name shown in the switcher (English; localize in UI if desired). */
   name: string;
-  /** Small swatch shown in the switcher — any CSS color. */
-  swatch: string;
+  /** Color palette swatches — [bg, surface, accent, foreground] */
+  palette: [string, string, string, string];
 }
 
 export const THEMES: ThemeMeta[] = [
-  { id: "obsidian", name: "Obsidian Industrial", swatch: "#0a0a0a" },
-  { id: "government", name: "Corporate Government", swatch: "#0f2747" },
-  { id: "luxury", name: "Minimal Luxury", swatch: "#1a1a1a" },
-  { id: "architectural", name: "Modern Architectural", swatch: "#2f3437" }
+  {
+    id: "obsidian",
+    name: "Obsidian",
+    palette: ["#0a0a0a", "#171717", "#ca9f4a", "#ededed"],
+  },
+  {
+    id: "government",
+    name: "Corporate",
+    palette: ["#f8fafc", "#ffffff", "#1e408a", "#0f172a"],
+  },
+  {
+    id: "luxury",
+    name: "Luxury",
+    palette: ["#fafaf9", "#ffffff", "#b79662", "#1a1a1a"],
+  },
+  {
+    id: "architectural",
+    name: "Architectural",
+    palette: ["#edeeef", "#fafafb", "#107a57", "#21252a"],
+  },
 ];
 
 export const DEFAULT_THEME: ThemeId = "government";

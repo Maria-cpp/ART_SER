@@ -14,13 +14,16 @@ const AnimatedLogo = dynamic(() => import("@/components/AnimatedLogo"), {
 
 const MOBILE_NAV = [
   { href: "/", key: "nav.home" },
-  { href: "/products", key: "sidebar.products" },
   { href: "/about", key: "nav.about" },
   { href: "/services", key: "nav.services" },
-  { href: "/portfolio", key: "nav.portfolio" },
   { href: "/clients", key: "nav.clients" },
-  { href: "/gallery", key: "nav.gallery" },
   { href: "/certifications", key: "nav.certifications" },
+  { href: "/products", key: "sidebar.products" },
+  { href: "/portfolio", key: "nav.portfolio" },
+  { href: "/government", key: "nav.government" },
+  { href: "/manufacturing", key: "nav.manufacturing" },
+  { href: "/gallery", key: "nav.gallery" },
+  { href: "/suppliers", key: "nav.suppliers" },
   { href: "/contact", key: "nav.contact" },
 ];
 

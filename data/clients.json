@@ -1,8 +1,8 @@
 {
   "items": [
-    { "id": "c-001", "name": "ART FER srl", "logo": "/clients/placeholder-1.svg", "sector": { "en": "Manufacturing", "it": "Manifattura", "ar": "التصنيع", "ur": "مینوفیکچرنگ" } },
-    { "id": "c-002", "name": "CORRADINI SRL", "logo": "/clients/placeholder-2.svg", "sector": { "en": "Construction", "it": "Costruzioni", "ar": "الإنشاءات", "ur": "تعمیرات" } },
-    { "id": "c-003", "name": "SOAVE SERRAMENTI SRLS", "logo": "/clients/placeholder-3.svg", "sector": { "en": "Windows & Doors", "it": "Serramenti", "ar": "النوافذ والأبواب", "ur": "کھڑکیاں اور دروازے" } },
-    { "id": "c-004", "name": "MASSIGNANI & C. S.R.L.", "logo": "/clients/placeholder-4.svg", "sector": { "en": "Manufacturing", "it": "Manifattura", "ar": "التصنيع", "ur": "مینوفیکچرنگ" } }
+    { "id": "c-001", "name": "ART FER SRL", "logo": "/clients/artfer.jpg", "website": "https://artfer.it/", "sector": { "en": "Manufacturing", "it": "Manifattura", "ar": "التصنيع", "ur": "مینوفیکچرنگ" } },
+    { "id": "c-002", "name": "CORRADINI SRL", "logo": "/clients/corradini.png", "website": "https://www.corradinivr.it/", "sector": { "en": "Construction", "it": "Costruzioni", "ar": "الإنشاءات", "ur": "تعمیرات" } },
+    { "id": "c-003", "name": "MASSIGNANI & C. S.R.L.", "logo": "/clients/massiagni.png", "website": "https://www.massignani.it/", "sector": { "en": "Manufacturing", "it": "Manifattura", "ar": "التصنيع", "ur": "مینوفیکچرنگ" } },
+    { "id": "c-004", "name": "SOAVE SERRAMENTI SRLS", "logo": "/clients/soave.svg", "website": "https://www.facebook.com/share/1CZcPwt9wz/", "sector": { "en": "Windows & Doors", "it": "Serramenti", "ar": "النوافذ والأبواب", "ur": "کھڑکیاں اور دروازے" } }
   ]
 }

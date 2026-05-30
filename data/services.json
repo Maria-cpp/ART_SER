@@ -1,69 +1,69 @@
 {
   "items": [
     {
-      "id": "engineering",
-      "icon": "compass",
-      "title": { "en": "Engineering & Design", "it": "Ingegneria e progettazione", "ar": "الهندسة والتصميم", "ur": "انجینئرنگ و ڈیزائن" },
-      "description": {
-        "en": "End-to-end engineering — feasibility, structural design, MEP, and detailed technical documentation.",
-        "it": "Ingegneria end-to-end: fattibilità, progettazione strutturale, MEP e documentazione tecnica dettagliata.",
-        "ar": "هندسة متكاملة — دراسات الجدوى، التصميم الإنشائي، الأنظمة الكهروميكانيكية، والوثائق الفنية التفصيلية.",
-        "ur": "مکمل انجینئرنگ — فزیبلٹی، ساختی ڈیزائن، MEP اور تفصیلی تکنیکی دستاویزات۔"
-      }
-    },
-    {
-      "id": "construction",
-      "icon": "building",
-      "title": { "en": "Construction", "it": "Costruzioni", "ar": "الإنشاءات", "ur": "تعمیرات" },
-      "description": {
-        "en": "Civil and industrial construction delivered with rigorous safety and quality control.",
-        "it": "Costruzioni civili e industriali realizzate con rigorosi controlli di sicurezza e qualità.",
-        "ar": "إنشاءات مدنية وصناعية تُنفّذ بضوابط صارمة للسلامة والجودة.",
-        "ur": "سخت حفاظتی اور معیاری کنٹرول کے ساتھ سول اور صنعتی تعمیرات۔"
-      }
-    },
-    {
-      "id": "manufacturing",
+      "id": "aluminium-production",
       "icon": "factory",
-      "title": { "en": "Manufacturing", "it": "Produzione", "ar": "التصنيع", "ur": "مینوفیکچرنگ" },
+      "title": { "en": "Aluminium Windows & Doors Production", "it": "Produzione finestre e porte in alluminio", "ar": "إنتاج نوافذ وأبواب الألمنيوم", "ur": "ایلومینیم کھڑکیاں اور دروازے کی پیداوار" },
       "description": {
-        "en": "Precision fabrication and production with full traceability and certified materials.",
-        "it": "Fabbricazione e produzione di precisione con piena tracciabilità e materiali certificati.",
-        "ar": "تصنيع وإنتاج دقيق مع تتبّع كامل ومواد معتمدة.",
-        "ur": "مکمل ٹریس ایبلٹی اور تصدیق شدہ مواد کے ساتھ درست فیبریکیشن اور پیداوار۔"
+        "en": "Professional production and fabrication of aluminium window and door systems, including cutting, assembly, and quality-controlled finishing for commercial and industrial applications.",
+        "it": "Produzione e fabbricazione professionale di sistemi di finestre e porte in alluminio, compreso taglio, assemblaggio e finitura con controllo qualità per applicazioni commerciali e industriali.",
+        "ar": "إنتاج وتصنيع احترافي لأنظمة نوافذ وأبواب الألمنيوم، بما في ذلك القطع والتجميع والتشطيب بمراقبة الجودة للتطبيقات التجارية والصناعية.",
+        "ur": "ایلومینیم کھڑکیوں اور دروازوں کے نظاموں کی پیشہ ورانہ پیداوار و فیبریکیشن، بشمول کٹنگ، اسمبلی اور تجارتی و صنعتی استعمال کے لیے کوالٹی کنٹرولڈ فنشنگ۔"
       }
     },
     {
-      "id": "infrastructure",
-      "icon": "road",
-      "title": { "en": "Infrastructure", "it": "Infrastrutture", "ar": "البنية التحتية", "ur": "انفراسٹرکچر" },
+      "id": "pvc-windows",
+      "icon": "building",
+      "title": { "en": "PVC Windows & Doors", "it": "Finestre e porte in PVC", "ar": "نوافذ وأبواب PVC", "ur": "PVC کھڑکیاں اور دروازے" },
       "description": {
-        "en": "Roads, utilities, and public works engineered for longevity and resilience.",
-        "it": "Strade, servizi e opere pubbliche progettate per durata e resilienza.",
-        "ar": "طرق ومرافق وأشغال عامة مصممة للديمومة والمرونة.",
-        "ur": "سڑکیں، یوٹیلٹیز اور عوامی منصوبے جو دوام اور مضبوطی کے لیے بنائے گئے ہیں۔"
+        "en": "Supply and installation of high-quality PVC window and door systems, offering excellent thermal insulation, durability, and cost-effective solutions for residential and commercial projects.",
+        "it": "Fornitura e installazione di sistemi di finestre e porte in PVC di alta qualità, che offrono eccellente isolamento termico, durata e soluzioni economiche per progetti residenziali e commerciali.",
+        "ar": "توريد وتركيب أنظمة نوافذ وأبواب PVC عالية الجودة، توفر عزلاً حرارياً ممتازاً ومتانة وحلولاً فعالة من حيث التكلفة للمشاريع السكنية والتجارية.",
+        "ur": "اعلیٰ معیار کے PVC کھڑکیوں اور دروازوں کے نظاموں کی فراہمی و تنصیب، بہترین حرارتی موصلیت، پائیداری اور رہائشی و تجارتی منصوبوں کے لیے سرمایہ کاری مؤثر حل فراہم کرنا۔"
       }
     },
     {
-      "id": "project-management",
-      "icon": "clipboard",
-      "title": { "en": "Project Management", "it": "Gestione progetti", "ar": "إدارة المشاريع", "ur": "پراجیکٹ مینجمنٹ" },
-      "description": {
-        "en": "Turnkey delivery — planning, procurement, scheduling, and on-site supervision.",
-        "it": "Consegna chiavi in mano: pianificazione, approvvigionamento, programmazione e supervisione in cantiere.",
-        "ar": "تسليم متكامل — التخطيط، التوريد، الجدولة، والإشراف الميداني.",
-        "ur": "ٹرن کی ڈیلیوری — منصوبہ بندی، خریداری، شیڈولنگ اور سائٹ پر نگرانی۔"
-      }
-    },
-    {
-      "id": "maintenance",
+      "id": "installation",
       "icon": "wrench",
-      "title": { "en": "Maintenance & O&M", "it": "Manutenzione e O&M", "ar": "الصيانة والتشغيل", "ur": "دیکھ بھال و آپریشن" },
+      "title": { "en": "Installation & Assembly", "it": "Installazione e assemblaggio", "ar": "التركيب والتجميع", "ur": "تنصیب و اسمبلی" },
       "description": {
-        "en": "Operations and maintenance programs that protect asset value over the full lifecycle.",
-        "it": "Programmi di esercizio e manutenzione che proteggono il valore degli asset lungo l'intero ciclo di vita.",
-        "ar": "برامج التشغيل والصيانة التي تحافظ على قيمة الأصول طوال دورة حياتها.",
-        "ur": "آپریشن اور مینٹیننس پروگرام جو پورے لائف سائیکل میں اثاثوں کی قدر کی حفاظت کرتے ہیں۔"
+        "en": "On-site installation, assembly, and fitting of aluminium and PVC serramenti systems. Precise technical execution with certified safety practices for both new builds and renovation projects.",
+        "it": "Installazione in cantiere, assemblaggio e montaggio di sistemi serramenti in alluminio e PVC. Esecuzione tecnica precisa con pratiche di sicurezza certificate per nuove costruzioni e ristrutturazioni.",
+        "ar": "التركيب والتجميع والتثبيت الميداني لأنظمة سيراميتي من الألمنيوم وPVC. تنفيذ تقني دقيق مع ممارسات سلامة معتمدة للمباني الجديدة ومشاريع التجديد.",
+        "ur": "ایلومینیم اور PVC سیرامینٹی سسٹمز کی سائٹ پر تنصیب، اسمبلی اور فٹنگ۔ نئی تعمیرات اور تجدید منصوبوں دونوں کے لیے تصدیق شدہ حفاظتی طریقوں کے ساتھ درست تکنیکی عمل درآمد۔"
+      }
+    },
+    {
+      "id": "facades",
+      "icon": "compass",
+      "title": { "en": "Facade & Curtain Wall Systems", "it": "Facciate e facciate continue", "ar": "أنظمة الواجهات والجدران الستائرية", "ur": "فیساد اور کرٹین وال سسٹمز" },
+      "description": {
+        "en": "Production and installation of aluminium facade systems, curtain walls, and structural glazing for commercial buildings. Engineered for aesthetics, thermal performance, and weather resistance.",
+        "it": "Produzione e installazione di sistemi di facciate in alluminio, facciate continue e vetrate strutturali per edifici commerciali. Progettati per estetica, prestazioni termiche e resistenza alle intemperie.",
+        "ar": "إنتاج وتركيب أنظمة واجهات الألمنيوم والجدران الستائرية والزجاج الهيكلي للمباني التجارية. مصممة للجمال والأداء الحراري ومقاومة العوامل الجوية.",
+        "ur": "تجارتی عمارتوں کے لیے ایلومینیم فیساد سسٹمز، کرٹین والز اور سٹرکچرل گلیزنگ کی پیداوار و تنصیب۔ جمالیات، حرارتی کارکردگی اور موسمی مزاحمت کے لیے ڈیزائن کیے گئے۔"
+      }
+    },
+    {
+      "id": "sliding-systems",
+      "icon": "road",
+      "title": { "en": "Sliding & Folding Systems", "it": "Sistemi scorrevoli e pieghevoli", "ar": "الأنظمة المنزلقة والقابلة للطي", "ur": "سلائیڈنگ اور فولڈنگ سسٹمز" },
+      "description": {
+        "en": "Installation of premium sliding and folding door systems that maximise space and provide seamless indoor-outdoor transitions. Featuring superior thermal insulation and smooth operation.",
+        "it": "Installazione di sistemi scorrevoli e pieghevoli premium che massimizzano lo spazio e offrono transizioni fluide tra interni ed esterni. Con isolamento termico superiore e funzionamento regolare.",
+        "ar": "تركيب أنظمة أبواب منزلقة وقابلة للطي متميزة تعظم المساحة وتوفر انتقالات سلسة بين الداخل والخارج. مع عزل حراري فائق وتشغيل سلس.",
+        "ur": "پریمیم سلائیڈنگ اور فولڈنگ دروازوں کے نظاموں کی تنصیب جو جگہ کو زیادہ سے زیادہ بناتے ہیں اور اندرونی و بیرونی ہموار منتقلی فراہم کرتے ہیں۔ بہتر حرارتی موصلیت اور ہموار آپریشن کے ساتھ۔"
+      }
+    },
+    {
+      "id": "sun-protection",
+      "icon": "clipboard",
+      "title": { "en": "Sun Protection & Shutters", "it": "Protezione solare e avvolgibili", "ar": "الحماية من الشمس والمصاريع", "ur": "سن پروٹیکشن اور شٹرز" },
+      "description": {
+        "en": "Supply and installation of roller shutters, mosquito nets, blinds, and sun protection systems. Complete solutions for privacy, comfort, energy efficiency, and security.",
+        "it": "Fornitura e installazione di avvolgibili, zanzariere, tende e sistemi di protezione solare. Soluzioni complete per privacy, comfort, efficienza energetica e sicurezza.",
+        "ar": "توريد وتركيب الستائر الدوارة وشبكات الحشرات والستائر وأنظمة الحماية من الشمس. حلول كاملة للخصوصية والراحة وكفاءة الطاقة والأمان.",
+        "ur": "رولر شٹرز، مچھر دانی، بلائنڈز اور سن پروٹیکشن سسٹمز کی فراہمی و تنصیب۔ پرائیویسی، آرام، توانائی کی کارکردگی اور سیکیورٹی کے لیے مکمل حل۔"
       }
     }
   ]

@@ -1,3 +1,26 @@
+# Sidebar Collapse, Nav Reorder, Hero Background Slideshow & Logo
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Collapsible sidebar with new nav order, hero section with image slideshow background and ART_SER_logo.png replacing text, JV Projects tab removed.
+
+**Architecture:** Modify Sidebar.tsx to add a collapse/expand toggle button that shrinks it to icon-only mode. Reorder nav groups to Home > Company > Products > Projects (minus JV) > Resources. Update home page hero to use a full-bleed image slideshow with crossfade transitions behind the content, and replace the "ART SER" text with the logo image.
+
+**Tech Stack:** Next.js 15, React 19, TailwindCSS 3, CSS animations
+
+---
+
+### Task 1: Sidebar Collapse/Expand Toggle
+
+**Files:**
+- Modify: `components/Sidebar.tsx`
+- Modify: `app/globals.css`
+
+- [ ] **Step 1: Add collapsed state and toggle button to Sidebar.tsx**
+
+Replace the full `components/Sidebar.tsx` with:
+
+```tsx
 "use client";
 
 import Link from "next/link";
@@ -222,3 +245,216 @@ export function Sidebar() {
     </aside>
   );
 }
+```
+
+- [ ] **Step 2: Verify sidebar renders and toggle works**
+
+Run: `npm run dev`
+Open http://localhost:3000 and verify sidebar shows collapse/expand button, groups are reordered (Home, Company, Products, Projects, Resources), JV Projects is removed.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add components/Sidebar.tsx
+git commit -m "feat: collapsible sidebar with reordered nav, remove JV Projects"
+```
+
+---
+
+### Task 2: Replace Hero "ART SER" Text with Logo Image
+
+**Files:**
+- Modify: `app/page.tsx`
+
+- [ ] **Step 1: Replace company name text with logo image**
+
+In `app/page.tsx`, add `import Image from "next/image";` at the top imports.
+
+Replace this block (around line 41-43):
+```tsx
+<p className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-accent scroll-reveal">
+  {company.name}
+</p>
+```
+
+With:
+```tsx
+<div className="mb-6 scroll-reveal">
+  <Image
+    src="/ART_SER_logo.png"
+    alt={company.name}
+    width={280}
+    height={100}
+    className="mx-auto h-auto w-auto max-h-24"
+    priority
+  />
+</div>
+```
+
+- [ ] **Step 2: Verify logo renders on home page**
+
+Open http://localhost:3000 — the 3D ART SER logo image should appear instead of plain text.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add app/page.tsx
+git commit -m "feat: replace hero ART SER text with logo image"
+```
+
+---
+
+### Task 3: Hero Background Image Slideshow
+
+**Files:**
+- Modify: `app/page.tsx`
+- Modify: `app/globals.css`
+
+- [ ] **Step 1: Add slideshow CSS to globals.css**
+
+Add at the end of `app/globals.css`:
+
+```css
+/* Hero background slideshow */
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-slideshow-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slideshow-img.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--color-background) / 0.7) 0%,
+    rgb(var(--color-background) / 0.85) 100%
+  );
+  z-index: 1;
+}
+```
+
+- [ ] **Step 2: Add slideshow state and images to hero in page.tsx**
+
+In `app/page.tsx`, add `useEffect` to the React import and `useCallback` if needed.
+
+Add a state + interval for cycling images. The user will provide images to `/public/hero/` — use placeholder paths for now:
+
+```tsx
+import { useState, useEffect } from "react"; // add to existing import
+
+// Inside HomePage component, before the return:
+const heroImages = [
+  "/hero/slide-1.jpg",
+  "/hero/slide-2.jpg",
+  "/hero/slide-3.jpg",
+];
+const [currentSlide, setCurrentSlide] = useState(0);
+
+useEffect(() => {
+  if (heroImages.length <= 1) return;
+  const interval = setInterval(() => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  }, 5000);
+  return () => clearInterval(interval);
+}, [heroImages.length]);
+```
+
+Replace the hero `<section>` opening and the radial glow div:
+
+```tsx
+<section className="relative overflow-hidden">
+  {/* Background slideshow */}
+  <div className="hero-slideshow">
+    {heroImages.map((src, idx) => (
+      <img
+        key={src}
+        src={src}
+        alt=""
+        className={`hero-slideshow-img ${idx === currentSlide ? "active" : ""}`}
+      />
+    ))}
+    <div className="hero-overlay" />
+  </div>
+```
+
+Remove the old radial glow `<div>` block entirely.
+
+Update the container div to add `relative z-10` so content sits above the overlay:
+
+```tsx
+<div className="container-x relative z-10 flex min-h-[85vh] flex-col items-center justify-center py-20 text-center">
+```
+
+- [ ] **Step 3: Create hero images directory**
+
+```bash
+mkdir -p public/hero
+```
+
+Place placeholder images or real images provided by the user at `public/hero/slide-1.jpg`, `slide-2.jpg`, `slide-3.jpg`.
+
+- [ ] **Step 4: Verify slideshow works**
+
+Open http://localhost:3000 — images should crossfade every 5 seconds behind the hero content with a dark overlay keeping text readable.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add app/page.tsx app/globals.css
+git commit -m "feat: hero background image slideshow with crossfade"
+```
+
+---
+
+### Task 4: Update Mobile Nav and Header to Match New Order
+
+**Files:**
+- Modify: `components/Header.tsx`
+
+- [ ] **Step 1: Update MOBILE_NAV array to match new order, remove JV Projects**
+
+In `components/Header.tsx`, replace the `MOBILE_NAV` array:
+
+```tsx
+const MOBILE_NAV = [
+  { href: "/", key: "nav.home" },
+  { href: "/about", key: "nav.about" },
+  { href: "/services", key: "nav.services" },
+  { href: "/clients", key: "nav.clients" },
+  { href: "/certifications", key: "nav.certifications" },
+  { href: "/products", key: "sidebar.products" },
+  { href: "/portfolio", key: "nav.portfolio" },
+  { href: "/government", key: "nav.government" },
+  { href: "/manufacturing", key: "nav.manufacturing" },
+  { href: "/gallery", key: "nav.gallery" },
+  { href: "/suppliers", key: "nav.suppliers" },
+  { href: "/contact", key: "nav.contact" },
+];
+```
+
+- [ ] **Step 2: Verify mobile nav**
+
+Open http://localhost:3000 on mobile viewport — JV Projects should be gone, order should be Home, Company items, Products, Projects (no JV), Resources.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add components/Header.tsx
+git commit -m "feat: update mobile nav order, remove JV Projects"
+```

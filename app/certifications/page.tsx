@@ -6,6 +6,7 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Section } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { getCertifications } from "@/lib/data";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export default function CertificationsPage() {
   const { t, localized } = useLanguage();
@@ -13,15 +14,17 @@ export default function CertificationsPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedName, setSelectedName] = useState<string>("");
 
+  useScrollReveal();
+
   return (
     <>
       <div className="container-x pt-6">
         <Breadcrumbs items={[{ label: "breadcrumb.home", href: "/" }, { label: "nav.certifications" }]} />
       </div>
       <Section title={t("certifications.title")} subtitle={t("certifications.subtitle")}>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
           {items.map((c) => (
-            <div key={c.id} className="card text-center group">
+            <div key={c.id} className="card text-center group border-2 border-accent/30 hover:border-accent">
               <button
                 type="button"
                 onClick={() => {

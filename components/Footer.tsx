@@ -5,7 +5,7 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { getCompany, getContact, getCategories } from "@/lib/data";
 
 // Inline brand icons (stroke = currentColor) for the "Follow us on" row.
-const SOCIAL_ICONS: Record<string, JSX.Element> = {
+const SOCIAL_ICONS: Record<string, React.ReactNode> = {
   facebook: <path d="M14 9h2V6h-2c-1.7 0-3 1.3-3 3v2H9v3h2v5h3v-5h2l.5-3H14v-1.5c0-.3.2-.5.5-.5Z" />,
   instagram: (
     <>
@@ -25,6 +25,9 @@ const SOCIAL_ICONS: Record<string, JSX.Element> = {
       <rect x="3.5" y="6.5" width="17" height="11" rx="3" />
       <path d="M10.5 9.8v4.4l3.8-2.2-3.8-2.2Z" fill="currentColor" stroke="none" />
     </>
+  ),
+  telegram: (
+    <path d="M21 3L1 11l7.5 2.5M21 3l-5 18-7.5-7.5M21 3L8.5 13.5m0 0V20l3.2-3.5" />
   )
 };
 

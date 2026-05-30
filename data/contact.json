@@ -1,35 +1,24 @@
 {
-  "email": "info@artser.example",
-  "phone": "+39 02 1234 5678",
-  "whatsapp": "+39 333 123 4567",
+  "email": "art_ser@outlook.it",
+  "pec": "khaan@pec.buffetti.it",
+  "phone": "+3903482402248",
+  "whatsapp": "+3903482402248",
   "headquarters": {
-    "label": { "en": "Headquarters", "it": "Sede centrale", "ar": "المقر الرئيسي", "ur": "ہیڈ کوارٹر" },
-    "address": "Via dell'Industria 12, 20100 Milano (MI), Italy"
+    "label": { "en": "Headquarters", "it": "Sede legale", "ar": "المقر الرئيسي", "ur": "ہیڈ کوارٹر" },
+    "address": "Via XX Settembre 86, 37036 San Martino Buon Albergo (VR), Italy"
   },
   "offices": [
     {
-      "city": "Milan",
-      "label": { "en": "Italy Office", "it": "Sede Italia", "ar": "مكتب إيطاليا", "ur": "اٹلی دفتر" },
-      "address": "Via dell'Industria 12, 20100 Milano (MI), Italy",
-      "phone": "+39 02 1234 5678"
-    },
-    {
-      "city": "Doha",
-      "label": { "en": "Qatar Office", "it": "Sede Qatar", "ar": "مكتب قطر", "ur": "قطر دفتر" },
-      "address": "Al Sadd Street, West Bay, Doha, Qatar",
-      "phone": "+974 4012 3456"
-    },
-    {
-      "city": "Lahore",
-      "label": { "en": "Pakistan Office", "it": "Sede Pakistan", "ar": "مكتب باكستان", "ur": "پاکستان دفتر" },
-      "address": "Gulberg III, Lahore, Punjab, Pakistan",
-      "phone": "+92 42 3456 7890"
+      "city": "San Martino Buon Albergo",
+      "label": { "en": "Registered Office", "it": "Sede legale", "ar": "المكتب المسجل", "ur": "رجسٹرڈ دفتر" },
+      "address": "Via XX Settembre 86, 37036 San Martino Buon Albergo (VR), Italy",
+      "phone": "+3903482402248"
     }
   ],
   "social": {
-    "linkedin": "https://www.linkedin.com/company/artser",
-    "instagram": "https://www.instagram.com/artser",
-    "youtube": "https://www.youtube.com/@artser"
+    "instagram": "https://www.instagram.com/ts_khaan?igsh=bmk3NzNsMHlmMmQ=",
+    "facebook": "https://www.facebook.com/share/1QTyovYnxS/",
+    "telegram": "https://t.me/leonealf"
   },
-  "mapEmbed": "https://www.google.com/maps?q=Milano,Italy&output=embed"
+  "mapEmbed": "https://www.google.com/maps?q=San+Martino+Buon+Albergo,+Verona,+Italy&output=embed"
 }

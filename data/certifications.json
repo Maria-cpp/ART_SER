@@ -1,36 +1,82 @@
 {
   "items": [
     {
-      "id": "iso-9001",
-      "name": "ISO 9001:2015",
-      "issuer": "International Organization for Standardization",
+      "id": "posa-serramenti",
+      "name": "Posa in Opera di Serramenti Esterni",
+      "issuer": "O.P.N. Italia Lavoro / CNL",
       "year": 2023,
-      "image": "/certifications/placeholder-1.svg",
-      "description": { "en": "Quality Management Systems", "it": "Sistemi di gestione della qualità", "ar": "أنظمة إدارة الجودة", "ur": "کوالٹی مینجمنٹ سسٹمز" }
+      "image": "/certificates/posa-serramenti.png",
+      "description": {
+        "en": "Training course for workers involved in the installation of external window and door frames",
+        "it": "Corso di formazione per lavoratori addetti alla posa in opera di serramenti esterni",
+        "ar": "دورة تدريبية للعمال المختصين بتركيب الإطارات الخارجية للنوافذ والأبواب",
+        "ur": "بیرونی کھڑکیوں اور دروازوں کے فریم لگانے والے کارکنوں کے لیے تربیتی کورس"
+      }
     },
     {
-      "id": "iso-14001",
-      "name": "ISO 14001:2015",
-      "issuer": "International Organization for Standardization",
+      "id": "prevenzione-protezione",
+      "name": "Responsabile Prevenzione e Protezione (RSPP)",
+      "issuer": "UESE Italia S.p.A. / E.N.Bi.Form.",
       "year": 2023,
-      "image": "/certifications/placeholder-2.svg",
-      "description": { "en": "Environmental Management", "it": "Gestione ambientale", "ar": "الإدارة البيئية", "ur": "ماحولیاتی مینجمنٹ" }
+      "image": "/certificates/prevenzione-protezione.png",
+      "description": {
+        "en": "Training course for Prevention and Protection Service Manager (RSPP) for high-risk employers",
+        "it": "Corso di formazione per responsabile del servizio di prevenzione e protezione per datori di lavoro a rischio alto",
+        "ar": "دورة تدريبية لمسؤول خدمة الوقاية والحماية لأصحاب العمل في المنشآت عالية المخاطر",
+        "ur": "اعلیٰ خطرے والے آجروں کے لیے روک تھام اور تحفظ کی خدمات کے ذمہ دار کا تربیتی کورس"
+      }
     },
     {
-      "id": "iso-45001",
-      "name": "ISO 45001:2018",
-      "issuer": "International Organization for Standardization",
-      "year": 2022,
-      "image": "/certifications/placeholder-3.svg",
-      "description": { "en": "Occupational Health & Safety", "it": "Salute e sicurezza sul lavoro", "ar": "الصحة والسلامة المهنية", "ur": "پیشہ ورانہ صحت و حفاظت" }
+      "id": "lavori-in-quota",
+      "name": "Lavori in Quota e DPI di Terza Categoria",
+      "issuer": "UESE Italia S.p.A. / A.N.P.I.",
+      "year": 2023,
+      "image": "/certificates/lavori-in-quota.png",
+      "description": {
+        "en": "Training and practical course for workers performing tasks at height and using Category III PPE",
+        "it": "Corso di formazione e addestramento per addetti ai lavori in quota e utilizzo DPI di terza categoria",
+        "ar": "دورة تدريبية وعملية للعمال الذين يؤدون مهام على ارتفاعات ويستخدمون معدات الحماية من الفئة الثالثة",
+        "ur": "اونچائی پر کام کرنے والے اور تیسرے درجے کے حفاظتی آلات استعمال کرنے والے کارکنوں کے لیے تربیتی و عملی کورس"
+      }
     },
     {
-      "id": "ce",
-      "name": "CE Marking",
-      "issuer": "European Conformity",
-      "year": 2024,
-      "image": "/certifications/placeholder-4.svg",
-      "description": { "en": "Structural steel — EN 1090", "it": "Acciaio strutturale — EN 1090", "ar": "الفولاذ الإنشائي — EN 1090", "ur": "اسٹرکچرل اسٹیل — EN 1090" }
+      "id": "piattaforme-elevabili",
+      "name": "Piattaforme di Lavoro Mobili Elevabili (PLE)",
+      "issuer": "UESE Italia S.p.A. / A.N.P.I.",
+      "year": 2023,
+      "image": "/certificates/piattaforme-elevabili.png",
+      "description": {
+        "en": "Certification for operating Mobile Elevated Work Platforms (MEWP) with and without stabilizers",
+        "it": "Addetto alla conduzione di piattaforme di lavoro mobili elevabili (PLE con e senza stabilizzatori)",
+        "ar": "شهادة تشغيل منصات العمل المتنقلة المرتفعة مع وبدون مثبتات",
+        "ur": "موبائل ایلیویٹڈ ورک پلیٹ فارمز (اسٹیبلائزرز کے ساتھ اور بغیر) چلانے کی سند"
+      }
+    },
+    {
+      "id": "primo-soccorso",
+      "name": "Addetti al Primo Soccorso",
+      "issuer": "UESE Italia S.p.A. / E.N.Bi.Form.",
+      "year": 2023,
+      "image": "/certificates/primo-soccorso.png",
+      "description": {
+        "en": "First aid training course for designated first aid personnel in Group A companies",
+        "it": "Corso di formazione per addetti al primo soccorso in aziende appartenenti al gruppo A",
+        "ar": "دورة تدريبية على الإسعافات الأولية للموظفين المعينين في شركات المجموعة أ",
+        "ur": "گروپ اے کمپنیوں میں ابتدائی طبی امداد کے نامزد اہلکاروں کے لیے تربیتی کورس"
+      }
+    },
+    {
+      "id": "formazione-antincendio",
+      "name": "Formazione Antincendio Livello 1",
+      "issuer": "O.P.N. Italia Lavoro / CNL / O.P.T.",
+      "year": 2023,
+      "image": "/certificates/formazione-antincendio.png",
+      "description": {
+        "en": "Fire safety training course for designated fire prevention personnel — Level 1",
+        "it": "Corso di formazione antincendio per addetto antincendio in attività di livello 1",
+        "ar": "دورة تدريبية على السلامة من الحرائق لموظفي الوقاية من الحرائق — المستوى الأول",
+        "ur": "آگ سے بچاؤ کے نامزد اہلکاروں کے لیے فائر سیفٹی تربیتی کورس — لیول 1"
+      }
     }
   ]
 }

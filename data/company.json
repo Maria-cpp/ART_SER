@@ -1,6 +1,6 @@
 {
-  "name": "ARTSER",
-  "legalName": "ARTSER S.r.l.",
+  "name": "ART SER",
+  "legalName": "ART SER DI SHEHEZAD TARIQ",
   "logo": "/logo.svg",
   "tagline": {
     "en": "Engineering Excellence, Delivered.",
@@ -21,10 +21,10 @@
     "ur": "درستگی اور قابل اعتماد ہونے کے عزم پر قائم، ARTSER ایک کثیر الشعبہ گروپ بن گیا ہے جو مینوفیکچرنگ، انجینئرنگ اور بڑے پیمانے کی تعمیرات پر محیط ہے۔ ہم نجی اداروں، مشترکہ منصوبوں اور حکومتی اداروں کے ساتھ مل کر ایسے منصوبے فراہم کرتے ہیں جو حفاظت، معیار اور پائیداری کے اعلیٰ ترین معیارات پر پورا اترتے ہیں۔"
   },
   "stats": [
-    { "value": "25+", "label": { "en": "Years of Experience", "it": "Anni di esperienza", "ar": "سنوات من الخبرة", "ur": "سالہ تجربہ" } },
-    { "value": "320+", "label": { "en": "Projects Delivered", "it": "Progetti realizzati", "ar": "مشاريع منجزة", "ur": "مکمل منصوبے" } },
-    { "value": "12", "label": { "en": "Countries", "it": "Paesi", "ar": "دول", "ur": "ممالک" } },
-    { "value": "1,200+", "label": { "en": "Team Members", "it": "Membri del team", "ar": "أعضاء الفريق", "ur": "ٹیم کے ارکان" } }
+    { "value": "26+", "label": { "en": "Years in the Field", "it": "Anni nel settore", "ar": "سنوات في المجال", "ur": "شعبے میں سالوں کا تجربہ" } },
+    { "value": "2015", "label": { "en": "Independent Since", "it": "Indipendente dal", "ar": "مستقل منذ", "ur": "مستقل طور پر" } },
+    { "value": "2021", "label": { "en": "Last Registration", "it": "Ultima registrazione", "ar": "آخر تسجيل", "ur": "آخری رجسٹریشن" } },
+    { "value": "6", "label": { "en": "Certifications", "it": "Certificazioni", "ar": "شهادات", "ur": "سرٹیفیکیشنز" } }
   ],
   "mission": {
     "en": "To engineer and build infrastructure that endures — safely, sustainably, and on time.",

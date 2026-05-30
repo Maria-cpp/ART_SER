@@ -1,6 +1,6 @@
 // Line icons for the home "Discover our products" showcase. Stroke = currentColor.
 
-const PATHS: Record<string, JSX.Element> = {
+const PATHS: Record<string, React.ReactNode> = {
   window: (
     <>
       <rect x="5" y="3.5" width="14" height="17" rx="1.5" />

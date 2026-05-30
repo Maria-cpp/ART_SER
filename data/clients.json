@@ -1,10 +1,8 @@
 {
   "items": [
-    { "id": "c-001", "name": "Helix Energy", "logo": "/clients/placeholder-1.svg", "sector": { "en": "Energy", "it": "Energia", "ar": "الطاقة", "ur": "توانائی" } },
-    { "id": "c-002", "name": "Al-Madar Group", "logo": "/clients/placeholder-2.svg", "sector": { "en": "Construction", "it": "Costruzioni", "ar": "الإنشاءات", "ur": "تعمیرات" } },
-    { "id": "c-003", "name": "Marenco Costruzioni", "logo": "/clients/placeholder-3.svg", "sector": { "en": "Infrastructure", "it": "Infrastrutture", "ar": "البنية التحتية", "ur": "انفراسٹرکچر" } },
-    { "id": "c-004", "name": "Ministry of Transport", "logo": "/clients/placeholder-4.svg", "sector": { "en": "Government", "it": "Governo", "ar": "حكومي", "ur": "حکومت" } },
-    { "id": "c-005", "name": "Regional Health Authority", "logo": "/clients/placeholder-5.svg", "sector": { "en": "Healthcare", "it": "Sanità", "ar": "الرعاية الصحية", "ur": "صحت" } },
-    { "id": "c-006", "name": "Adriatic Ports", "logo": "/clients/placeholder-6.svg", "sector": { "en": "Logistics", "it": "Logistica", "ar": "اللوجستيات", "ur": "لاجسٹکس" } }
+    { "id": "c-001", "name": "ART FER srl", "logo": "/clients/placeholder-1.svg", "sector": { "en": "Manufacturing", "it": "Manifattura", "ar": "التصنيع", "ur": "مینوفیکچرنگ" } },
+    { "id": "c-002", "name": "CORRADINI SRL", "logo": "/clients/placeholder-2.svg", "sector": { "en": "Construction", "it": "Costruzioni", "ar": "الإنشاءات", "ur": "تعمیرات" } },
+    { "id": "c-003", "name": "SOAVE SERRAMENTI SRLS", "logo": "/clients/placeholder-3.svg", "sector": { "en": "Windows & Doors", "it": "Serramenti", "ar": "النوافذ والأبواب", "ur": "کھڑکیاں اور دروازے" } },
+    { "id": "c-004", "name": "MASSIGNANI & C. S.R.L.", "logo": "/clients/placeholder-4.svg", "sector": { "en": "Manufacturing", "it": "Manifattura", "ar": "التصنيع", "ur": "مینوفیکچرنگ" } }
   ]
 }

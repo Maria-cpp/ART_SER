@@ -52,7 +52,7 @@ export interface TeamMember { id: string; name: string; photo: string; role: Loc
 export interface Certification { id: string; name: string; issuer: string; year: number; image: string; description: Localized; }
 export interface Office { city: string; label: Localized; address: string; phone: string; }
 export interface Contact {
-  email: string; phone: string; whatsapp: string;
+  email: string; pec?: string; phone: string; whatsapp: string;
   headquarters: { label: Localized; address: string };
   offices: Office[];
   social: Record<string, string>;

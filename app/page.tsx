@@ -81,6 +81,7 @@ export default function HomePage() {
     "/hero/IMG_20230708_122420.jpg",
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [portfolioOpen, setPortfolioOpen] = useState(false);
 
   useEffect(() => {
     if (heroImages.length <= 1) return;
@@ -126,16 +127,43 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 scroll-reveal">
-            <a
-              href={locale === "it" ? "/ART_SER_Portafoglio.pdf" : "/ART_SER_Portfolio_EN.pdf"}
-              download
-              className="btn-accent inline-flex items-center gap-2"
-            >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path d="M12 5v14M5 12l7 7 7-7" />
-              </svg>
-              {t("hero.downloadPortfolio")}
-            </a>
+            <div className="relative">
+              <button
+                onClick={() => setPortfolioOpen((o) => !o)}
+                className="btn-accent inline-flex items-center gap-2"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+                {t("hero.downloadPortfolio")}
+              </button>
+              {portfolioOpen && (
+                <div className="absolute start-0 top-full mt-2 z-20 min-w-[220px] rounded-lg border border-border bg-surface p-2 shadow-xl">
+                  <a
+                    href="/ART_SER_Portfolio_EN.pdf"
+                    download="ART_SER_Portfolio_EN.pdf"
+                    className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition hover:bg-accent/10 hover:text-accent"
+                    onClick={() => setPortfolioOpen(false)}
+                  >
+                    <svg className="h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                    </svg>
+                    Portfolio — English
+                  </a>
+                  <a
+                    href="/ART_SER_Portafoglio_IT.pdf"
+                    download="ART_SER_Portafoglio_IT.pdf"
+                    className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition hover:bg-accent/10 hover:text-accent"
+                    onClick={() => setPortfolioOpen(false)}
+                  >
+                    <svg className="h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                    </svg>
+                    Portafoglio — Italiano
+                  </a>
+                </div>
+              )}
+            </div>
             <Link href="/portfolio" className="btn-outline">
               {t("hero.secondaryCta")}
             </Link>

@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "windows",
+      "icon": "window",
+      "href": "/products/windows",
+      "name": { "en": "Windows", "it": "Finestre", "ar": "النوافذ", "ur": "کھڑکیاں" }
+    },
+    {
+      "id": "doors",
+      "icon": "door",
+      "href": "/products/doors",
+      "name": { "en": "Doors", "it": "Porte", "ar": "الأبواب", "ur": "دروازے" }
+    },
+    {
+      "id": "sliding-folding",
+      "icon": "sliding",
+      "href": "/products/sliding-folding",
+      "name": { "en": "Sliding & Folding", "it": "Scorrevoli e pieghevoli", "ar": "الأنظمة المنزلقة والقابلة للطي", "ur": "سلائیڈنگ و فولڈنگ" }
+    },
+    {
+      "id": "facades",
+      "icon": "facade",
+      "href": "/products/facades",
+      "name": { "en": "Facades", "it": "Facciate", "ar": "الواجهات", "ur": "فیساد" }
+    },
+    {
+      "id": "conservatories",
+      "icon": "conservatory",
+      "href": "/products/conservatories",
+      "name": { "en": "Conservatories & Skylights", "it": "Verande e lucernari", "ar": "البيوت الزجاجية والمناور", "ur": "کنزرویٹریز و اسکائی لائٹس" }
+    },
+    {
+      "id": "smart-buildings",
+      "icon": "smart",
+      "href": "/products/smart-buildings",
+      "name": { "en": "Smart Buildings", "it": "Edifici intelligenti", "ar": "المباني الذكية", "ur": "اسمارٹ بلڈنگز" }
+    },
+    {
+      "id": "all-products",
+      "icon": "all",
+      "href": "/products",
+      "name": { "en": "All products", "it": "Tutti i prodotti", "ar": "كل المنتجات", "ur": "تمام مصنوعات" }
+    }
+  ]
+}

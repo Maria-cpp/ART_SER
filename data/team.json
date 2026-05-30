@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "t-001",
+      "name": "Alessandro Ferri",
+      "photo": "/team/placeholder-1.jpg",
+      "role": { "en": "Chief Executive Officer", "it": "Amministratore Delegato", "ar": "الرئيس التنفيذي", "ur": "چیف ایگزیکٹو آفیسر" },
+      "bio": {
+        "en": "30 years leading industrial and infrastructure delivery across three continents.",
+        "it": "30 anni alla guida di progetti industriali e infrastrutturali in tre continenti.",
+        "ar": "30 عامًا في قيادة مشاريع صناعية وبنية تحتية عبر ثلاث قارات.",
+        "ur": "تین براعظموں میں صنعتی اور انفراسٹرکچر منصوبوں کی قیادت کا 30 سالہ تجربہ۔"
+      }
+    },
+    {
+      "id": "t-002",
+      "name": "Sara Khan",
+      "photo": "/team/placeholder-2.jpg",
+      "role": { "en": "Chief Operating Officer", "it": "Direttore Operativo", "ar": "مدير العمليات", "ur": "چیف آپریٹنگ آفیسر" },
+      "bio": {
+        "en": "Operations leader specializing in large-scale project execution and HSE.",
+        "it": "Responsabile operativa specializzata nell'esecuzione di grandi progetti e HSE.",
+        "ar": "قائدة عمليات متخصصة في تنفيذ المشاريع الكبرى والصحة والسلامة والبيئة.",
+        "ur": "بڑے منصوبوں کے نفاذ اور HSE میں مہارت رکھنے والی آپریشنز رہنما۔"
+      }
+    },
+    {
+      "id": "t-003",
+      "name": "Marco Bianchi",
+      "photo": "/team/placeholder-3.jpg",
+      "role": { "en": "Head of Engineering", "it": "Responsabile Ingegneria", "ar": "رئيس الهندسة", "ur": "سربراہ انجینئرنگ" },
+      "bio": {
+        "en": "Structural engineer overseeing design integrity across all divisions.",
+        "it": "Ingegnere strutturale che supervisiona l'integrità progettuale in tutte le divisioni.",
+        "ar": "مهندس إنشائي يشرف على سلامة التصميم في جميع الأقسام.",
+        "ur": "تمام شعبوں میں ڈیزائن کی سالمیت کی نگرانی کرنے والے ساختی انجینئر۔"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "p-001",
+      "title": { "en": "Northgate Logistics Hub", "it": "Hub logistico Northgate", "ar": "مركز نورثغيت اللوجستي", "ur": "نارتھ گیٹ لاجسٹکس حب" },
+      "category": { "en": "Industrial", "it": "Industriale", "ar": "صناعي", "ur": "صنعتی" },
+      "location": "Milan, Italy",
+      "year": 2024,
+      "image": "/projects/placeholder-1.jpg",
+      "summary": {
+        "en": "A 48,000 m² automated distribution center with integrated cold storage.",
+        "it": "Un centro di distribuzione automatizzato di 48.000 m² con celle frigorifere integrate.",
+        "ar": "مركز توزيع آلي بمساحة 48,000 م² مع تخزين مبرّد متكامل.",
+        "ur": "48,000 مربع میٹر کا خودکار تقسیمی مرکز جس میں مربوط کولڈ اسٹوریج شامل ہے۔"
+      }
+    },
+    {
+      "id": "p-002",
+      "title": { "en": "Coastal Desalination Plant", "it": "Impianto di desalinizzazione costiero", "ar": "محطة تحلية ساحلية", "ur": "ساحلی ڈی سیلینیشن پلانٹ" },
+      "category": { "en": "Infrastructure", "it": "Infrastrutture", "ar": "بنية تحتية", "ur": "انفراسٹرکچر" },
+      "location": "Jeddah, Saudi Arabia",
+      "year": 2023,
+      "image": "/projects/placeholder-2.jpg",
+      "summary": {
+        "en": "Reverse-osmosis facility producing 120,000 m³ of potable water per day.",
+        "it": "Impianto a osmosi inversa che produce 120.000 m³ di acqua potabile al giorno.",
+        "ar": "منشأة تناضح عكسي تنتج 120,000 م³ من مياه الشرب يوميًا.",
+        "ur": "ریورس اوسموسس سہولت جو روزانہ 120,000 مکعب میٹر پینے کا پانی پیدا کرتی ہے۔"
+      }
+    },
+    {
+      "id": "p-003",
+      "title": { "en": "Metro Line 4 Viaduct", "it": "Viadotto Linea Metro 4", "ar": "جسر خط المترو 4", "ur": "میٹرو لائن 4 وایاڈکٹ" },
+      "category": { "en": "Infrastructure", "it": "Infrastrutture", "ar": "بنية تحتية", "ur": "انفراسٹرکچر" },
+      "location": "Lahore, Pakistan",
+      "year": 2022,
+      "image": "/projects/placeholder-3.jpg",
+      "summary": {
+        "en": "9.2 km elevated viaduct and six stations delivered ahead of schedule.",
+        "it": "Viadotto sopraelevato di 9,2 km e sei stazioni consegnati in anticipo.",
+        "ar": "جسر علوي بطول 9.2 كم وست محطات تم تسليمها قبل الموعد.",
+        "ur": "9.2 کلومیٹر بلند وایاڈکٹ اور چھ اسٹیشن مقررہ وقت سے پہلے مکمل۔"
+      }
+    },
+    {
+      "id": "p-004",
+      "title": { "en": "Steelworks Modernization", "it": "Ammodernamento acciaieria", "ar": "تحديث مصنع الصلب", "ur": "اسٹیل ورکس جدید کاری" },
+      "category": { "en": "Manufacturing", "it": "Produzione", "ar": "تصنيع", "ur": "مینوفیکچرنگ" },
+      "location": "Brescia, Italy",
+      "year": 2024,
+      "image": "/projects/placeholder-4.jpg",
+      "summary": {
+        "en": "Retrofit of a rolling mill with energy-recovery and automation upgrades.",
+        "it": "Ristrutturazione di un laminatoio con recupero energetico e aggiornamenti di automazione.",
+        "ar": "تحديث مصنع درفلة مع أنظمة استرداد الطاقة وترقيات الأتمتة.",
+        "ur": "رولنگ مل کی تجدید توانائی کی بحالی اور آٹومیشن اپ گریڈ کے ساتھ۔"
+      }
+    }
+  ]
+}

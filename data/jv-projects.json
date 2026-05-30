@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "jv-001",
+      "title": { "en": "Gulf Power Consortium", "it": "Consorzio Gulf Power", "ar": "تحالف غلف باور", "ur": "گلف پاور کنسورشیم" },
+      "partners": ["ARTSER", "Helix Energy", "Al-Madar Group"],
+      "location": "Doha, Qatar",
+      "year": 2023,
+      "image": "/projects/placeholder-jv-1.jpg",
+      "summary": {
+        "en": "Joint venture delivering a 600 MW combined-cycle power facility.",
+        "it": "Joint venture per la realizzazione di una centrale a ciclo combinato da 600 MW.",
+        "ar": "مشروع مشترك لتنفيذ محطة طاقة بدورة مركبة بقدرة 600 ميجاواط.",
+        "ur": "600 میگاواٹ کمبائنڈ سائیکل پاور سہولت فراہم کرنے والا مشترکہ منصوبہ۔"
+      }
+    },
+    {
+      "id": "jv-002",
+      "title": { "en": "Adriatic Port Expansion", "it": "Ampliamento Porto Adriatico", "ar": "توسعة ميناء الأدرياتيكي", "ur": "ایڈریاٹک پورٹ توسیع" },
+      "partners": ["ARTSER", "Marenco Costruzioni"],
+      "location": "Trieste, Italy",
+      "year": 2024,
+      "image": "/projects/placeholder-jv-2.jpg",
+      "summary": {
+        "en": "Deep-water quay and container terminal expansion under a 50/50 JV.",
+        "it": "Banchina in acque profonde ed espansione del terminal container in JV 50/50.",
+        "ar": "رصيف بمياه عميقة وتوسعة محطة الحاويات ضمن مشروع مشترك بنسبة 50/50.",
+        "ur": "50/50 مشترکہ منصوبے کے تحت گہرے پانی کی کوئے اور کنٹینر ٹرمینل کی توسیع۔"
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id": "engineering",
+      "icon": "compass",
+      "title": { "en": "Engineering & Design", "it": "Ingegneria e progettazione", "ar": "الهندسة والتصميم", "ur": "انجینئرنگ و ڈیزائن" },
+      "description": {
+        "en": "End-to-end engineering — feasibility, structural design, MEP, and detailed technical documentation.",
+        "it": "Ingegneria end-to-end: fattibilità, progettazione strutturale, MEP e documentazione tecnica dettagliata.",
+        "ar": "هندسة متكاملة — دراسات الجدوى، التصميم الإنشائي، الأنظمة الكهروميكانيكية، والوثائق الفنية التفصيلية.",
+        "ur": "مکمل انجینئرنگ — فزیبلٹی، ساختی ڈیزائن، MEP اور تفصیلی تکنیکی دستاویزات۔"
+      }
+    },
+    {
+      "id": "construction",
+      "icon": "building",
+      "title": { "en": "Construction", "it": "Costruzioni", "ar": "الإنشاءات", "ur": "تعمیرات" },
+      "description": {
+        "en": "Civil and industrial construction delivered with rigorous safety and quality control.",
+        "it": "Costruzioni civili e industriali realizzate con rigorosi controlli di sicurezza e qualità.",
+        "ar": "إنشاءات مدنية وصناعية تُنفّذ بضوابط صارمة للسلامة والجودة.",
+        "ur": "سخت حفاظتی اور معیاری کنٹرول کے ساتھ سول اور صنعتی تعمیرات۔"
+      }
+    },
+    {
+      "id": "manufacturing",
+      "icon": "factory",
+      "title": { "en": "Manufacturing", "it": "Produzione", "ar": "التصنيع", "ur": "مینوفیکچرنگ" },
+      "description": {
+        "en": "Precision fabrication and production with full traceability and certified materials.",
+        "it": "Fabbricazione e produzione di precisione con piena tracciabilità e materiali certificati.",
+        "ar": "تصنيع وإنتاج دقيق مع تتبّع كامل ومواد معتمدة.",
+        "ur": "مکمل ٹریس ایبلٹی اور تصدیق شدہ مواد کے ساتھ درست فیبریکیشن اور پیداوار۔"
+      }
+    },
+    {
+      "id": "infrastructure",
+      "icon": "road",
+      "title": { "en": "Infrastructure", "it": "Infrastrutture", "ar": "البنية التحتية", "ur": "انفراسٹرکچر" },
+      "description": {
+        "en": "Roads, utilities, and public works engineered for longevity and resilience.",
+        "it": "Strade, servizi e opere pubbliche progettate per durata e resilienza.",
+        "ar": "طرق ومرافق وأشغال عامة مصممة للديمومة والمرونة.",
+        "ur": "سڑکیں، یوٹیلٹیز اور عوامی منصوبے جو دوام اور مضبوطی کے لیے بنائے گئے ہیں۔"
+      }
+    },
+    {
+      "id": "project-management",
+      "icon": "clipboard",
+      "title": { "en": "Project Management", "it": "Gestione progetti", "ar": "إدارة المشاريع", "ur": "پراجیکٹ مینجمنٹ" },
+      "description": {
+        "en": "Turnkey delivery — planning, procurement, scheduling, and on-site supervision.",
+        "it": "Consegna chiavi in mano: pianificazione, approvvigionamento, programmazione e supervisione in cantiere.",
+        "ar": "تسليم متكامل — التخطيط، التوريد، الجدولة، والإشراف الميداني.",
+        "ur": "ٹرن کی ڈیلیوری — منصوبہ بندی، خریداری، شیڈولنگ اور سائٹ پر نگرانی۔"
+      }
+    },
+    {
+      "id": "maintenance",
+      "icon": "wrench",
+      "title": { "en": "Maintenance & O&M", "it": "Manutenzione e O&M", "ar": "الصيانة والتشغيل", "ur": "دیکھ بھال و آپریشن" },
+      "description": {
+        "en": "Operations and maintenance programs that protect asset value over the full lifecycle.",
+        "it": "Programmi di esercizio e manutenzione che proteggono il valore degli asset lungo l'intero ciclo di vita.",
+        "ar": "برامج التشغيل والصيانة التي تحافظ على قيمة الأصول طوال دورة حياتها.",
+        "ur": "آپریشن اور مینٹیننس پروگرام جو پورے لائف سائیکل میں اثاثوں کی قدر کی حفاظت کرتے ہیں۔"
+      }
+    }
+  ]
+}

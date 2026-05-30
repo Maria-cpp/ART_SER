@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Theme system: each [data-theme] block defines color variables as space-separated
+  RGB triples so Tailwind's `rgb(var(--color-x) / <alpha-value>)` works.
+  ThemeProvider sets <html data-theme="...">. Default below = "government".
+*/
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-arabic: "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
+
+  /* Fallback palette (Corporate Government) */
+  --color-background: 248 250 252;
+  --color-surface: 255 255 255;
+  --color-surface-alt: 241 245 249;
+  --color-foreground: 15 23 42;
+  --color-muted: 100 116 139;
+  --color-accent: 30 64 138;
+  --color-accent-foreground: 255 255 255;
+  --color-border: 203 213 225;
+}
+
+/* Theme 1 — Obsidian Industrial: deep black, graphite, industrial silver, warm gold */
+[data-theme="obsidian"] {
+  --color-background: 10 10 10;
+  --color-surface: 23 23 23;
+  --color-surface-alt: 38 38 38;
+  --color-foreground: 237 237 237;
+  --color-muted: 163 163 163;
+  --color-accent: 202 160 74;       /* warm gold */
+  --color-accent-foreground: 10 10 10;
+  --color-border: 64 64 64;
+}
+
+/* Theme 2 — Corporate Government: navy, steel gray, white, professional blue */
+[data-theme="government"] {
+  --color-background: 248 250 252;
+  --color-surface: 255 255 255;
+  --color-surface-alt: 241 245 249;
+  --color-foreground: 15 23 42;
+  --color-muted: 100 116 139;
+  --color-accent: 30 64 138;        /* professional blue / navy */
+  --color-accent-foreground: 255 255 255;
+  --color-border: 203 213 225;
+}
+
+/* Theme 3 — Minimal Luxury: matte black, champagne gold, soft silver, clean white */
+[data-theme="luxury"] {
+  --color-background: 250 250 249;
+  --color-surface: 255 255 255;
+  --color-surface-alt: 245 244 242;
+  --color-foreground: 26 26 26;
+  --color-muted: 120 113 108;
+  --color-accent: 183 150 98;       /* champagne gold */
+  --color-accent-foreground: 26 26 26;
+  --color-border: 224 220 214;
+}
+
+/* Theme 4 — Modern Architectural: concrete gray, aluminum silver, emerald accent, dark charcoal */
+[data-theme="architectural"] {
+  --color-background: 237 238 239;
+  --color-surface: 250 250 251;
+  --color-surface-alt: 226 228 230;
+  --color-foreground: 33 37 41;
+  --color-muted: 108 117 125;
+  --color-accent: 16 122 87;        /* emerald */
+  --color-accent-foreground: 255 255 255;
+  --color-border: 200 204 208;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+  html[lang="ar"],
+  html[lang="ur"] {
+    font-family: var(--font-arabic);
+  }
+  body {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  /* Mirror simple horizontal flips for RTL where logical utilities aren't enough. */
+  [dir="rtl"] .flip-rtl {
+    transform: scaleX(-1);
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-6;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition hover:opacity-90;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition hover:bg-surface-alt;
+  }
+  .card {
+    @apply rounded-xl border border-border bg-surface p-6 shadow-sm transition-all duration-300;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+  }
+  .card:hover {
+    @apply shadow-xl border-accent/30;
+    transform: perspective(800px) rotateX(1deg) rotateY(-1deg) translateY(-4px);
+  }
+}
+
+/* ---- Hero Gradient Text ---- */
+.hero-gradient-text {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-accent)) 0%,
+    rgb(var(--color-foreground)) 50%,
+    rgb(var(--color-accent)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+/* ---- Typewriter Cursor Blink ---- */
+.hero-cursor {
+  color: rgb(var(--color-accent));
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 0.8s step-end infinite;
+}
+
+/* ---- Scroll Indicator ---- */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.scroll-indicator {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+/* ---- Sidebar Styles ---- */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-border)) transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-border));
+  border-radius: 2px;
+}
+
+/* ---- Product Hero Overlay ---- */
+.product-hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgb(var(--color-background) / 0.6) 60%,
+    rgb(var(--color-background) / 0.95) 100%
+  );
+}

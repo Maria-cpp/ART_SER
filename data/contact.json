@@ -1,0 +1,35 @@
+{
+  "email": "info@artser.example",
+  "phone": "+39 02 1234 5678",
+  "whatsapp": "+39 333 123 4567",
+  "headquarters": {
+    "label": { "en": "Headquarters", "it": "Sede centrale", "ar": "المقر الرئيسي", "ur": "ہیڈ کوارٹر" },
+    "address": "Via dell'Industria 12, 20100 Milano (MI), Italy"
+  },
+  "offices": [
+    {
+      "city": "Milan",
+      "label": { "en": "Italy Office", "it": "Sede Italia", "ar": "مكتب إيطاليا", "ur": "اٹلی دفتر" },
+      "address": "Via dell'Industria 12, 20100 Milano (MI), Italy",
+      "phone": "+39 02 1234 5678"
+    },
+    {
+      "city": "Doha",
+      "label": { "en": "Qatar Office", "it": "Sede Qatar", "ar": "مكتب قطر", "ur": "قطر دفتر" },
+      "address": "Al Sadd Street, West Bay, Doha, Qatar",
+      "phone": "+974 4012 3456"
+    },
+    {
+      "city": "Lahore",
+      "label": { "en": "Pakistan Office", "it": "Sede Pakistan", "ar": "مكتب باكستان", "ur": "پاکستان دفتر" },
+      "address": "Gulberg III, Lahore, Punjab, Pakistan",
+      "phone": "+92 42 3456 7890"
+    }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/artser",
+    "instagram": "https://www.instagram.com/artser",
+    "youtube": "https://www.youtube.com/@artser"
+  },
+  "mapEmbed": "https://www.google.com/maps?q=Milano,Italy&output=embed"
+}

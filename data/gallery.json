@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "id": "g-001", "image": "/gallery/placeholder-1.jpg", "caption": { "en": "Fabrication floor", "it": "Reparto di fabbricazione", "ar": "صالة التصنيع", "ur": "فیبریکیشن فلور" } },
+    { "id": "g-002", "image": "/gallery/placeholder-2.jpg", "caption": { "en": "Site assembly", "it": "Montaggio in cantiere", "ar": "التركيب في الموقع", "ur": "سائٹ اسمبلی" } },
+    { "id": "g-003", "image": "/gallery/placeholder-3.jpg", "caption": { "en": "Completed viaduct", "it": "Viadotto completato", "ar": "الجسر المكتمل", "ur": "مکمل وایاڈکٹ" } },
+    { "id": "g-004", "image": "/gallery/placeholder-4.jpg", "caption": { "en": "Control room", "it": "Sala di controllo", "ar": "غرفة التحكم", "ur": "کنٹرول روم" } },
+    { "id": "g-005", "image": "/gallery/placeholder-5.jpg", "caption": { "en": "Quality inspection", "it": "Ispezione qualità", "ar": "فحص الجودة", "ur": "معیار کی جانچ" } },
+    { "id": "g-006", "image": "/gallery/placeholder-6.jpg", "caption": { "en": "Logistics yard", "it": "Piazzale logistico", "ar": "ساحة اللوجستيات", "ur": "لاجسٹکس یارڈ" } }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "intro": {
+    "en": "Our production facilities combine precision fabrication, certified materials, and end-to-end traceability to serve industrial and government clients.",
+    "it": "I nostri stabilimenti combinano fabbricazione di precisione, materiali certificati e tracciabilità end-to-end al servizio di clienti industriali e governativi.",
+    "ar": "تجمع منشآتنا الإنتاجية بين التصنيع الدقيق والمواد المعتمدة والتتبّع الكامل لخدمة العملاء الصناعيين والحكوميين.",
+    "ur": "ہماری پیداواری سہولیات درست فیبریکیشن، تصدیق شدہ مواد اور مکمل ٹریس ایبلٹی کو یکجا کرتی ہیں تاکہ صنعتی اور حکومتی صارفین کی خدمت کی جا سکے۔"
+  },
+  "capabilities": [
+    {
+      "id": "fabrication",
+      "title": { "en": "Structural Steel Fabrication", "it": "Carpenteria metallica", "ar": "تصنيع الهياكل الفولاذية", "ur": "اسٹرکچرل اسٹیل فیبریکیشن" },
+      "description": {
+        "en": "Heavy and light steel fabrication with CNC cutting and robotic welding.",
+        "it": "Carpenteria pesante e leggera con taglio CNC e saldatura robotizzata.",
+        "ar": "تصنيع فولاذي ثقيل وخفيف مع قطع CNC ولحام آلي.",
+        "ur": "CNC کٹنگ اور روبوٹک ویلڈنگ کے ساتھ بھاری اور ہلکی اسٹیل فیبریکیشن۔"
+      }
+    },
+    {
+      "id": "precast",
+      "title": { "en": "Precast Concrete", "it": "Calcestruzzo prefabbricato", "ar": "الخرسانة سابقة الصب", "ur": "پری کاسٹ کنکریٹ" },
+      "description": {
+        "en": "Precision-cast structural and architectural concrete elements.",
+        "it": "Elementi in calcestruzzo strutturale e architettonico di precisione.",
+        "ar": "عناصر خرسانية إنشائية ومعمارية مصبوبة بدقة.",
+        "ur": "درست کاسٹ ساختی اور تعمیراتی کنکریٹ اجزاء۔"
+      }
+    },
+    {
+      "id": "modular",
+      "title": { "en": "Modular Units", "it": "Unità modulari", "ar": "الوحدات المعيارية", "ur": "ماڈیولر یونٹس" },
+      "description": {
+        "en": "Factory-built modular units for rapid on-site assembly.",
+        "it": "Unità modulari prefabbricate per un rapido assemblaggio in cantiere.",
+        "ar": "وحدات معيارية مصنّعة للتركيب السريع في الموقع.",
+        "ur": "سائٹ پر تیز اسمبلی کے لیے فیکٹری میں تیار کردہ ماڈیولر یونٹس۔"
+      }
+    }
+  ]
+}

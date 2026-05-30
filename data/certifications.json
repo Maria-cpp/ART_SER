@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": "iso-9001",
+      "name": "ISO 9001:2015",
+      "issuer": "International Organization for Standardization",
+      "year": 2023,
+      "image": "/certifications/placeholder-1.svg",
+      "description": { "en": "Quality Management Systems", "it": "Sistemi di gestione della qualità", "ar": "أنظمة إدارة الجودة", "ur": "کوالٹی مینجمنٹ سسٹمز" }
+    },
+    {
+      "id": "iso-14001",
+      "name": "ISO 14001:2015",
+      "issuer": "International Organization for Standardization",
+      "year": 2023,
+      "image": "/certifications/placeholder-2.svg",
+      "description": { "en": "Environmental Management", "it": "Gestione ambientale", "ar": "الإدارة البيئية", "ur": "ماحولیاتی مینجمنٹ" }
+    },
+    {
+      "id": "iso-45001",
+      "name": "ISO 45001:2018",
+      "issuer": "International Organization for Standardization",
+      "year": 2022,
+      "image": "/certifications/placeholder-3.svg",
+      "description": { "en": "Occupational Health & Safety", "it": "Salute e sicurezza sul lavoro", "ar": "الصحة والسلامة المهنية", "ur": "پیشہ ورانہ صحت و حفاظت" }
+    },
+    {
+      "id": "ce",
+      "name": "CE Marking",
+      "issuer": "European Conformity",
+      "year": 2024,
+      "image": "/certifications/placeholder-4.svg",
+      "description": { "en": "Structural steel — EN 1090", "it": "Acciaio strutturale — EN 1090", "ar": "الفولاذ الإنشائي — EN 1090", "ur": "اسٹرکچرل اسٹیل — EN 1090" }
+    }
+  ]
+}

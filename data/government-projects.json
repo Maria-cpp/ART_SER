@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "gov-001",
+      "title": { "en": "National Highway Section N-12", "it": "Tratto autostradale nazionale N-12", "ar": "قطاع الطريق الوطني N-12", "ur": "قومی شاہراہ سیکشن N-12" },
+      "authority": { "en": "Ministry of Transport", "it": "Ministero dei Trasporti", "ar": "وزارة النقل", "ur": "وزارت ٹرانسپورٹ" },
+      "location": "Islamabad, Pakistan",
+      "year": 2023,
+      "image": "/projects/placeholder-gov-1.jpg",
+      "summary": {
+        "en": "62 km dual-carriageway with bridges, drainage, and smart tolling.",
+        "it": "62 km di superstrada a doppia carreggiata con ponti, drenaggio e pedaggio intelligente.",
+        "ar": "طريق مزدوج بطول 62 كم مع جسور وصرف ونظام رسوم ذكي.",
+        "ur": "62 کلومیٹر دہری شاہراہ پلوں، نکاسی آب اور اسمارٹ ٹولنگ کے ساتھ۔"
+      }
+    },
+    {
+      "id": "gov-002",
+      "title": { "en": "Regional Hospital Complex", "it": "Complesso ospedaliero regionale", "ar": "مجمع المستشفى الإقليمي", "ur": "علاقائی ہسپتال کمپلیکس" },
+      "authority": { "en": "Regional Health Authority", "it": "Azienda Sanitaria Regionale", "ar": "الهيئة الصحية الإقليمية", "ur": "علاقائی صحت اتھارٹی" },
+      "location": "Naples, Italy",
+      "year": 2022,
+      "image": "/projects/placeholder-gov-2.jpg",
+      "summary": {
+        "en": "420-bed hospital built to seismic and clinical-grade standards.",
+        "it": "Ospedale da 420 posti letto costruito secondo standard antisismici e clinici.",
+        "ar": "مستشفى بسعة 420 سريرًا مبني وفق معايير زلزالية وطبية.",
+        "ur": "420 بستروں کا ہسپتال جو زلزلہ پروف اور کلینیکل معیارات پر تعمیر کیا گیا۔"
+      }
+    }
+  ]
+}

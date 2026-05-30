@@ -1,0 +1,41 @@
+{
+  "name": "ARTSER",
+  "legalName": "ARTSER S.r.l.",
+  "logo": "/logo.svg",
+  "tagline": {
+    "en": "Engineering Excellence, Delivered.",
+    "it": "Eccellenza ingegneristica, realizzata.",
+    "ar": "التميز الهندسي، يُنجَز.",
+    "ur": "انجینئرنگ کی فضیلت، فراہم کردہ۔"
+  },
+  "shortDescription": {
+    "en": "ARTSER is an integrated industrial and construction group delivering manufacturing, infrastructure, and government-grade projects across Europe, the Middle East, and South Asia.",
+    "it": "ARTSER è un gruppo industriale e di costruzioni integrato che realizza progetti manifatturieri, infrastrutturali e governativi in Europa, Medio Oriente e Asia meridionale.",
+    "ar": "ARTSER هي مجموعة صناعية وإنشائية متكاملة تنفّذ مشاريع التصنيع والبنية التحتية والمشاريع الحكومية في أوروبا والشرق الأوسط وجنوب آسيا.",
+    "ur": "ARTSER ایک مربوط صنعتی اور تعمیراتی گروپ ہے جو یورپ، مشرق وسطیٰ اور جنوبی ایشیا میں مینوفیکچرنگ، انفراسٹرکچر اور حکومتی منصوبے فراہم کرتا ہے۔"
+  },
+  "story": {
+    "en": "Founded on a commitment to precision and reliability, ARTSER has grown into a multidisciplinary group spanning manufacturing, engineering, and large-scale construction. We partner with private enterprises, joint ventures, and government bodies to deliver projects that meet the highest standards of safety, quality, and durability.",
+    "it": "Fondata sull'impegno per la precisione e l'affidabilità, ARTSER è cresciuta fino a diventare un gruppo multidisciplinare che abbraccia produzione, ingegneria e costruzioni su larga scala. Collaboriamo con imprese private, joint venture ed enti governativi per realizzare progetti che soddisfano i più elevati standard di sicurezza, qualità e durata.",
+    "ar": "تأسست ARTSER على الالتزام بالدقة والموثوقية، ونمت لتصبح مجموعة متعددة التخصصات تشمل التصنيع والهندسة والإنشاءات واسعة النطاق. نتعاون مع المؤسسات الخاصة والمشاريع المشتركة والجهات الحكومية لتنفيذ مشاريع تلبي أعلى معايير السلامة والجودة والمتانة.",
+    "ur": "درستگی اور قابل اعتماد ہونے کے عزم پر قائم، ARTSER ایک کثیر الشعبہ گروپ بن گیا ہے جو مینوفیکچرنگ، انجینئرنگ اور بڑے پیمانے کی تعمیرات پر محیط ہے۔ ہم نجی اداروں، مشترکہ منصوبوں اور حکومتی اداروں کے ساتھ مل کر ایسے منصوبے فراہم کرتے ہیں جو حفاظت، معیار اور پائیداری کے اعلیٰ ترین معیارات پر پورا اترتے ہیں۔"
+  },
+  "stats": [
+    { "value": "25+", "label": { "en": "Years of Experience", "it": "Anni di esperienza", "ar": "سنوات من الخبرة", "ur": "سالہ تجربہ" } },
+    { "value": "320+", "label": { "en": "Projects Delivered", "it": "Progetti realizzati", "ar": "مشاريع منجزة", "ur": "مکمل منصوبے" } },
+    { "value": "12", "label": { "en": "Countries", "it": "Paesi", "ar": "دول", "ur": "ممالک" } },
+    { "value": "1,200+", "label": { "en": "Team Members", "it": "Membri del team", "ar": "أعضاء الفريق", "ur": "ٹیم کے ارکان" } }
+  ],
+  "mission": {
+    "en": "To engineer and build infrastructure that endures — safely, sustainably, and on time.",
+    "it": "Progettare e costruire infrastrutture durature, in sicurezza, in modo sostenibile e puntuale.",
+    "ar": "هندسة وبناء بنية تحتية تدوم — بأمان واستدامة وفي الوقت المحدد.",
+    "ur": "ایسا انفراسٹرکچر ڈیزائن اور تعمیر کرنا جو دیرپا ہو — محفوظ، پائیدار اور بروقت۔"
+  },
+  "vision": {
+    "en": "To be the most trusted industrial and construction partner across the regions we serve.",
+    "it": "Essere il partner industriale e di costruzione più affidabile nelle regioni in cui operiamo.",
+    "ar": "أن نكون الشريك الصناعي والإنشائي الأكثر ثقة في المناطق التي نخدمها.",
+    "ur": "جن خطوں میں ہم خدمات فراہم کرتے ہیں وہاں سب سے قابل اعتماد صنعتی و تعمیراتی شراکت دار بننا۔"
+  }
+}

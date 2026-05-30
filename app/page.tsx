@@ -60,7 +60,7 @@ function ServiceIcon({ name }: { name: string }) {
 }
 
 export default function HomePage() {
-  const { t, localized } = useLanguage();
+  const { t, localized, locale } = useLanguage();
   const company = getCompany();
   const services = getServices().slice(0, 6);
   const projects = getProjects().slice(0, 3);
@@ -127,7 +127,7 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 scroll-reveal">
             <a
-              href="/portfolio.pdf"
+              href={locale === "it" ? "/ART_SER_Portafoglio.pdf" : "/ART_SER_Portfolio_EN.pdf"}
               download
               className="btn-accent inline-flex items-center gap-2"
             >

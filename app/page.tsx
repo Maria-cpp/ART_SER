@@ -8,56 +8,7 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Section } from "@/components/Section";
 import { CategoryIcon } from "@/components/CategoryIcon";
 import { ImageCarousel } from "@/components/ImageCarousel";
-import { MarqueeCarousel } from "@/components/MarqueeCarousel";
 import { getCompany, getServices, getProjects, getClients, getCategories, getSuppliers } from "@/lib/data";
-
-const PRODUCT_IMAGES: { labelKey: string; images: string[] }[] = [
-  {
-    labelKey: "products.windows.title",
-    images: [
-      "/windows/8.jpeg",
-      "/windows/B6.jpeg",
-      "/windows/WhatsApp Image 2026-05-29 at 21.1.jpeg",
-      "/windows/WhatsApp Image 2026-05-29 at 21.11.33.jpeg",
-    ],
-  },
-  {
-    labelKey: "products.doors.title",
-    images: [
-      "/doors/3.jpeg",
-      "/doors/4.jpeg",
-      "/doors/14.jpeg",
-      "/doors/16.jpeg",
-      "/doors/17.jpeg",
-      "/doors/B4.jpeg",
-      "/doors/IMG_20230715_191531.jpg",
-      "/doors/IMG-20211112-WA0001.jpg",
-    ],
-  },
-  {
-    labelKey: "products.facades.title",
-    images: [
-      "/facades/20210901_200319.jpg",
-      "/facades/48.png",
-      "/facades/Giardino d'inverno con veranda.jpg",
-      "/facades/Giardino d'inverno.jpg",
-    ],
-  },
-  {
-    labelKey: "manufacturing.title",
-    images: [
-      "/manufacturing/20210726_105833.jpg",
-      "/manufacturing/20210726_105854.jpg",
-      "/manufacturing/20210726_114454.jpg",
-      "/manufacturing/IMG_20221111_150622.jpg",
-      "/manufacturing/IMG_20230203_170002.jpg",
-      "/manufacturing/IMG_20230222_164326.jpg",
-      "/manufacturing/IMG_20230424_113816.jpg",
-      "/manufacturing/IMG_20230428_082039.jpg",
-      "/manufacturing/IMG_20230622_094343.jpg",
-    ],
-  },
-];
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 const HeroTypewriter = dynamic(() => import("@/components/HeroTypewriter"), {
@@ -127,9 +78,7 @@ export default function HomePage() {
     "/hero/IMG_20230501_154302.jpg",
     "/hero/20220131_160138.jpg",
     "/hero/IMG_20221111_150227.jpg",
-    "/hero/33.jpg",
-    "/hero/28.jpg",
-    "/hero/09.jpg",
+    "/hero/IMG_20230708_122420.jpg",
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -228,17 +177,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Product image marquee carousels */}
-          <div className="mt-14 space-y-8">
-            {PRODUCT_IMAGES.map((group) => (
-              <MarqueeCarousel
-                key={group.labelKey}
-                images={group.images}
-                label={t(group.labelKey)}
-                speed={group.images.length > 6 ? 35 : 25}
-              />
-            ))}
-          </div>
         </div>
       </section>
 

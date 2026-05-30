@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CategoryIcon } from "@/components/CategoryIcon";
-import { ImageCarousel } from "@/components/ImageCarousel";
+import { MarqueeCarousel } from "@/components/MarqueeCarousel";
 import { getCategories, getProductCategory } from "@/lib/data";
 
 const CATEGORY_KEY_MAP: Record<string, string> = {
@@ -65,13 +65,8 @@ export default function ProductCategoryPage() {
         />
       </div>
 
-      {/* Hero carousel */}
-      <div className="container-x mt-6">
-        {productData && <ImageCarousel images={productData.images} aspectClass="aspect-[16/7]" />}
-      </div>
-
       {/* Title & description */}
-      <div className="container-x mt-10">
+      <div className="container-x mt-6">
         <div className="max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {title}
@@ -81,6 +76,16 @@ export default function ProductCategoryPage() {
           </p>
         </div>
       </div>
+
+      {/* Product image marquee carousel */}
+      {productData && productData.images.length > 0 && (
+        <div className="container-x mt-10">
+          <MarqueeCarousel
+            images={productData.images}
+            speed={productData.images.length > 6 ? 35 : 25}
+          />
+        </div>
+      )}
 
       {/* Subcategories */}
       {productData && productData.subcategories.length > 0 && (

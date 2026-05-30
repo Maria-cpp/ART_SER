@@ -34,7 +34,7 @@ export const THEMES: ThemeMeta[] = [
   },
 ];
 
-export const DEFAULT_THEME: ThemeId = "government";
+export const DEFAULT_THEME: ThemeId = "obsidian";
 
 export const THEME_STORAGE_KEY = "artser.theme";
 

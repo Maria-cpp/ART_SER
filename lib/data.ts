@@ -18,6 +18,7 @@ import teamData from "@/data/team.json";
 import certificationsData from "@/data/certifications.json";
 import contactData from "@/data/contact.json";
 import suppliersData from "@/data/suppliers.json";
+import productsData from "@/data/products.json";
 
 // ---- Types ---------------------------------------------------------------
 
@@ -53,7 +54,7 @@ export interface Company {
 export interface Service { id: string; icon: string; title: Localized; description: Localized; }
 export interface Category { id: string; icon: string; href: string; name: Localized; }
 export interface Project {
-  id: string; title: Localized; category: Localized; location: string; year: number; image: string; summary: Localized;
+  id: string; title: Localized; category: Localized; location: string; year: number; image: string; images?: string[]; summary: Localized;
 }
 export interface JvProject {
   id: string; title: Localized; partners: string[]; location: string; year: number; image: string; summary: Localized;
@@ -61,7 +62,7 @@ export interface JvProject {
 export interface GovProject {
   id: string; title: Localized; authority: Localized; location: string; year: number; image: string; summary: Localized;
 }
-export interface Capability { id: string; title: Localized; description: Localized; }
+export interface Capability { id: string; image?: string; title: Localized; description: Localized; }
 export interface Manufacturing { intro: Localized; capabilities: Capability[]; }
 export interface GalleryItem { id: string; image: string; caption: Localized; }
 export interface Client { id: string; name: string; logo: string; website?: string; sector: Localized; }
@@ -81,6 +82,20 @@ export interface Contact {
   mapEmbed: string;
 }
 
+export interface ProductSubcategory {
+  id: string;
+  title: Localized;
+  tagline: Localized;
+  description: Localized;
+  features: { en: string[]; it: string[]; ar: string[]; ur: string[] };
+  suitableFor?: Localized;
+}
+export interface ProductCategory {
+  images: string[];
+  subcategories: ProductSubcategory[];
+}
+export type ProductsData = Record<string, ProductCategory>;
+
 // ---- Loaders -------------------------------------------------------------
 
 export const getCompany = (): Company => companyData as Company;
@@ -96,6 +111,8 @@ export const getTeam = (): TeamMember[] => (teamData as { items: TeamMember[] })
 export const getCertifications = (): Certification[] => (certificationsData as { items: Certification[] }).items;
 export const getContact = (): Contact => contactData as Contact;
 export const getSuppliers = (): Supplier[] => (suppliersData as { items: Supplier[] }).items;
+export const getProducts = (): ProductsData => productsData as unknown as ProductsData;
+export const getProductCategory = (slug: string): ProductCategory | undefined => (productsData as unknown as ProductsData)[slug];
 
 // ---- Admin editable-file registry (allowlist) ---------------------------
 // The admin API will only read/write filenames present here. This prevents

@@ -40,5 +40,8 @@ next-env.d.ts
 # misc
 *.log
 
+# loose editor screenshots in repo root
+/Screenshot*.png
+
 # claude code local settings
 .claude/settings.local.json

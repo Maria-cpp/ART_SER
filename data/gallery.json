@@ -1,10 +1,16 @@
 {
   "items": [
-    { "id": "g-001", "image": "/gallery/placeholder-1.jpg", "caption": { "en": "Fabrication floor", "it": "Reparto di fabbricazione", "ar": "صالة التصنيع", "ur": "فیبریکیشن فلور" } },
-    { "id": "g-002", "image": "/gallery/placeholder-2.jpg", "caption": { "en": "Site assembly", "it": "Montaggio in cantiere", "ar": "التركيب في الموقع", "ur": "سائٹ اسمبلی" } },
-    { "id": "g-003", "image": "/gallery/placeholder-3.jpg", "caption": { "en": "Completed viaduct", "it": "Viadotto completato", "ar": "الجسر المكتمل", "ur": "مکمل وایاڈکٹ" } },
-    { "id": "g-004", "image": "/gallery/placeholder-4.jpg", "caption": { "en": "Control room", "it": "Sala di controllo", "ar": "غرفة التحكم", "ur": "کنٹرول روم" } },
-    { "id": "g-005", "image": "/gallery/placeholder-5.jpg", "caption": { "en": "Quality inspection", "it": "Ispezione qualità", "ar": "فحص الجودة", "ur": "معیار کی جانچ" } },
-    { "id": "g-006", "image": "/gallery/placeholder-6.jpg", "caption": { "en": "Logistics yard", "it": "Piazzale logistico", "ar": "ساحة اللوجستيات", "ur": "لاجسٹکس یارڈ" } }
+    { "id": "g-001", "image": "/doors/IMG_20230715_191531.jpg", "caption": { "en": "Aluminium door installation", "it": "Installazione porta in alluminio", "ar": "تركيب باب ألمنيوم", "ur": "ایلومینیم دروازے کی تنصیب" } },
+    { "id": "g-002", "image": "/windows/8.jpeg", "caption": { "en": "Window system", "it": "Sistema di finestre", "ar": "نظام النوافذ", "ur": "کھڑکی کا نظام" } },
+    { "id": "g-003", "image": "/facades/20210901_200319.jpg", "caption": { "en": "Facade installation", "it": "Installazione facciata", "ar": "تركيب الواجهة", "ur": "فیساد تنصیب" } },
+    { "id": "g-004", "image": "/manufacturing/IMG_20230622_094343.jpg", "caption": { "en": "Manufacturing workshop", "it": "Officina di produzione", "ar": "ورشة التصنيع", "ur": "مینوفیکچرنگ ورکشاپ" } },
+    { "id": "g-005", "image": "/stairs/Copertura scala.jpg", "caption": { "en": "Staircase covering", "it": "Copertura scala", "ar": "تغطية السلالم", "ur": "سیڑھیوں کا احاطہ" } },
+    { "id": "g-006", "image": "/shelters and shades/Copertura scala 6.jpg", "caption": { "en": "Shelter & shade system", "it": "Sistema di copertura e ombreggiatura", "ar": "نظام المظلات والتظليل", "ur": "شیلٹر اور شیڈ سسٹم" } },
+    { "id": "g-007", "image": "/facades/Giardino d'inverno con veranda.jpg", "caption": { "en": "Winter garden with veranda", "it": "Giardino d'inverno con veranda", "ar": "حديقة شتوية مع شرفة", "ur": "ویرانڈا کے ساتھ سردیوں کا باغ" } },
+    { "id": "g-008", "image": "/manufacturing/IMG_20230428_082039.jpg", "caption": { "en": "Production line", "it": "Linea di produzione", "ar": "خط الإنتاج", "ur": "پروڈکشن لائن" } },
+    { "id": "g-009", "image": "/doors/3.jpeg", "caption": { "en": "Door system", "it": "Sistema di porte", "ar": "نظام الأبواب", "ur": "دروازے کا نظام" } },
+    { "id": "g-010", "image": "/windows/B6.jpeg", "caption": { "en": "Window installation", "it": "Installazione finestre", "ar": "تركيب النوافذ", "ur": "کھڑکی کی تنصیب" } },
+    { "id": "g-011", "image": "/manufacturing/20210726_105833.jpg", "caption": { "en": "Workshop operations", "it": "Operazioni di officina", "ar": "عمليات الورشة", "ur": "ورکشاپ آپریشنز" } },
+    { "id": "g-012", "image": "/featured/S. Pietro/IMG_20230708_122026.jpg", "caption": { "en": "S. Pietro project", "it": "Progetto S. Pietro", "ar": "مشروع سان بيترو", "ur": "سان پیئٹرو پروجیکٹ" } }
   ]
 }

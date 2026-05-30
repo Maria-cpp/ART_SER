@@ -2,58 +2,60 @@
   "items": [
     {
       "id": "p-001",
-      "title": { "en": "Northgate Logistics Hub", "it": "Hub logistico Northgate", "ar": "مركز نورثغيت اللوجستي", "ur": "نارتھ گیٹ لاجسٹکس حب" },
-      "category": { "en": "Industrial", "it": "Industriale", "ar": "صناعي", "ur": "صنعتی" },
-      "location": "Milan, Italy",
-      "year": 2024,
-      "image": "/projects/placeholder-1.jpg",
+      "title": {
+        "en": "Iconic Commercial Complex — Curtain Wall Production",
+        "it": "Complesso Commerciale Iconic — Produzione Facciate Continue",
+        "ar": "مجمع أيقوني التجاري — إنتاج الجدران الستائرية",
+        "ur": "آئیکونک کمرشل کمپلیکس — کرٹین وال پروڈکشن"
+      },
+      "category": {
+        "en": "Facades & Curtain Walls",
+        "it": "Facciate e Facciate Continue",
+        "ar": "الواجهات والجدران الستائرية",
+        "ur": "فیسادز اور کرٹین والز"
+      },
+      "location": "Verona, Italy",
+      "year": 2023,
+      "image": "/featured/iconic/iconic.jpg",
+      "images": [
+        "/featured/iconic/iconic.jpg"
+      ],
       "summary": {
-        "en": "A 48,000 m² automated distribution center with integrated cold storage.",
-        "it": "Un centro di distribuzione automatizzato di 48.000 m² con celle frigorifere integrate.",
-        "ar": "مركز توزيع آلي بمساحة 48,000 م² مع تخزين مبرّد متكامل.",
-        "ur": "48,000 مربع میٹر کا خودکار تقسیمی مرکز جس میں مربوط کولڈ اسٹوریج شامل ہے۔"
+        "en": "ARTSER handled the full production and fabrication of aluminium and glass curtain wall systems for this landmark commercial complex, in collaboration with ART FER SRL. The project involved manufacturing precision-engineered aluminium frames, structural glazing assemblies, and building connection elements. Our production capabilities — including CNC cutting, certified welding, and quality-controlled finishing — delivered safe, durable, and architecturally striking façade components designed to withstand seismic loads while minimising structural burden.",
+        "it": "ARTSER ha curato l'intera produzione e fabbricazione dei sistemi di facciate continue in alluminio e vetro per questo importante complesso commerciale, in collaborazione con ART FER SRL. Il progetto ha comportato la produzione di telai in alluminio di precisione, assemblaggi di vetrate strutturali ed elementi di collegamento edilizio. Le nostre capacità produttive — tra cui taglio CNC, saldatura certificata e finitura con controllo qualità — hanno fornito componenti di facciata sicuri, durevoli e architettonicamente d'impatto, progettati per resistere ai carichi sismici minimizzando il peso sulla struttura.",
+        "ar": "تولى ARTSER الإنتاج والتصنيع الكامل لأنظمة الجدران الستائرية من الألمنيوم والزجاج لهذا المجمع التجاري البارز، بالتعاون مع ART FER SRL. تضمن المشروع تصنيع إطارات ألمنيوم دقيقة الهندسة وتجميعات زجاج هيكلي وعناصر ربط المباني. قدمت قدراتنا الإنتاجية — بما في ذلك القطع بالتحكم الرقمي واللحام المعتمد والتشطيب بمراقبة الجودة — مكونات واجهات آمنة ومتينة ومعمارياً مميزة مصممة لتحمل الأحمال الزلزالية مع تقليل العبء على الهيكل.",
+        "ur": "ARTSER نے ART FER SRL کے ساتھ تعاون میں اس نمایاں تجارتی کمپلیکس کے لیے ایلومینیم اور شیشے کے کرٹین وال سسٹمز کی مکمل پروڈکشن اور فیبریکیشن کی ذمہ داری سنبھالی۔ اس منصوبے میں درست انجینئرڈ ایلومینیم فریمز، سٹرکچرل گلیزنگ اسمبلیز اور بلڈنگ کنکشن عناصر کی تیاری شامل تھی۔ ہماری پروڈکشن صلاحیتوں — بشمول CNC کٹنگ، تصدیق شدہ ویلڈنگ اور کوالٹی کنٹرولڈ فنشنگ — نے محفوظ، پائیدار اور تعمیراتی طور پر شاندار فیساد اجزاء فراہم کیے جو زلزلے کے بوجھ کو برداشت کرنے کے لیے ڈیزائن کیے گئے ہیں جبکہ ساختی بوجھ کو کم سے کم رکھا گیا۔"
       }
     },
     {
       "id": "p-002",
-      "title": { "en": "Coastal Desalination Plant", "it": "Impianto di desalinizzazione costiero", "ar": "محطة تحلية ساحلية", "ur": "ساحلی ڈی سیلینیشن پلانٹ" },
-      "category": { "en": "Infrastructure", "it": "Infrastrutture", "ar": "بنية تحتية", "ur": "انفراسٹرکچر" },
-      "location": "Jeddah, Saudi Arabia",
+      "title": {
+        "en": "S. Pietro Residential — Window & Door Installation",
+        "it": "S. Pietro Residenziale — Installazione Serramenti",
+        "ar": "سان بيترو السكني — تركيب النوافذ والأبواب",
+        "ur": "سان پیئٹرو رہائشی — کھڑکیوں اور دروازوں کی تنصیب"
+      },
+      "category": {
+        "en": "Windows & Doors",
+        "it": "Serramenti",
+        "ar": "النوافذ والأبواب",
+        "ur": "کھڑکیاں اور دروازے"
+      },
+      "location": "San Pietro, Verona, Italy",
       "year": 2023,
-      "image": "/projects/placeholder-2.jpg",
+      "image": "/featured/S. Pietro/IMG_20230706_175012.jpg",
+      "images": [
+        "/featured/S. Pietro/IMG_20230706_175012.jpg",
+        "/featured/S. Pietro/IMG_20230708_122026.jpg",
+        "/featured/S. Pietro/IMG_20230708_122346.jpg",
+        "/featured/S. Pietro/IMG_20230708_122411.jpg",
+        "/featured/S. Pietro/IMG_20230708_122420.jpg"
+      ],
       "summary": {
-        "en": "Reverse-osmosis facility producing 120,000 m³ of potable water per day.",
-        "it": "Impianto a osmosi inversa che produce 120.000 m³ di acqua potabile al giorno.",
-        "ar": "منشأة تناضح عكسي تنتج 120,000 م³ من مياه الشرب يوميًا.",
-        "ur": "ریورس اوسموسس سہولت جو روزانہ 120,000 مکعب میٹر پینے کا پانی پیدا کرتی ہے۔"
-      }
-    },
-    {
-      "id": "p-003",
-      "title": { "en": "Metro Line 4 Viaduct", "it": "Viadotto Linea Metro 4", "ar": "جسر خط المترو 4", "ur": "میٹرو لائن 4 وایاڈکٹ" },
-      "category": { "en": "Infrastructure", "it": "Infrastrutture", "ar": "بنية تحتية", "ur": "انفراسٹرکچر" },
-      "location": "Lahore, Pakistan",
-      "year": 2022,
-      "image": "/projects/placeholder-3.jpg",
-      "summary": {
-        "en": "9.2 km elevated viaduct and six stations delivered ahead of schedule.",
-        "it": "Viadotto sopraelevato di 9,2 km e sei stazioni consegnati in anticipo.",
-        "ar": "جسر علوي بطول 9.2 كم وست محطات تم تسليمها قبل الموعد.",
-        "ur": "9.2 کلومیٹر بلند وایاڈکٹ اور چھ اسٹیشن مقررہ وقت سے پہلے مکمل۔"
-      }
-    },
-    {
-      "id": "p-004",
-      "title": { "en": "Steelworks Modernization", "it": "Ammodernamento acciaieria", "ar": "تحديث مصنع الصلب", "ur": "اسٹیل ورکس جدید کاری" },
-      "category": { "en": "Manufacturing", "it": "Produzione", "ar": "تصنيع", "ur": "مینوفیکچرنگ" },
-      "location": "Brescia, Italy",
-      "year": 2024,
-      "image": "/projects/placeholder-4.jpg",
-      "summary": {
-        "en": "Retrofit of a rolling mill with energy-recovery and automation upgrades.",
-        "it": "Ristrutturazione di un laminatoio con recupero energetico e aggiornamenti di automazione.",
-        "ar": "تحديث مصنع درفلة مع أنظمة استرداد الطاقة وترقيات الأتمتة.",
-        "ur": "رولنگ مل کی تجدید توانائی کی بحالی اور آٹومیشن اپ گریڈ کے ساتھ۔"
+        "en": "Complete production and installation of premium aluminium window and door systems for a residential building in San Pietro, Verona. ARTSER manufactured and fitted casement windows, tilt-and-turn units, and entrance doors with wood-effect aluminium finishes, delivering excellent thermal insulation, acoustic performance, and refined aesthetics that blend seamlessly with the traditional architectural character of the neighbourhood.",
+        "it": "Produzione e installazione completa di sistemi di serramenti in alluminio premium per un edificio residenziale a San Pietro, Verona. ARTSER ha prodotto e installato finestre a battente, unità vasistas e porte d'ingresso con finiture in alluminio effetto legno, garantendo eccellente isolamento termico, prestazioni acustiche ed estetica raffinata che si integra armoniosamente con il carattere architettonico tradizionale del quartiere.",
+        "ar": "إنتاج وتركيب كامل لأنظمة نوافذ وأبواب ألمنيوم متميزة لمبنى سكني في سان بيترو، فيرونا. قام ARTSER بتصنيع وتركيب نوافذ بمصراعين ووحدات إمالة ودوران وأبواب مدخل بتشطيبات ألمنيوم بمظهر الخشب، مما يوفر عزلاً حرارياً ممتازاً وأداءً صوتياً وجماليات راقية تنسجم بسلاسة مع الطابع المعماري التقليدي للحي.",
+        "ur": "سان پیئٹرو، ویرونا میں ایک رہائشی عمارت کے لیے پریمیم ایلومینیم کھڑکیوں اور دروازوں کے نظاموں کی مکمل پروڈکشن اور تنصیب۔ ARTSER نے کیسمنٹ ونڈوز، ٹلٹ اینڈ ٹرن یونٹس اور ووڈ ایفیکٹ ایلومینیم فنشز کے ساتھ داخلی دروازے تیار اور نصب کیے، جو بہترین حرارتی موصلیت، صوتی کارکردگی اور نفیس جمالیات فراہم کرتے ہیں جو محلے کے روایتی تعمیراتی کردار کے ساتھ ہم آہنگ ہیں۔"
       }
     }
   ]

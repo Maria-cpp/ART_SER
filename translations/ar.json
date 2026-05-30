@@ -124,5 +124,9 @@
   "suppliers.products": "المنتجات",
   "suppliers.aluminium": "موردو الألمنيوم",
   "suppliers.pvc": "مورد PVC",
-  "suppliers.shutters": "الستائر الدوارة وشبكات الحشرات"
+  "suppliers.shutters": "الستائر الدوارة وشبكات الحشرات",
+  "products.keyFeatures": "الميزات الرئيسية",
+  "products.suitableFor": "مناسب لـ",
+  "products.otherProducts": "منتجات أخرى",
+  "products.requestQuote": "طلب عرض سعر"
 }

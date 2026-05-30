@@ -17,6 +17,11 @@ export default function JvProjectsPage() {
       <div className="grid gap-6 md:grid-cols-2">
         {items.map((p) => (
           <article key={p.id} className="card">
+            {p.image && (
+              <div className="mb-3 aspect-video rounded-md bg-surface-alt overflow-hidden">
+                <img src={p.image} alt={localized(p.title)} className="h-full w-full object-cover" />
+              </div>
+            )}
             <h3 className="text-lg font-semibold text-foreground">{localized(p.title)}</h3>
             <p className="mt-1 text-sm text-muted">{p.location} · {p.year}</p>
             <p className="mt-2 text-sm text-muted">{localized(p.summary)}</p>

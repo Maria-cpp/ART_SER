@@ -7,13 +7,106 @@ import dynamic from "next/dynamic";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Section } from "@/components/Section";
 import { CategoryIcon } from "@/components/CategoryIcon";
+import { ImageCarousel } from "@/components/ImageCarousel";
+import { MarqueeCarousel } from "@/components/MarqueeCarousel";
 import { getCompany, getServices, getProjects, getClients, getCategories, getSuppliers } from "@/lib/data";
+
+const PRODUCT_IMAGES: { labelKey: string; images: string[] }[] = [
+  {
+    labelKey: "products.windows.title",
+    images: [
+      "/windows/8.jpeg",
+      "/windows/B6.jpeg",
+      "/windows/WhatsApp Image 2026-05-29 at 21.1.jpeg",
+      "/windows/WhatsApp Image 2026-05-29 at 21.11.33.jpeg",
+    ],
+  },
+  {
+    labelKey: "products.doors.title",
+    images: [
+      "/doors/3.jpeg",
+      "/doors/4.jpeg",
+      "/doors/14.jpeg",
+      "/doors/16.jpeg",
+      "/doors/17.jpeg",
+      "/doors/B4.jpeg",
+      "/doors/IMG_20230715_191531.jpg",
+      "/doors/IMG-20211112-WA0001.jpg",
+    ],
+  },
+  {
+    labelKey: "products.facades.title",
+    images: [
+      "/facades/20210901_200319.jpg",
+      "/facades/48.png",
+      "/facades/Giardino d'inverno con veranda.jpg",
+      "/facades/Giardino d'inverno.jpg",
+    ],
+  },
+  {
+    labelKey: "manufacturing.title",
+    images: [
+      "/manufacturing/20210726_105833.jpg",
+      "/manufacturing/20210726_105854.jpg",
+      "/manufacturing/20210726_114454.jpg",
+      "/manufacturing/IMG_20221111_150622.jpg",
+      "/manufacturing/IMG_20230203_170002.jpg",
+      "/manufacturing/IMG_20230222_164326.jpg",
+      "/manufacturing/IMG_20230424_113816.jpg",
+      "/manufacturing/IMG_20230428_082039.jpg",
+      "/manufacturing/IMG_20230622_094343.jpg",
+    ],
+  },
+];
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 const HeroTypewriter = dynamic(() => import("@/components/HeroTypewriter"), {
   ssr: false,
   loading: () => <div className="min-h-[1.2em]" />,
 });
+
+const SERVICE_ICONS: Record<string, React.ReactNode> = {
+  factory: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 20h20M4 20V10l4 3V10l4 3V6h8v14" />
+      <path d="M14 10h.01M18 10h.01M14 14h.01M18 14h.01" />
+    </svg>
+  ),
+  building: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" />
+      <path d="M9 9v.01M9 13v.01M9 17v.01" />
+    </svg>
+  ),
+  wrench: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+    </svg>
+  ),
+  compass: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M3 9h18M3 15h18M9 3v18M15 3v18" />
+    </svg>
+  ),
+  road: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 19h4M16 19h4M5 5l2 14M19 5l-2 14" />
+      <path d="M12 5v2M12 11v2M12 17v2" />
+    </svg>
+  ),
+  clipboard: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  ),
+};
+
+function ServiceIcon({ name }: { name: string }) {
+  return SERVICE_ICONS[name] ?? SERVICE_ICONS.wrench;
+}
 
 export default function HomePage() {
   const { t, localized } = useLanguage();
@@ -31,9 +124,12 @@ export default function HomePage() {
   };
 
   const heroImages = [
-    "/hero/slide-1.jpg",
-    "/hero/slide-2.jpg",
-    "/hero/slide-3.jpg",
+    "/hero/IMG_20230501_154302.jpg",
+    "/hero/20220131_160138.jpg",
+    "/hero/IMG_20221111_150227.jpg",
+    "/hero/33.jpg",
+    "/hero/28.jpg",
+    "/hero/09.jpg",
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -131,6 +227,18 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+
+          {/* Product image marquee carousels */}
+          <div className="mt-14 space-y-8">
+            {PRODUCT_IMAGES.map((group) => (
+              <MarqueeCarousel
+                key={group.labelKey}
+                images={group.images}
+                label={t(group.labelKey)}
+                speed={group.images.length > 6 ? 35 : 25}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -147,16 +255,14 @@ export default function HomePage() {
       </Section>
 
       {/* Services — flip cards */}
-      <Section title={t("home.servicesTitle")} alt>
+      <Section title={t("home.servicesTitle")}>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
           {services.map((s) => (
             <div key={s.id} className="flip-card h-52">
               <div className="flip-card-inner">
                 <div className="flip-card-front flex flex-col items-center justify-center gap-3 bg-surface p-6 text-center">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
-                    </svg>
+                    <ServiceIcon name={s.icon} />
                   </div>
                   <h3 className="text-base font-bold text-foreground">{localized(s.title)}</h3>
                 </div>
@@ -175,15 +281,30 @@ export default function HomePage() {
 
       {/* Featured projects */}
       <Section title={t("home.projectsTitle")}>
-        <div className="grid gap-6 md:grid-cols-3 stagger-children">
+        <div className="space-y-8 stagger-children">
           {projects.map((p) => (
-            <article key={p.id} className="card">
-              <div className="mb-3 aspect-video rounded-lg bg-surface-alt" />
-              <span className="text-xs font-semibold uppercase tracking-wide text-accent">
-                {localized(p.category)}
-              </span>
-              <h3 className="mt-1 text-lg font-semibold text-foreground">{localized(p.title)}</h3>
-              <p className="mt-1 text-sm text-muted">{p.location} &middot; {p.year}</p>
+            <article key={p.id} className="card grid gap-6 lg:grid-cols-2 p-0 overflow-hidden">
+              <div>
+                {p.images && p.images.length > 1 ? (
+                  <ImageCarousel images={p.images} aspectClass="aspect-[4/3]" />
+                ) : (
+                  <div className="aspect-[4/3] bg-surface-alt overflow-hidden">
+                    {p.image && <img src={p.image} alt={localized(p.title)} className="h-full w-full object-cover" />}
+                  </div>
+                )}
+              </div>
+              <div className="flex flex-col justify-center p-6 lg:py-8 lg:pe-8 lg:ps-2">
+                <span className="text-xs font-semibold uppercase tracking-wide text-accent">
+                  {localized(p.category)}
+                </span>
+                <h3 className="mt-2 text-xl font-bold text-foreground">{localized(p.title)}</h3>
+                <p className="mt-1 text-sm text-muted">{p.location} &middot; {p.year}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted line-clamp-4">{localized(p.summary)}</p>
+                <Link href="/portfolio" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">
+                  {t("common.readMore")}
+                  <svg className="h-3 w-3 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M9 5l7 7-7 7" /></svg>
+                </Link>
+              </div>
             </article>
           ))}
         </div>
@@ -193,7 +314,7 @@ export default function HomePage() {
       </Section>
 
       {/* Clients — flip cards */}
-      <Section title={t("home.clientsTitle")} alt>
+      <Section title={t("home.clientsTitle")}>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 stagger-children">
           {clients.map((c) => (
             <a

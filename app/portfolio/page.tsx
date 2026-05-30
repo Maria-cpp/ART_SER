@@ -3,6 +3,7 @@
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Section } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import { getProjects, getSuppliers } from "@/lib/data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
@@ -30,14 +31,24 @@ export default function PortfolioPage() {
         ]} />
       </div>
       <Section title={t("portfolio.title")} subtitle={t("portfolio.subtitle")}>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="space-y-10">
           {projects.map((p) => (
-            <article key={p.id} className="card">
-              <div className="mb-3 aspect-video rounded-md bg-surface-alt" />
-              <span className="text-xs font-semibold uppercase tracking-wide text-accent">{localized(p.category)}</span>
-              <h3 className="mt-1 text-lg font-semibold text-foreground">{localized(p.title)}</h3>
-              <p className="mt-1 text-sm text-muted">{p.location} · {p.year}</p>
-              <p className="mt-2 text-sm text-muted">{localized(p.summary)}</p>
+            <article key={p.id} className="card grid gap-6 lg:grid-cols-2 p-0 overflow-hidden">
+              <div className="lg:p-0">
+                {p.images && p.images.length > 1 ? (
+                  <ImageCarousel images={p.images} aspectClass="aspect-[4/3]" />
+                ) : (
+                  <div className="aspect-[4/3] bg-surface-alt overflow-hidden rounded-xl lg:rounded-none lg:rounded-s-xl">
+                    {p.image && <img src={p.image} alt={localized(p.title)} className="h-full w-full object-cover" />}
+                  </div>
+                )}
+              </div>
+              <div className="flex flex-col justify-center p-6 lg:py-8 lg:pe-8 lg:ps-2">
+                <span className="text-xs font-semibold uppercase tracking-wide text-accent">{localized(p.category)}</span>
+                <h3 className="mt-2 text-xl font-bold text-foreground lg:text-2xl">{localized(p.title)}</h3>
+                <p className="mt-1 text-sm text-muted">{p.location} · {p.year}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted">{localized(p.summary)}</p>
+              </div>
             </article>
           ))}
         </div>

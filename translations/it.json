@@ -124,5 +124,9 @@
   "suppliers.products": "Prodotti",
   "suppliers.aluminium": "Fornitori di alluminio",
   "suppliers.pvc": "Fornitore PVC",
-  "suppliers.shutters": "Avvolgibili e zanzariere"
+  "suppliers.shutters": "Avvolgibili e zanzariere",
+  "products.keyFeatures": "Caratteristiche principali",
+  "products.suitableFor": "Adatto per",
+  "products.otherProducts": "Altri prodotti",
+  "products.requestQuote": "Richiedi un preventivo"
 }

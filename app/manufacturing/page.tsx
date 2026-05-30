@@ -18,6 +18,11 @@ export default function ManufacturingPage() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {data.capabilities.map((c) => (
           <div key={c.id} className="card">
+            {c.image && (
+              <div className="mb-3 aspect-video rounded-md bg-surface-alt overflow-hidden">
+                <img src={c.image} alt={localized(c.title)} className="h-full w-full object-cover" />
+              </div>
+            )}
             <h3 className="text-lg font-semibold text-foreground">{localized(c.title)}</h3>
             <p className="mt-2 text-sm text-muted">{localized(c.description)}</p>
           </div>

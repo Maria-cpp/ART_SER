@@ -124,5 +124,9 @@
   "suppliers.products": "Products",
   "suppliers.aluminium": "Aluminium Providers",
   "suppliers.pvc": "PVC Provider",
-  "suppliers.shutters": "Roller Shutters & Mosquito Nets"
+  "suppliers.shutters": "Roller Shutters & Mosquito Nets",
+  "products.keyFeatures": "Key Features",
+  "products.suitableFor": "Suitable For",
+  "products.otherProducts": "Other Products",
+  "products.requestQuote": "Request a Quote"
 }

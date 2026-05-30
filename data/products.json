@@ -1,0 +1,397 @@
+{
+  "doors": {
+    "images": [
+      "/doors/3.jpeg",
+      "/doors/4.jpeg",
+      "/doors/14.jpeg",
+      "/doors/16.jpeg",
+      "/doors/17.jpeg",
+      "/doors/B4.jpeg",
+      "/doors/IMG_20230715_191531.jpg",
+      "/doors/IMG-20211112-WA0001.jpg"
+    ],
+    "subcategories": [
+      {
+        "id": "entrance-doors",
+        "title": { "en": "Entrance Doors", "it": "Porte d'ingresso", "ar": "أبواب المدخل", "ur": "داخلی دروازے" },
+        "tagline": { "en": "Secure Performance. Refined Design.", "it": "Prestazioni sicure. Design raffinato.", "ar": "أداء آمن. تصميم راقٍ.", "ur": "محفوظ کارکردگی۔ نفیس ڈیزائن۔" },
+        "description": {
+          "en": "ARTSER Entrance Door Systems combine durability, insulation performance, and contemporary aesthetics to create premium access solutions for residential, commercial, and institutional projects.",
+          "it": "I sistemi di porte d'ingresso ARTSER combinano durabilità, prestazioni di isolamento ed estetica contemporanea per creare soluzioni di accesso premium per progetti residenziali, commerciali e istituzionali.",
+          "ar": "تجمع أنظمة أبواب المدخل من ARTSER بين المتانة وأداء العزل والجماليات المعاصرة لإنشاء حلول وصول متميزة للمشاريع السكنية والتجارية والمؤسسية.",
+          "ur": "ARTSER داخلی دروازوں کے نظام پائیداری، موصلیت کی کارکردگی اور عصری جمالیات کو یکجا کرتے ہیں تاکہ رہائشی، تجارتی اور ادارہ جاتی منصوبوں کے لیے پریمیم رسائی حل تخلیق کیے جا سکیں۔"
+        },
+        "features": {
+          "en": ["Robust aluminium construction", "Advanced locking compatibility", "Thermal and acoustic insulation options", "Multiple panel and glazing configurations", "Wide range of finishes and textures"],
+          "it": ["Costruzione robusta in alluminio", "Compatibilità con serrature avanzate", "Opzioni di isolamento termico e acustico", "Molteplici configurazioni di pannelli e vetri", "Ampia gamma di finiture e texture"],
+          "ar": ["بناء ألمنيوم متين", "توافق مع أقفال متقدمة", "خيارات العزل الحراري والصوتي", "تكوينات متعددة للألواح والزجاج", "مجموعة واسعة من التشطيبات والأنسجة"],
+          "ur": ["مضبوط ایلومینیم تعمیر", "جدید لاکنگ مطابقت", "حرارتی اور صوتی موصلیت کے اختیارات", "متعدد پینل اور گلیزنگ ترتیبات", "فنشز اور ٹیکسچرز کی وسیع رینج"]
+        },
+        "suitableFor": {
+          "en": "Private residences, villas, offices, retail entrances, hospitality environments.",
+          "it": "Residenze private, ville, uffici, ingressi commerciali, ambienti di ospitalità.",
+          "ar": "المساكن الخاصة، الفيلات، المكاتب، مداخل البيع بالتجزئة، بيئات الضيافة.",
+          "ur": "نجی رہائش گاہیں، ولاز، دفاتر، ریٹیل داخلے، مہمان نوازی کے ماحول۔"
+        }
+      },
+      {
+        "id": "sliding-doors",
+        "title": { "en": "Sliding Doors", "it": "Porte scorrevoli", "ar": "أبواب منزلقة", "ur": "سلائیڈنگ دروازے" },
+        "tagline": { "en": "Maximum Light. Effortless Movement.", "it": "Massima luce. Movimento senza sforzo.", "ar": "أقصى إضاءة. حركة سلسة.", "ur": "زیادہ سے زیادہ روشنی۔ آسان حرکت۔" },
+        "description": {
+          "en": "Designed for expansive openings and uninterrupted views, ARTSER Sliding Door Systems deliver smooth operation, slim sightlines, and modern architectural flexibility.",
+          "it": "Progettati per ampie aperture e viste ininterrotte, i sistemi di porte scorrevoli ARTSER offrono un funzionamento fluido, profili sottili e flessibilità architettonica moderna.",
+          "ar": "صممت للفتحات الواسعة والمناظر غير المنقطعة، توفر أنظمة الأبواب المنزلقة من ARTSER تشغيلاً سلساً وخطوط رؤية نحيفة ومرونة معمارية حديثة.",
+          "ur": "وسیع اوپننگز اور بلاتعطل مناظر کے لیے ڈیزائن کیے گئے، ARTSER سلائیڈنگ ڈور سسٹمز ہموار آپریشن، پتلی سائٹ لائنز اور جدید تعمیراتی لچک فراہم کرتے ہیں۔"
+        },
+        "features": {
+          "en": ["Large opening capability", "Smooth sliding mechanisms", "Slim visible profiles", "High weather resistance", "Multi-track configurations available"],
+          "it": ["Grande capacità di apertura", "Meccanismi di scorrimento fluidi", "Profili visibili sottili", "Alta resistenza alle intemperie", "Configurazioni multi-binario disponibili"],
+          "ar": ["قدرة فتح كبيرة", "آليات انزلاق سلسة", "ملفات مرئية نحيفة", "مقاومة عالية للعوامل الجوية", "تكوينات متعددة المسارات متاحة"],
+          "ur": ["بڑی اوپننگ صلاحیت", "ہموار سلائیڈنگ میکانزم", "پتلے نظر آنے والے پروفائلز", "اعلیٰ موسمی مزاحمت", "ملٹی ٹریک ترتیبات دستیاب"]
+        },
+        "suitableFor": {
+          "en": "Luxury homes, terraces, commercial spaces, showrooms, hospitality projects.",
+          "it": "Case di lusso, terrazze, spazi commerciali, showroom, progetti di ospitalità.",
+          "ar": "المنازل الفاخرة، الشرفات، المساحات التجارية، صالات العرض، مشاريع الضيافة.",
+          "ur": "لگژری گھر، چھتیں، تجارتی جگہیں، شو رومز، مہمان نوازی کے منصوبے۔"
+        }
+      },
+      {
+        "id": "pivot-doors",
+        "title": { "en": "Pivot Doors", "it": "Porte a bilico", "ar": "أبواب محورية", "ur": "پیوٹ دروازے" },
+        "tagline": { "en": "Bold Scale. Contemporary Character.", "it": "Grande scala. Carattere contemporaneo.", "ar": "مقياس جريء. طابع معاصر.", "ur": "جرأت مندانہ پیمانہ۔ عصری کردار۔" },
+        "description": {
+          "en": "ARTSER Pivot Doors provide oversized entrance solutions engineered for architectural impact, smooth functionality, and modern minimalism.",
+          "it": "Le porte a bilico ARTSER offrono soluzioni d'ingresso oversize progettate per un impatto architettonico, funzionalità fluida e minimalismo moderno.",
+          "ar": "توفر أبواب ARTSER المحورية حلول مداخل كبيرة الحجم مصممة للتأثير المعماري والوظائف السلسة والحداثة البسيطة.",
+          "ur": "ARTSER پیوٹ دروازے بڑے سائز کے داخلی حل فراہم کرتے ہیں جو تعمیراتی اثر، ہموار فعالیت اور جدید مینیملزم کے لیے انجینئر کیے گئے ہیں۔"
+        },
+        "features": {
+          "en": ["Large-format design capability", "Clean, minimal appearance", "Heavy-duty hardware support", "Custom glazing and cladding options"],
+          "it": ["Capacità di design in grande formato", "Aspetto pulito e minimale", "Supporto per ferramenta pesante", "Opzioni di vetro e rivestimento personalizzate"],
+          "ar": ["قدرة تصميم كبيرة", "مظهر نظيف وبسيط", "دعم للأجهزة الثقيلة", "خيارات تزجيج وتكسية مخصصة"],
+          "ur": ["بڑے فارمیٹ ڈیزائن کی صلاحیت", "صاف، مینیمل ظاہری شکل", "ہیوی ڈیوٹی ہارڈویئر سپورٹ", "حسب ضرورت گلیزنگ اور کلیڈنگ اختیارات"]
+        }
+      },
+      {
+        "id": "folding-doors",
+        "title": { "en": "Folding Doors", "it": "Porte pieghevoli", "ar": "أبواب قابلة للطي", "ur": "فولڈنگ دروازے" },
+        "tagline": { "en": "Open Spaces Without Limits.", "it": "Spazi aperti senza limiti.", "ar": "مساحات مفتوحة بلا حدود.", "ur": "بلا حد کھلی جگہیں۔" },
+        "description": {
+          "en": "Flexible folding systems designed to connect indoor and outdoor environments through adaptable opening configurations.",
+          "it": "Sistemi pieghevoli flessibili progettati per collegare ambienti interni ed esterni attraverso configurazioni di apertura adattabili.",
+          "ar": "أنظمة طي مرنة مصممة لربط البيئات الداخلية والخارجية من خلال تكوينات فتح قابلة للتكيف.",
+          "ur": "لچکدار فولڈنگ سسٹمز جو موافق اوپننگ ترتیبات کے ذریعے اندرونی اور بیرونی ماحول کو جوڑنے کے لیے ڈیزائن کیے گئے ہیں۔"
+        },
+        "features": {
+          "en": ["Full-width opening potential", "Smooth folding operation", "Indoor–outdoor integration", "Residential and commercial adaptability"],
+          "it": ["Potenziale di apertura a tutta larghezza", "Operazione di piegatura fluida", "Integrazione interno-esterno", "Adattabilità residenziale e commerciale"],
+          "ar": ["إمكانية فتح بعرض كامل", "عملية طي سلسة", "تكامل داخلي-خارجي", "قابلية التكيف السكنية والتجارية"],
+          "ur": ["پوری چوڑائی کھلنے کی صلاحیت", "ہموار فولڈنگ آپریشن", "اندرونی-بیرونی انضمام", "رہائشی اور تجارتی موافقت"]
+        }
+      }
+    ]
+  },
+  "windows": {
+    "images": [
+      "/windows/8.jpeg",
+      "/windows/B6.jpeg",
+      "/windows/WhatsApp Image 2026-05-29 at 21.1.jpeg",
+      "/windows/WhatsApp Image 2026-05-29 at 21.11.33.jpeg"
+    ],
+    "subcategories": [
+      {
+        "id": "casement-windows",
+        "title": { "en": "Casement Windows", "it": "Finestre a battente", "ar": "نوافذ بمصراعين", "ur": "کیسمنٹ کھڑکیاں" },
+        "tagline": { "en": "Precision Ventilation. Lasting Reliability.", "it": "Ventilazione precisa. Affidabilità duratura.", "ar": "تهوية دقيقة. موثوقية دائمة.", "ur": "درست وینٹیلیشن۔ دیرپا قابل اعتمادی۔" },
+        "description": {
+          "en": "ARTSER Casement Windows deliver efficient ventilation, airtight sealing, and refined architectural styling suitable for modern and traditional projects.",
+          "it": "Le finestre a battente ARTSER offrono ventilazione efficiente, sigillatura ermetica e styling architettonico raffinato adatto a progetti moderni e tradizionali.",
+          "ar": "توفر نوافذ ARTSER ذات المصراعين تهوية فعالة وإحكام الغلق وتصميماً معمارياً راقياً مناسباً للمشاريع الحديثة والتقليدية.",
+          "ur": "ARTSER کیسمنٹ ونڈوز موثر وینٹیلیشن، ایئر ٹائٹ سیلنگ اور نفیس تعمیراتی اسٹائلنگ فراہم کرتی ہیں جو جدید اور روایتی منصوبوں کے لیے موزوں ہیں۔"
+        },
+        "features": {
+          "en": ["Excellent sealing performance", "High energy efficiency potential", "Secure locking systems", "Multiple opening directions"],
+          "it": ["Eccellente prestazione di sigillatura", "Alto potenziale di efficienza energetica", "Sistemi di chiusura sicuri", "Molteplici direzioni di apertura"],
+          "ar": ["أداء إحكام ممتاز", "إمكانية عالية لكفاءة الطاقة", "أنظمة قفل آمنة", "اتجاهات فتح متعددة"],
+          "ur": ["بہترین سیلنگ کارکردگی", "اعلیٰ توانائی کارکردگی کی صلاحیت", "محفوظ لاکنگ سسٹمز", "متعدد کھلنے کی سمتیں"]
+        },
+        "suitableFor": {
+          "en": "Homes, apartments, offices, educational facilities.",
+          "it": "Case, appartamenti, uffici, strutture educative.",
+          "ar": "المنازل، الشقق، المكاتب، المنشآت التعليمية.",
+          "ur": "گھر، اپارٹمنٹس، دفاتر، تعلیمی سہولیات۔"
+        }
+      },
+      {
+        "id": "sliding-windows",
+        "title": { "en": "Sliding Windows", "it": "Finestre scorrevoli", "ar": "نوافذ منزلقة", "ur": "سلائیڈنگ کھڑکیاں" },
+        "tagline": { "en": "Practical Design. Modern Simplicity.", "it": "Design pratico. Semplicità moderna.", "ar": "تصميم عملي. بساطة حديثة.", "ur": "عملی ڈیزائن۔ جدید سادگی۔" },
+        "description": {
+          "en": "Sliding window systems engineered for easy operation, clean aesthetics, and efficient use of space.",
+          "it": "Sistemi di finestre scorrevoli progettati per un facile utilizzo, estetica pulita e uso efficiente dello spazio.",
+          "ar": "أنظمة نوافذ منزلقة مصممة لسهولة التشغيل والجماليات النظيفة والاستخدام الفعال للمساحة.",
+          "ur": "سلائیڈنگ ونڈو سسٹمز جو آسان آپریشن، صاف جمالیات اور جگہ کے موثر استعمال کے لیے انجینئر کیے گئے ہیں۔"
+        },
+        "features": {
+          "en": ["Space-saving functionality", "Smooth sliding operation", "Slim profile options", "Durable aluminium framing"],
+          "it": ["Funzionalità salvaspazio", "Scorrimento fluido", "Opzioni con profilo sottile", "Telaio in alluminio durevole"],
+          "ar": ["وظائف توفير المساحة", "تشغيل انزلاق سلس", "خيارات ملف تعريف نحيف", "إطار ألمنيوم متين"],
+          "ur": ["جگہ بچانے والی فعالیت", "ہموار سلائیڈنگ آپریشن", "پتلے پروفائل اختیارات", "پائیدار ایلومینیم فریمنگ"]
+        }
+      },
+      {
+        "id": "tilt-turn-windows",
+        "title": { "en": "Tilt & Turn Windows", "it": "Finestre a vasistas", "ar": "نوافذ إمالة ودوران", "ur": "ٹلٹ اینڈ ٹرن کھڑکیاں" },
+        "tagline": { "en": "Flexible Operation. Advanced Comfort.", "it": "Funzionamento flessibile. Comfort avanzato.", "ar": "تشغيل مرن. راحة متقدمة.", "ur": "لچکدار آپریشن۔ جدید آرام۔" },
+        "description": {
+          "en": "Dual-function systems allowing secure ventilation and full inward opening from a single window solution.",
+          "it": "Sistemi a doppia funzione che consentono una ventilazione sicura e un'apertura completa verso l'interno da un'unica soluzione di finestra.",
+          "ar": "أنظمة مزدوجة الوظائف تتيح التهوية الآمنة والفتح الكامل للداخل من حل نافذة واحد.",
+          "ur": "دوہری فنکشن سسٹمز جو ایک ونڈو حل سے محفوظ وینٹیلیشن اور مکمل اندرونی کھلنے کی اجازت دیتے ہیں۔"
+        },
+        "features": {
+          "en": ["Two operating modes", "Improved ventilation control", "Easy cleaning access", "Enhanced security compatibility"],
+          "it": ["Due modalità operative", "Controllo della ventilazione migliorato", "Facile accesso per la pulizia", "Compatibilità di sicurezza migliorata"],
+          "ar": ["وضعان للتشغيل", "تحكم محسّن في التهوية", "سهولة الوصول للتنظيف", "توافق أمني محسّن"],
+          "ur": ["دو آپریٹنگ موڈز", "بہتر وینٹیلیشن کنٹرول", "آسان صفائی رسائی", "بہتر سیکیورٹی مطابقت"]
+        }
+      },
+      {
+        "id": "fixed-windows",
+        "title": { "en": "Fixed Windows", "it": "Finestre fisse", "ar": "نوافذ ثابتة", "ur": "فکسڈ کھڑکیاں" },
+        "tagline": { "en": "Maximum Daylight. Minimal Framing.", "it": "Massima luce diurna. Cornice minima.", "ar": "أقصى ضوء نهاري. إطار أدنى.", "ur": "زیادہ سے زیادہ دن کی روشنی۔ کم سے کم فریمنگ۔" },
+        "description": {
+          "en": "Designed to maximise natural illumination while maintaining structural performance and contemporary visual clarity.",
+          "it": "Progettate per massimizzare l'illuminazione naturale mantenendo le prestazioni strutturali e la chiarezza visiva contemporanea.",
+          "ar": "مصممة لتعظيم الإضاءة الطبيعية مع الحفاظ على الأداء الهيكلي والوضوح البصري المعاصر.",
+          "ur": "ساختی کارکردگی اور عصری بصری وضاحت کو برقرار رکھتے ہوئے قدرتی روشنی کو زیادہ سے زیادہ کرنے کے لیے ڈیزائن کی گئیں۔"
+        },
+        "features": {
+          "en": ["Feature glazing", "Façade integration", "Stairwell applications", "Panoramic openings"],
+          "it": ["Vetrate decorative", "Integrazione in facciata", "Applicazioni per vani scala", "Aperture panoramiche"],
+          "ar": ["تزجيج مميز", "تكامل الواجهة", "تطبيقات السلالم", "فتحات بانورامية"],
+          "ur": ["فیچر گلیزنگ", "فیساد انضمام", "سیڑھیوں کی ایپلیکیشنز", "پینورامک اوپننگز"]
+        }
+      }
+    ]
+  },
+  "facades": {
+    "images": [
+      "/facades/20210901_200319.jpg",
+      "/facades/48.png",
+      "/facades/Giardino d'inverno con veranda.jpg",
+      "/facades/Giardino d'inverno.jpg"
+    ],
+    "subcategories": [
+      {
+        "id": "curtain-wall",
+        "title": { "en": "Curtain Wall Systems", "it": "Sistemi a facciata continua", "ar": "أنظمة الجدران الستائرية", "ur": "کرٹین وال سسٹمز" },
+        "tagline": { "en": "Engineered Building Envelopes.", "it": "Involucri edilizi ingegnerizzati.", "ar": "أغلفة مباني هندسية.", "ur": "انجینئرڈ بلڈنگ انویلپس۔" },
+        "description": {
+          "en": "ARTSER Curtain Wall Systems combine structural performance, daylight optimisation, and architectural freedom for modern façades.",
+          "it": "I sistemi a facciata continua ARTSER combinano prestazioni strutturali, ottimizzazione della luce diurna e libertà architettonica per facciate moderne.",
+          "ar": "تجمع أنظمة الجدران الستائرية من ARTSER بين الأداء الهيكلي وتحسين الإضاءة الطبيعية والحرية المعمارية للواجهات الحديثة.",
+          "ur": "ARTSER کرٹین وال سسٹمز جدید فیسادز کے لیے ساختی کارکردگی، دن کی روشنی کی اصلاح اور تعمیراتی آزادی کو یکجا کرتے ہیں۔"
+        },
+        "features": {
+          "en": ["High weather resistance", "Thermal insulation solutions", "Large glazing support", "Flexible architectural configurations"],
+          "it": ["Alta resistenza alle intemperie", "Soluzioni di isolamento termico", "Supporto per grandi vetrate", "Configurazioni architettoniche flessibili"],
+          "ar": ["مقاومة عالية للعوامل الجوية", "حلول العزل الحراري", "دعم الزجاج الكبير", "تكوينات معمارية مرنة"],
+          "ur": ["اعلیٰ موسمی مزاحمت", "حرارتی موصلیت حل", "بڑی گلیزنگ سپورٹ", "لچکدار تعمیراتی ترتیبات"]
+        },
+        "suitableFor": {
+          "en": "Commercial towers, mixed-use developments, institutional buildings, corporate headquarters.",
+          "it": "Torri commerciali, sviluppi misti, edifici istituzionali, sedi aziendali.",
+          "ar": "الأبراج التجارية، المشاريع متعددة الاستخدامات، المباني المؤسسية، المقرات الرئيسية.",
+          "ur": "تجارتی ٹاورز، مکس یوز ڈیولپمنٹس، ادارہ جاتی عمارتیں، کارپوریٹ ہیڈکوارٹرز۔"
+        }
+      },
+      {
+        "id": "stick-facade",
+        "title": { "en": "Stick Façade Systems", "it": "Sistemi di facciata a montanti e traversi", "ar": "أنظمة واجهات العصا", "ur": "اسٹک فیساد سسٹمز" },
+        "tagline": { "en": "Efficient Fabrication. Design Freedom.", "it": "Fabbricazione efficiente. Libertà di design.", "ar": "تصنيع فعال. حرية التصميم.", "ur": "موثر فیبریکیشن۔ ڈیزائن کی آزادی۔" },
+        "description": {
+          "en": "Modular façade assemblies designed for flexible installation, precise detailing, and architectural adaptability.",
+          "it": "Assemblaggi modulari di facciata progettati per installazione flessibile, dettagli precisi e adattabilità architettonica.",
+          "ar": "تجميعات واجهات معيارية مصممة للتركيب المرن والتفاصيل الدقيقة والتكيف المعماري.",
+          "ur": "ماڈیولر فیساد اسمبلیز جو لچکدار تنصیب، درست تفصیلات اور تعمیراتی موافقت کے لیے ڈیزائن کیے گئے ہیں۔"
+        },
+        "features": {
+          "en": ["Versatile project integration", "Wide glazing possibilities", "Clean exterior appearance", "Scalable design capability"],
+          "it": ["Integrazione versatile nei progetti", "Ampie possibilità di vetrata", "Aspetto esterno pulito", "Capacità di design scalabile"],
+          "ar": ["تكامل مشروع متعدد الاستخدامات", "إمكانيات تزجيج واسعة", "مظهر خارجي نظيف", "قدرة تصميم قابلة للتطوير"],
+          "ur": ["ورسٹائل پروجیکٹ انضمام", "وسیع گلیزنگ امکانات", "صاف بیرونی ظاہری شکل", "قابل توسیع ڈیزائن صلاحیت"]
+        }
+      },
+      {
+        "id": "unitized-facade",
+        "title": { "en": "Unitized Façade Systems", "it": "Sistemi di facciata unitizzata", "ar": "أنظمة واجهات وحدوية", "ur": "یونیٹائزڈ فیساد سسٹمز" },
+        "tagline": { "en": "Speed, Precision, Consistency.", "it": "Velocità, precisione, coerenza.", "ar": "السرعة، الدقة، الاتساق.", "ur": "رفتار، درستگی، مستقل مزاجی۔" },
+        "description": {
+          "en": "Pre-assembled façade solutions developed for large-scale projects requiring rapid installation and controlled manufacturing quality.",
+          "it": "Soluzioni di facciata pre-assemblate sviluppate per progetti su larga scala che richiedono installazione rapida e qualità di produzione controllata.",
+          "ar": "حلول واجهات مسبقة التجميع طُوِّرت للمشاريع الكبيرة التي تتطلب تركيباً سريعاً وجودة تصنيع محكومة.",
+          "ur": "پری اسمبلڈ فیساد حل جو بڑے پیمانے کے منصوبوں کے لیے تیار کیے گئے ہیں جن میں تیز تنصیب اور کنٹرولڈ مینوفیکچرنگ کوالٹی درکار ہے۔"
+        },
+        "features": {
+          "en": ["Faster site installation", "Factory-controlled assembly", "Reduced on-site complexity", "Suitable for high-rise projects"],
+          "it": ["Installazione in cantiere più rapida", "Assemblaggio controllato in fabbrica", "Complessità in cantiere ridotta", "Adatto a progetti di grattacieli"],
+          "ar": ["تركيب أسرع في الموقع", "تجميع محكوم في المصنع", "تقليل التعقيد في الموقع", "مناسب للمشاريع العالية"],
+          "ur": ["تیز تر سائٹ تنصیب", "فیکٹری کنٹرولڈ اسمبلی", "سائٹ پر پیچیدگی میں کمی", "بلند عمارت منصوبوں کے لیے موزوں"]
+        }
+      },
+      {
+        "id": "structural-glazing",
+        "title": { "en": "Structural Glazing", "it": "Vetrata strutturale", "ar": "الزجاج الهيكلي", "ur": "سٹرکچرل گلیزنگ" },
+        "tagline": { "en": "Seamless Glass Architecture.", "it": "Architettura in vetro senza soluzione di continuità.", "ar": "هندسة زجاجية سلسة.", "ur": "بے جوڑ شیشے کا فن تعمیر۔" },
+        "description": {
+          "en": "High-performance glazing systems designed to achieve clean visual surfaces and contemporary transparent façades.",
+          "it": "Sistemi di vetrate ad alte prestazioni progettati per ottenere superfici visive pulite e facciate trasparenti contemporanee.",
+          "ar": "أنظمة تزجيج عالية الأداء مصممة لتحقيق أسطح بصرية نظيفة وواجهات شفافة معاصرة.",
+          "ur": "اعلیٰ کارکردگی والے گلیزنگ سسٹمز جو صاف بصری سطحوں اور عصری شفاف فیسادز کو حاصل کرنے کے لیے ڈیزائن کیے گئے ہیں۔"
+        },
+        "features": {
+          "en": ["Minimal external framing", "Modern glass appearance", "Optimised daylight penetration", "Compatible with complex geometries"],
+          "it": ["Cornice esterna minima", "Aspetto moderno in vetro", "Penetrazione della luce ottimizzata", "Compatibile con geometrie complesse"],
+          "ar": ["إطار خارجي أدنى", "مظهر زجاجي حديث", "اختراق محسّن لضوء النهار", "متوافق مع الأشكال الهندسية المعقدة"],
+          "ur": ["کم سے کم بیرونی فریمنگ", "جدید شیشے کی ظاہری شکل", "بہتر دن کی روشنی کا دخول", "پیچیدہ جیومیٹریز کے ساتھ مطابقت"]
+        }
+      }
+    ]
+  },
+  "sliding-folding": {
+    "images": [
+      "/doors/3.jpeg",
+      "/doors/4.jpeg",
+      "/doors/B4.jpeg",
+      "/facades/Giardino d'inverno con veranda.jpg",
+      "/facades/Giardino d'inverno.jpg"
+    ],
+    "subcategories": [
+      {
+        "id": "lift-slide",
+        "title": { "en": "Lift & Slide Systems", "it": "Sistemi alzante scorrevole", "ar": "أنظمة الرفع والانزلاق", "ur": "لفٹ اینڈ سلائیڈ سسٹمز" },
+        "tagline": { "en": "Large Openings. Superior Performance.", "it": "Grandi aperture. Prestazioni superiori.", "ar": "فتحات كبيرة. أداء متفوق.", "ur": "بڑی اوپننگز۔ اعلیٰ کارکردگی۔" },
+        "description": {
+          "en": "Advanced sliding systems engineered for oversized panels, premium operation, and enhanced thermal performance.",
+          "it": "Sistemi scorrevoli avanzati progettati per pannelli oversize, funzionamento premium e prestazioni termiche migliorate.",
+          "ar": "أنظمة انزلاق متقدمة مصممة للألواح كبيرة الحجم والتشغيل المتميز والأداء الحراري المحسّن.",
+          "ur": "جدید سلائیڈنگ سسٹمز جو بڑے پینلز، پریمیم آپریشن اور بہتر حرارتی کارکردگی کے لیے انجینئر کیے گئے ہیں۔"
+        },
+        "features": {
+          "en": ["Heavy panel capability", "Smooth lifting operation", "Enhanced insulation performance", "Panoramic design possibilities"],
+          "it": ["Capacità per pannelli pesanti", "Operazione di sollevamento fluida", "Prestazioni di isolamento migliorate", "Possibilità di design panoramico"],
+          "ar": ["قدرة الألواح الثقيلة", "عملية رفع سلسة", "أداء عزل محسّن", "إمكانيات تصميم بانورامي"],
+          "ur": ["بھاری پینل صلاحیت", "ہموار لفٹنگ آپریشن", "بہتر موصلیت کارکردگی", "پینورامک ڈیزائن کے امکانات"]
+        }
+      },
+      {
+        "id": "corner-sliding",
+        "title": { "en": "Corner Sliding Systems", "it": "Sistemi scorrevoli angolari", "ar": "أنظمة انزلاق زاوية", "ur": "کارنر سلائیڈنگ سسٹمز" },
+        "tagline": { "en": "Uninterrupted Views.", "it": "Viste ininterrotte.", "ar": "مناظر بلا انقطاع.", "ur": "بلاتعطل مناظر۔" },
+        "description": {
+          "en": "Innovative sliding configurations enabling open corners and seamless spatial transitions.",
+          "it": "Configurazioni scorrevoli innovative che consentono angoli aperti e transizioni spaziali fluide.",
+          "ar": "تكوينات انزلاق مبتكرة تتيح الزوايا المفتوحة والانتقالات المكانية السلسة.",
+          "ur": "جدید سلائیڈنگ ترتیبات جو کھلے کونوں اور ہموار مکانی منتقلی کو ممکن بناتی ہیں۔"
+        },
+        "features": {
+          "en": ["Open corner capability", "Seamless glass-to-glass joints", "Maximum transparency", "Architectural statement design"],
+          "it": ["Capacità angolo aperto", "Giunti vetro-vetro senza soluzione di continuità", "Massima trasparenza", "Design d'impatto architettonico"],
+          "ar": ["قدرة الزاوية المفتوحة", "مفاصل زجاج سلسة", "أقصى شفافية", "تصميم معماري مؤثر"],
+          "ur": ["اوپن کارنر صلاحیت", "بے جوڑ شیشے سے شیشے کے جوڑ", "زیادہ سے زیادہ شفافیت", "تعمیراتی بیان کا ڈیزائن"]
+        }
+      }
+    ]
+  },
+  "conservatories": {
+    "images": [
+      "/facades/Giardino d'inverno.jpg",
+      "/facades/Giardino d'inverno con veranda.jpg",
+      "/featured/S. Pietro/IMG_20230706_175012.jpg",
+      "/featured/S. Pietro/IMG_20230708_122026.jpg"
+    ],
+    "subcategories": [
+      {
+        "id": "louvers",
+        "title": { "en": "Louvers & Solar Shading", "it": "Frangisole e schermature solari", "ar": "المشربيات والتظليل الشمسي", "ur": "لوورز اور سولر شیڈنگ" },
+        "tagline": { "en": "Light Control. Architectural Expression.", "it": "Controllo della luce. Espressione architettonica.", "ar": "التحكم بالضوء. التعبير المعماري.", "ur": "روشنی کا کنٹرول۔ تعمیراتی اظہار۔" },
+        "description": {
+          "en": "ARTSER shading systems improve solar performance while contributing to modern façade identity.",
+          "it": "I sistemi di schermatura ARTSER migliorano le prestazioni solari contribuendo all'identità della facciata moderna.",
+          "ar": "تحسّن أنظمة التظليل من ARTSER الأداء الشمسي مع المساهمة في هوية الواجهة الحديثة.",
+          "ur": "ARTSER شیڈنگ سسٹمز جدید فیساد شناخت میں حصہ ڈالتے ہوئے سولر کارکردگی کو بہتر بناتے ہیں۔"
+        },
+        "features": {
+          "en": ["Reduced solar heat gain", "Visual comfort enhancement", "Custom blade configurations", "Architectural façade integration"],
+          "it": ["Ridotto guadagno di calore solare", "Miglioramento del comfort visivo", "Configurazioni personalizzate delle lamelle", "Integrazione nella facciata architettonica"],
+          "ar": ["تقليل اكتساب الحرارة الشمسية", "تعزيز الراحة البصرية", "تكوينات شفرات مخصصة", "تكامل الواجهة المعمارية"],
+          "ur": ["سولر حرارت میں کمی", "بصری آرام میں اضافہ", "حسب ضرورت بلیڈ ترتیبات", "تعمیراتی فیساد انضمام"]
+        }
+      },
+      {
+        "id": "cladding",
+        "title": { "en": "Cladding Systems", "it": "Sistemi di rivestimento", "ar": "أنظمة التكسية", "ur": "کلیڈنگ سسٹمز" },
+        "tagline": { "en": "Durable Protection. Contemporary Finish.", "it": "Protezione durevole. Finitura contemporanea.", "ar": "حماية متينة. تشطيب معاصر.", "ur": "پائیدار تحفظ۔ عصری فنش۔" },
+        "description": {
+          "en": "Exterior cladding solutions designed to enhance aesthetics, durability, and environmental performance.",
+          "it": "Soluzioni di rivestimento esterno progettate per migliorare l'estetica, la durabilità e le prestazioni ambientali.",
+          "ar": "حلول تكسية خارجية مصممة لتعزيز الجماليات والمتانة والأداء البيئي.",
+          "ur": "بیرونی کلیڈنگ حل جو جمالیات، پائیداری اور ماحولیاتی کارکردگی کو بہتر بنانے کے لیے ڈیزائن کیے گئے ہیں۔"
+        },
+        "features": {
+          "en": ["Weather protection", "Aesthetic versatility", "Low maintenance requirements", "Sustainable material options"],
+          "it": ["Protezione dalle intemperie", "Versatilità estetica", "Bassi requisiti di manutenzione", "Opzioni di materiali sostenibili"],
+          "ar": ["حماية من العوامل الجوية", "تنوع جمالي", "متطلبات صيانة منخفضة", "خيارات مواد مستدامة"],
+          "ur": ["موسمی تحفظ", "جمالیاتی ورسٹائلٹی", "کم دیکھ بھال کی ضروریات", "پائیدار مواد کے اختیارات"]
+        }
+      }
+    ]
+  },
+  "smart-buildings": {
+    "images": [
+      "/featured/S. Pietro/IMG_20230707_170602.jpg",
+      "/featured/S. Pietro/IMG_20230707_170612.jpg",
+      "/featured/S. Pietro/IMG_20230708_122346.jpg",
+      "/featured/S. Pietro/IMG_20230708_122411.jpg"
+    ],
+    "subcategories": [
+      {
+        "id": "automated-ventilation",
+        "title": { "en": "Automated Ventilation", "it": "Ventilazione automatizzata", "ar": "التهوية الآلية", "ur": "خودکار وینٹیلیشن" },
+        "tagline": { "en": "Intelligent Air Management.", "it": "Gestione intelligente dell'aria.", "ar": "إدارة ذكية للهواء.", "ur": "ذہین ہوا کا انتظام۔" },
+        "description": {
+          "en": "Smart ventilation systems integrated with building management for optimal indoor air quality and energy efficiency.",
+          "it": "Sistemi di ventilazione intelligente integrati con la gestione dell'edificio per una qualità dell'aria interna e un'efficienza energetica ottimali.",
+          "ar": "أنظمة تهوية ذكية متكاملة مع إدارة المبنى لجودة الهواء الداخلي المثلى وكفاءة الطاقة.",
+          "ur": "اسمارٹ وینٹیلیشن سسٹمز جو بہترین اندرونی ہوا کے معیار اور توانائی کی کارکردگی کے لیے بلڈنگ مینجمنٹ کے ساتھ مربوط ہیں۔"
+        },
+        "features": {
+          "en": ["Sensor-driven operation", "Energy recovery integration", "Building management compatibility", "Improved indoor air quality"],
+          "it": ["Funzionamento basato su sensori", "Integrazione del recupero energetico", "Compatibilità con la gestione dell'edificio", "Qualità dell'aria interna migliorata"],
+          "ar": ["تشغيل بالمستشعرات", "تكامل استرداد الطاقة", "توافق إدارة المبنى", "جودة هواء داخلي محسّنة"],
+          "ur": ["سینسر سے چلنے والا آپریشن", "توانائی ریکوری انضمام", "بلڈنگ مینجمنٹ مطابقت", "بہتر اندرونی ہوا کا معیار"]
+        }
+      },
+      {
+        "id": "solar-control",
+        "title": { "en": "Solar Control Systems", "it": "Sistemi di controllo solare", "ar": "أنظمة التحكم الشمسي", "ur": "سولر کنٹرول سسٹمز" },
+        "tagline": { "en": "Comfort Through Innovation.", "it": "Comfort attraverso l'innovazione.", "ar": "الراحة من خلال الابتكار.", "ur": "جدت کے ذریعے آرام۔" },
+        "description": {
+          "en": "Automated solar shading and glazing systems that adapt to environmental conditions for occupant comfort and energy savings.",
+          "it": "Sistemi automatizzati di schermatura solare e vetrate che si adattano alle condizioni ambientali per il comfort degli occupanti e il risparmio energetico.",
+          "ar": "أنظمة تظليل وتزجيج شمسي آلية تتكيف مع الظروف البيئية لراحة الساكنين وتوفير الطاقة.",
+          "ur": "خودکار سولر شیڈنگ اور گلیزنگ سسٹمز جو رہائشیوں کے آرام اور توانائی کی بچت کے لیے ماحولیاتی حالات کے مطابق ڈھلتے ہیں۔"
+        },
+        "features": {
+          "en": ["Dynamic response to sunlight", "Reduced cooling demand", "Automated blind control", "Smart building integration"],
+          "it": ["Risposta dinamica alla luce solare", "Ridotta domanda di raffreddamento", "Controllo automatico delle tende", "Integrazione edifici intelligenti"],
+          "ar": ["استجابة ديناميكية لأشعة الشمس", "تقليل الطلب على التبريد", "تحكم آلي في الستائر", "تكامل المباني الذكية"],
+          "ur": ["سورج کی روشنی کا متحرک ردعمل", "کولنگ کی طلب میں کمی", "خودکار بلائنڈ کنٹرول", "اسمارٹ بلڈنگ انضمام"]
+        }
+      }
+    ]
+  }
+}

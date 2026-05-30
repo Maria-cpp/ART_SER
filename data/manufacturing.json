@@ -8,6 +8,7 @@
   "capabilities": [
     {
       "id": "fabrication",
+      "image": "/manufacturing/20210726_105833.jpg",
       "title": { "en": "Structural Steel Fabrication", "it": "Carpenteria metallica", "ar": "تصنيع الهياكل الفولاذية", "ur": "اسٹرکچرل اسٹیل فیبریکیشن" },
       "description": {
         "en": "Heavy and light steel fabrication with CNC cutting and robotic welding.",
@@ -18,6 +19,7 @@
     },
     {
       "id": "precast",
+      "image": "/manufacturing/IMG_20230203_170002.jpg",
       "title": { "en": "Precast Concrete", "it": "Calcestruzzo prefabbricato", "ar": "الخرسانة سابقة الصب", "ur": "پری کاسٹ کنکریٹ" },
       "description": {
         "en": "Precision-cast structural and architectural concrete elements.",
@@ -28,6 +30,7 @@
     },
     {
       "id": "modular",
+      "image": "/manufacturing/IMG_20230424_113816.jpg",
       "title": { "en": "Modular Units", "it": "Unità modulari", "ar": "الوحدات المعيارية", "ur": "ماڈیولر یونٹس" },
       "description": {
         "en": "Factory-built modular units for rapid on-site assembly.",

@@ -82,7 +82,7 @@ const NAV_GROUPS: NavGroup[] = [
 export function Sidebar() {
   const { t } = useLanguage();
   const pathname = usePathname();
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {};
     NAV_GROUPS.forEach((g) => {

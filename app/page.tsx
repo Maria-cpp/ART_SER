@@ -108,7 +108,7 @@ export default function HomePage() {
           <div className="hero-overlay" />
         </div>
 
-        <div className="container-x relative z-10 flex min-h-[85vh] flex-col items-center justify-center py-20 text-center">
+        <div className="container-x relative z-10 flex min-h-[60vh] md:min-h-[85vh] flex-col items-center justify-center py-10 md:py-20 text-center">
           <div className="mb-6 scroll-reveal">
             <Image
               src="/ART_SER_logo.png"
@@ -122,11 +122,11 @@ export default function HomePage() {
 
           <HeroTypewriter />
 
-          <p className="mt-8 max-w-2xl text-lg text-muted scroll-reveal">
+          <p className="mt-4 md:mt-8 max-w-2xl text-base md:text-lg text-muted scroll-reveal">
             {t("hero.subtitle")}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 scroll-reveal">
+          <div className="mt-6 md:mt-10 flex flex-wrap items-center justify-center gap-3 md:gap-4 scroll-reveal">
             <div className="relative">
               <button
                 onClick={() => setPortfolioOpen((o) => !o)}
@@ -171,7 +171,7 @@ export default function HomePage() {
 
           <button
             onClick={scrollToContent}
-            className="mt-16 flex flex-col items-center gap-2 text-muted transition hover:text-accent"
+            className="mt-8 md:mt-16 hidden sm:flex flex-col items-center gap-2 text-muted transition hover:text-accent"
           >
             <span className="text-xs tracking-widest uppercase">
               {t("hero.scrollToExplore")}
@@ -191,7 +191,7 @@ export default function HomePage() {
       <section className="py-16 relative">
         <div className="glow-line absolute top-0 inset-x-0" />
         <div className="container-x">
-          <h2 className="mx-auto mb-12 max-w-2xl text-center text-2xl font-bold tracking-tight text-accent sm:text-3xl scroll-reveal">
+          <h2 className="mx-auto mb-6 md:mb-12 max-w-2xl text-center text-2xl font-bold tracking-tight text-accent sm:text-3xl scroll-reveal">
             {t("home.productsShowcaseTitle")}
           </h2>
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-7 stagger-children">

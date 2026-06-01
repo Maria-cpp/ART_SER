@@ -18,6 +18,9 @@ export function ImageCarousel({ images, aspectClass = "aspect-video" }: ImageCar
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
   }, [images.length]);
 
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
   useEffect(() => {
     if (images.length <= 1) return;
     const interval = setInterval(next, 5000);
@@ -25,9 +28,6 @@ export function ImageCarousel({ images, aspectClass = "aspect-video" }: ImageCar
   }, [next, images.length]);
 
   if (images.length === 0) return null;
-
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;

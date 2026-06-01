@@ -220,6 +220,53 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* Founder / About ARTSER */}
+      {company.journey && <Section title={t("home.founderTitle")} subtitle={t("home.founderSubtitle")} alt>
+        <div className="grid gap-6 lg:grid-cols-2 items-start">
+          {/* Left: Journey summary */}
+          <div>
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                {t("home.founderSince")}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                {t("home.founderBased")}
+              </span>
+            </div>
+            <p className="text-sm leading-relaxed text-muted mb-4">{localized(company.journey.beginnings)}</p>
+            <p className="text-sm leading-relaxed text-muted">{localized(company.journey.independence)}</p>
+            <Link href="/about" className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline">
+              {t("home.founderLearnMore")}
+              <svg className="h-3.5 w-3.5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M9 5l7 7-7 7" /></svg>
+            </Link>
+          </div>
+
+          {/* Right: Specializations + experience badge */}
+          <div>
+            <ul className="space-y-2.5 mb-5">
+              {company.journey.specializations.slice(0, 4).map((spec, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-sm text-muted">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {localized(spec)}
+                </li>
+              ))}
+            </ul>
+            <div className="rounded-xl border border-accent/20 bg-accent/5 p-4">
+              <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-start">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent text-white font-bold text-xl shadow-md shadow-accent/20">
+                  26+
+                </div>
+                <p className="text-sm leading-relaxed text-foreground font-medium">{localized(company.journey.experience)}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>}
+
       {/* Services — flip cards */}
       <Section title={t("home.servicesTitle")}>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-children">

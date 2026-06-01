@@ -43,5 +43,8 @@ next-env.d.ts
 # loose editor screenshots in repo root
 /Screenshot*.png
 
+# generated marketing deliverables (not part of the website)
+/Company_Portfolio/
+
 # claude code local settings
 .claude/settings.local.json

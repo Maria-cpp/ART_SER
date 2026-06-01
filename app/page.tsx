@@ -122,7 +122,7 @@ export default function HomePage() {
 
           <HeroTypewriter />
 
-          <p className="mt-4 md:mt-8 max-w-2xl text-base md:text-lg text-muted scroll-reveal">
+          <p className="mt-4 md:mt-8 max-w-2xl text-base md:text-lg text-foreground/80 scroll-reveal">
             {t("hero.subtitle")}
           </p>
 

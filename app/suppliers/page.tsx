@@ -35,10 +35,14 @@ export default function SuppliersPage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 stagger-children">
               {group.items.map((supplier) => (
                 <article key={supplier.id} className="card flex flex-col">
-                  {/* Header with logo placeholder and name */}
+                  {/* Header with logo and name */}
                   <div className="mb-4 flex items-center gap-4">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent font-bold text-lg">
-                      {supplier.name.charAt(0)}
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden">
+                      <img
+                        src={supplier.logo}
+                        alt={supplier.name}
+                        className="h-full w-full object-contain p-1.5"
+                      />
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-foreground">{supplier.name}</h4>

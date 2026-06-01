@@ -90,7 +90,7 @@ export function ThemeSwitcher() {
       {open && (
         <div
           role="listbox"
-          className="theme-dropdown absolute end-0 z-50 mt-3 w-64 rounded-2xl border border-border/40 bg-surface/80 p-2 shadow-2xl backdrop-blur-xl"
+          className="theme-dropdown absolute end-0 z-50 mt-3 w-[calc(100vw-2rem)] sm:w-64 rounded-2xl border border-border/40 bg-surface/80 p-2 shadow-2xl backdrop-blur-xl"
           style={{
             animation: "themeDropIn 0.3s cubic-bezier(0.16,1,0.3,1) forwards",
           }}

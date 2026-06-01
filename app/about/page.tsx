@@ -137,7 +137,7 @@ export default function AboutPage() {
 
           {/* Experience highlight */}
           <div className="mt-10 rounded-xl border-2 border-accent/30 bg-accent/5 p-6">
-            <div className="flex items-center gap-5">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 text-center sm:text-start">
               <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-accent text-white font-bold text-3xl shadow-lg shadow-accent/20">
                 26+
               </div>

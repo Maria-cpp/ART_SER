@@ -809,6 +809,26 @@ header.sticky {
   }
 }
 
+@media (max-width: 640px) {
+  .card {
+    padding: 1rem;
+  }
+
+  /* Ensure flip cards respond to tap on touch */
+  .flip-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Reduce hero overlay gradient for better readability on small screens */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgb(var(--color-background) / 0.45) 0%,
+      rgb(var(--color-background) / 0.65) 100%
+    );
+  }
+}
+
 /* Hero background slideshow */
 .hero-slideshow {
   position: absolute;

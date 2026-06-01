@@ -187,39 +187,6 @@ export default function HomePage() {
 
       <div id="content-start" />
 
-      {/* Products showcase */}
-      <section className="py-16 relative">
-        <div className="glow-line absolute top-0 inset-x-0" />
-        <div className="container-x">
-          <h2 className="mx-auto mb-6 md:mb-12 max-w-2xl text-center text-2xl font-bold tracking-tight text-accent sm:text-3xl scroll-reveal">
-            {t("home.productsShowcaseTitle")}
-          </h2>
-          <div className="grid grid-cols-2 gap-3 sm:gap-5 sm:grid-cols-3 lg:grid-cols-7 stagger-children">
-            {categories.map((c) => (
-              <Link key={c.id} href={c.href} className="group flex flex-col items-center gap-3">
-                <span className="flex aspect-square w-full items-center justify-center rounded-2xl bg-accent text-accent-foreground shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-accent/20">
-                  <CategoryIcon name={c.icon} className="h-10 w-10" />
-                </span>
-                <span className="text-center text-sm font-medium text-foreground">{localized(c.name)}</span>
-              </Link>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* Stats */}
-      <Section title={t("home.statsTitle")}>
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 stagger-children">
-          {company.stats.map((s, idx) => (
-            <div key={idx} className="card text-center">
-              <div className="text-3xl font-extrabold text-accent">{s.value}</div>
-              <div className="mt-2 text-sm text-muted">{localized(s.label)}</div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
       {/* Founder / About ARTSER */}
       {company.journey && <Section title={t("home.founderTitle")} subtitle={t("home.founderSubtitle")} alt>
         <div className="grid gap-6 lg:grid-cols-2 items-start">
@@ -400,6 +367,23 @@ export default function HomePage() {
         </div>
         <div className="mt-8">
           <Link href="/suppliers" className="btn-outline">{t("suppliers.viewAll")}</Link>
+        </div>
+      </Section>
+
+      {/* Products showcase */}
+      <Section title={t("home.productsShowcaseTitle")} alt>
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 sm:grid-cols-3 lg:grid-cols-7 stagger-children">
+          {categories.map((c) => (
+            <Link key={c.id} href={c.href} className="group flex flex-col items-center gap-3">
+              <span className="flex aspect-square w-full items-center justify-center rounded-2xl bg-accent text-accent-foreground shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-accent/20">
+                <CategoryIcon name={c.icon} className="h-10 w-10" />
+              </span>
+              <span className="text-center text-sm font-medium text-foreground">{localized(c.name)}</span>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-8">
+          <Link href="/products" className="btn-outline">{t("common.viewAll")}</Link>
         </div>
       </Section>
     </>

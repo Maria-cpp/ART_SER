@@ -38,7 +38,7 @@ export default function ContactPage() {
           <iframe
             title="map"
             src={contact.mapEmbed}
-            className="h-full min-h-[320px] w-full"
+            className="h-full min-h-[250px] md:min-h-[320px] w-full"
             loading="lazy"
           />
         </div>

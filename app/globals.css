@@ -889,6 +889,20 @@ header.sticky {
   transform: rotateY(-180deg);
 }
 
+/* Touch support: flip on tap/hold for touch devices */
+@media (hover: none) {
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0 12px 32px rgb(var(--color-accent) / 0.2), 0 4px 16px rgb(0 0 0 / 0.12);
+  }
+
+  [dir="rtl"] .flip-card:active .flip-card-inner,
+  [dir="rtl"] .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(-180deg);
+  }
+}
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;

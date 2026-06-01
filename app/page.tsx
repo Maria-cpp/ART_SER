@@ -224,7 +224,7 @@ export default function HomePage() {
       <Section title={t("home.servicesTitle")}>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
           {services.map((s) => (
-            <div key={s.id} className="flip-card h-52">
+            <div key={s.id} className="flip-card h-52" tabIndex={0} role="button">
               <div className="flip-card-inner">
                 <div className="flip-card-front flex flex-col items-center justify-center gap-3 bg-surface p-6 text-center">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">

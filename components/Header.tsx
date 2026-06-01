@@ -57,8 +57,8 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="border-t border-border bg-surface lg:hidden">
-          <div className="flex flex-col px-4 py-3">
+        <nav className="border-t border-border bg-surface lg:hidden max-h-[70vh] overflow-y-auto">
+          <div className="flex flex-col px-4 py-2">
             {MOBILE_NAV.map((item) => (
               <Link
                 key={item.href}

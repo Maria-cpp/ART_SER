@@ -194,7 +194,7 @@ export default function HomePage() {
           <h2 className="mx-auto mb-6 md:mb-12 max-w-2xl text-center text-2xl font-bold tracking-tight text-accent sm:text-3xl scroll-reveal">
             {t("home.productsShowcaseTitle")}
           </h2>
-          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-7 stagger-children">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 sm:grid-cols-3 lg:grid-cols-7 stagger-children">
             {categories.map((c) => (
               <Link key={c.id} href={c.href} className="group flex flex-col items-center gap-3">
                 <span className="flex aspect-square w-full items-center justify-center rounded-2xl bg-accent text-accent-foreground shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-accent/20">
@@ -210,7 +210,7 @@ export default function HomePage() {
 
       {/* Stats */}
       <Section title={t("home.statsTitle")}>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 stagger-children">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 stagger-children">
           {company.stats.map((s, idx) => (
             <div key={idx} className="card text-center">
               <div className="text-3xl font-extrabold text-accent">{s.value}</div>
@@ -222,7 +222,7 @@ export default function HomePage() {
 
       {/* Services — flip cards */}
       <Section title={t("home.servicesTitle")}>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
           {services.map((s) => (
             <div key={s.id} className="flip-card h-52" tabIndex={0} role="button">
               <div className="flip-card-inner">
@@ -281,7 +281,7 @@ export default function HomePage() {
 
       {/* Clients — flip cards */}
       <Section title={t("home.clientsTitle")}>
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 stagger-children">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-4 stagger-children">
           {clients.map((c) => (
             <a
               key={c.id}
@@ -317,7 +317,7 @@ export default function HomePage() {
 
       {/* Suppliers — flip cards */}
       <Section title={t("home.suppliersTitle")} subtitle={t("home.suppliersSubtitle")}>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 stagger-children">
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 stagger-children">
           {suppliers.map((s) => (
             <a
               key={s.id}

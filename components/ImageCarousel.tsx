@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 interface ImageCarouselProps {
   images: string[];
@@ -26,9 +26,29 @@ export function ImageCarousel({ images, aspectClass = "aspect-video" }: ImageCar
 
   if (images.length === 0) return null;
 
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    touchEndX.current = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+    }
+  };
+
   return (
     <div className="relative w-full overflow-hidden rounded-xl bg-surface-alt">
-      <div className={`${aspectClass} relative`}>
+      <div
+        className={`${aspectClass} relative`}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {images.map((src, idx) => (
           <img
             key={src}
@@ -45,7 +65,7 @@ export function ImageCarousel({ images, aspectClass = "aspect-video" }: ImageCar
         <>
           <button
             onClick={prev}
-            className="absolute start-2 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur transition hover:bg-black/60"
+            className="absolute start-2 top-1/2 -translate-y-1/2 flex h-10 w-10 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur transition hover:bg-black/60"
             aria-label="Previous"
           >
             <svg className="h-4 w-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -54,7 +74,7 @@ export function ImageCarousel({ images, aspectClass = "aspect-video" }: ImageCar
           </button>
           <button
             onClick={next}
-            className="absolute end-2 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur transition hover:bg-black/60"
+            className="absolute end-2 top-1/2 -translate-y-1/2 flex h-10 w-10 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur transition hover:bg-black/60"
             aria-label="Next"
           >
             <svg className="h-4 w-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -67,8 +87,8 @@ export function ImageCarousel({ images, aspectClass = "aspect-video" }: ImageCar
               <button
                 key={idx}
                 onClick={() => setCurrent(idx)}
-                className={`h-1.5 rounded-full transition-all ${
-                  idx === current ? "w-5 bg-white" : "w-1.5 bg-white/50"
+                className={`h-2 sm:h-1.5 rounded-full transition-all ${
+                  idx === current ? "w-6 sm:w-5 bg-white" : "w-2 sm:w-1.5 bg-white/50"
                 }`}
                 aria-label={`Slide ${idx + 1}`}
               />

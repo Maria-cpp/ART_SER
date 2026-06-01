@@ -62,7 +62,7 @@ export function Footer() {
     <footer className="bg-accent text-accent-foreground">
       <div className="container-x py-5">
         {/* Always visible: Brand + Mission | Follow Us + Expand */}
-        <div className="flex items-start justify-between gap-6">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-4 sm:gap-6">
           {/* Left: Brand + mission */}
           <div className="flex-1 min-w-0">
             <span className="text-lg font-extrabold">{company.name}</span>
@@ -72,7 +72,7 @@ export function Footer() {
           </div>
 
           {/* Right: Follow us + expand */}
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0 flex-wrap">
             <div className="flex items-center gap-3">
               <span className="text-sm font-bold whitespace-nowrap">{t("contact.followUs")}:</span>
               {socialEntries.map(([platform, url]) => (
@@ -175,7 +175,7 @@ export function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-4 border-t border-current/20 pt-3 flex flex-col gap-2 text-[11px] opacity-80 md:flex-row md:items-center md:justify-between">
+          <div className="mt-4 border-t border-current/20 pt-3 flex flex-col gap-2 text-xs sm:text-[11px] opacity-80 md:flex-row md:items-center md:justify-between">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <span>&copy; {year} {company.name}.</span>
               <span>{t("footer.cookieSettings")}</span>

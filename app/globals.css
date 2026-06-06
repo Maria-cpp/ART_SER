@@ -863,6 +863,55 @@ header.sticky {
 }
 
 /* ============================================
+   DOOR INTRO ANIMATION
+   ============================================ */
+
+.door-intro-panel {
+  position: relative;
+  background: rgb(var(--color-surface));
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  will-change: transform;
+}
+
+.door-intro-open-left {
+  animation: doorSlideLeft 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.door-intro-open-right {
+  animation: doorSlideRight 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes doorSlideLeft {
+  0% {
+    transform: perspective(1200px) translateX(0) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1200px) translateX(-105%) rotateY(25deg);
+  }
+}
+
+@keyframes doorSlideRight {
+  0% {
+    transform: perspective(1200px) translateX(0) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1200px) translateX(105%) rotateY(-25deg);
+  }
+}
+
+/* Reduced motion: skip 3D, just fade */
+@media (prefers-reduced-motion: reduce) {
+  .door-intro-open-left,
+  .door-intro-open-right {
+    animation: doorFadeOut 0.5s ease forwards;
+  }
+
+  @keyframes doorFadeOut {
+    to { opacity: 0; }
+  }
+}
+
+/* ============================================
    RESPONSIVE STYLES
    ============================================ */
 

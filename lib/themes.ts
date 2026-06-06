@@ -1,7 +1,7 @@
 // Theme registry. Each theme maps to a `[data-theme="id"]` block in app/globals.css.
 // To add a theme: add an entry here AND a matching CSS block in globals.css.
 
-export type ThemeId = "obsidian" | "government" | "luxury" | "architectural";
+export type ThemeId = "obsidian" | "government" | "luxury" | "architectural" | "crane";
 
 export interface ThemeMeta {
   id: ThemeId;
@@ -31,6 +31,11 @@ export const THEMES: ThemeMeta[] = [
     id: "architectural",
     name: "Architectural",
     palette: ["#edeeef", "#fafafb", "#107a57", "#21252a"],
+  },
+  {
+    id: "crane",
+    name: "Construction",
+    palette: ["#fafafa", "#ffffff", "#E8651A", "#1a1a1a"],
   },
 ];
 

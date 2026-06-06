@@ -1361,6 +1361,198 @@ header.sticky {
 }
 
 /* ============================================
+   PAGE INTRO — CONSERVATORIES (frame assembles)
+   ============================================ */
+
+.pi-conservatory-frame {
+  position: relative;
+  width: 340px;
+  height: 300px;
+}
+
+@media (min-width: 640px) {
+  .pi-conservatory-frame {
+    width: 460px;
+    height: 380px;
+  }
+}
+
+.pi-conservatory-roof {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-40px);
+  width: 0;
+  height: 0;
+  border-left: 170px solid transparent;
+  border-right: 170px solid transparent;
+  border-bottom: 80px solid rgb(var(--color-accent) / 0.15);
+  opacity: 0;
+}
+
+@media (min-width: 640px) {
+  .pi-conservatory-roof {
+    border-left-width: 230px;
+    border-right-width: 230px;
+    border-bottom-width: 100px;
+  }
+}
+
+.pi-conservatory-left {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 6px;
+  height: 260px;
+  background: rgb(var(--color-accent) / 0.25);
+  border-radius: 3px;
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+@media (min-width: 640px) {
+  .pi-conservatory-left {
+    height: 280px;
+  }
+}
+
+.pi-conservatory-right {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 6px;
+  height: 260px;
+  background: rgb(var(--color-accent) / 0.25);
+  border-radius: 3px;
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+@media (min-width: 640px) {
+  .pi-conservatory-right {
+    height: 280px;
+  }
+}
+
+.pi-conservatory-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: rgb(var(--color-accent) / 0.25);
+  border-radius: 3px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.pi-conservatory-assemble {
+  animation: conservatoryAssemble 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes conservatoryAssemble {
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.pi-conservatory-roof.pi-conservatory-assemble {
+  animation: conservatoryRoofAssemble 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes conservatoryRoofAssemble {
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ============================================
+   PAGE INTRO — SMART BUILDINGS (rise from bottom)
+   ============================================ */
+
+.pi-buildings-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  height: 400px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 640px) {
+  .pi-buildings-row {
+    gap: 24px;
+    height: 450px;
+  }
+}
+
+.pi-building {
+  position: relative;
+  background: rgb(var(--color-foreground) / 0.08);
+  border: 2px solid rgb(var(--color-accent) / 0.25);
+  border-radius: 4px 4px 0 0;
+  transform: translateY(110%);
+}
+
+.pi-building-short {
+  width: 80px;
+  height: 160px;
+}
+
+.pi-building-medium {
+  width: 90px;
+  height: 240px;
+}
+
+.pi-building-tall {
+  width: 75px;
+  height: 320px;
+}
+
+@media (min-width: 640px) {
+  .pi-building-short {
+    width: 110px;
+    height: 200px;
+  }
+  .pi-building-medium {
+    width: 120px;
+    height: 300px;
+  }
+  .pi-building-tall {
+    width: 100px;
+    height: 380px;
+  }
+}
+
+.pi-building-windows {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  padding: 10px 8px;
+}
+
+.pi-building-window {
+  aspect-ratio: 1;
+  background: rgb(var(--color-accent) / 0.2);
+  border-radius: 2px;
+}
+
+.pi-building-rise {
+  animation: buildingRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes buildingRise {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
    RESPONSIVE STYLES
    ============================================ */
 

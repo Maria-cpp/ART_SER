@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CategoryIcon } from "@/components/CategoryIcon";
-import { MarqueeCarousel } from "@/components/MarqueeCarousel";
+import { Carousel3D } from "@/components/Carousel3D";
+import { PageIntro, PageIntroVariant } from "@/components/PageIntro";
 import { getCategories, getProductCategory } from "@/lib/data";
 
 const CATEGORY_KEY_MAP: Record<string, string> = {
@@ -15,6 +16,15 @@ const CATEGORY_KEY_MAP: Record<string, string> = {
   facades: "products.facades",
   conservatories: "products.conservatories",
   "smart-buildings": "products.smart",
+};
+
+const CATEGORY_INTRO_MAP: Record<string, PageIntroVariant> = {
+  windows: "windows",
+  doors: "doors",
+  "sliding-folding": "sliding-folding",
+  facades: "facades",
+  conservatories: "conservatories",
+  "smart-buildings": "smart-buildings",
 };
 
 export default function ProductCategoryPage() {
@@ -53,7 +63,10 @@ export default function ProductCategoryPage() {
     return features[locale as keyof typeof features] || features.en;
   };
 
+  const introVariant = CATEGORY_INTRO_MAP[slug];
+
   return (
+    <PageIntro variant={introVariant || "doors"}>
     <div className="pb-16">
       <div className="container-x pt-6">
         <Breadcrumbs
@@ -77,13 +90,10 @@ export default function ProductCategoryPage() {
         </div>
       </div>
 
-      {/* Product image marquee carousel */}
+      {/* Product image 3D carousel */}
       {productData && productData.images.length > 0 && (
         <div className="container-x mt-10">
-          <MarqueeCarousel
-            images={productData.images}
-            speed={productData.images.length > 6 ? 35 : 25}
-          />
+          <Carousel3D images={productData.images} />
         </div>
       )}
 
@@ -186,5 +196,6 @@ export default function ProductCategoryPage() {
         </div>
       </div>
     </div>
+    </PageIntro>
   );
 }

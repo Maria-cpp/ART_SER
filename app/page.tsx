@@ -109,7 +109,7 @@ export default function HomePage() {
         </div>
 
         <div className="container-x relative z-10 flex min-h-[60vh] md:min-h-[85vh] flex-col items-center justify-center py-10 md:py-20 text-center">
-          <div className="mb-6 scroll-reveal">
+          <div className="mb-1 scroll-reveal">
             <Image
               src="/logo/ARTSER_logo.png"
               alt={company.name}
@@ -120,11 +120,11 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="mt-4 flex flex-col items-center scroll-reveal">
-            <div className="w-8 h-[2px] bg-accent mb-3" />
-            <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-foreground/70 font-light">
+          <div className="mt-1 flex flex-col items-center scroll-reveal">
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-bold mb-3" style={{ color: "#2d3436" }}>
               {t("hero.slogan")}
             </p>
+            <div className="w-8 h-[2px] bg-[#ef5e00]" />
           </div>
 
           <HeroTypewriter />

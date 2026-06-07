@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export type PageIntroVariant =
   | "windows"
@@ -15,32 +15,33 @@ interface PageIntroProps {
   children: React.ReactNode;
 }
 
-const SESSION_PREFIX = "artser.pageIntro.";
-
 export function PageIntro({ variant, children }: PageIntroProps) {
-  const [show, setShow] = useState(false);
-  const [animating, setAnimating] = useState(false);
+  const [phase, setPhase] = useState<"showing" | "animating" | "done">("showing");
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
-    const key = SESSION_PREFIX + variant;
-    if (sessionStorage.getItem(key)) return;
-    setShow(true);
-    const startTimer = setTimeout(() => setAnimating(true), 400);
-    const endTimer = setTimeout(() => {
-      setShow(false);
-      sessionStorage.setItem(key, "1");
-    }, 2400);
+    timersRef.current.forEach(clearTimeout);
+    timersRef.current = [];
+
+    setPhase("showing");
+
+    const t1 = setTimeout(() => setPhase("animating"), 800);
+    const t2 = setTimeout(() => setPhase("done"), 4000);
+    timersRef.current = [t1, t2];
+
     return () => {
-      clearTimeout(startTimer);
-      clearTimeout(endTimer);
+      timersRef.current.forEach(clearTimeout);
+      timersRef.current = [];
     };
   }, [variant]);
 
+  const isAnimating = phase === "animating";
+
   return (
     <>
-      {show && (
-        <div className={`page-intro-overlay ${animating ? "page-intro-animating" : ""}`}>
-          <PageIntroContent variant={variant} animating={animating} />
+      {phase !== "done" && (
+        <div className={`page-intro-overlay ${isAnimating ? "page-intro-animating" : ""}`}>
+          <PageIntroContent variant={variant} animating={isAnimating} />
         </div>
       )}
       {children}

@@ -4,6 +4,7 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Section } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { Construction3DBackground } from "@/components/Construction3DBackground";
 import { getProjects, getSuppliers } from "@/lib/data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
@@ -24,6 +25,7 @@ export default function PortfolioPage() {
   ];
   return (
     <>
+      <Construction3DBackground />
       <div className="container-x pt-6">
         <Breadcrumbs items={[
           { label: "breadcrumb.home", href: "/" },

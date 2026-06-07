@@ -111,13 +111,20 @@ export default function HomePage() {
         <div className="container-x relative z-10 flex min-h-[60vh] md:min-h-[85vh] flex-col items-center justify-center py-10 md:py-20 text-center">
           <div className="mb-6 scroll-reveal">
             <Image
-              src="/ART_SER_logo.png"
+              src="/logo/ARTSER_logo.png"
               alt={company.name}
               width={280}
               height={100}
               className="mx-auto h-auto w-auto max-h-24"
               priority
             />
+          </div>
+
+          <div className="mt-4 flex flex-col items-center scroll-reveal">
+            <div className="w-8 h-[2px] bg-accent mb-3" />
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-foreground/70 font-light">
+              {t("hero.slogan")}
+            </p>
           </div>
 
           <HeroTypewriter />
@@ -140,7 +147,7 @@ export default function HomePage() {
               {portfolioOpen && (
                 <div className="absolute start-0 top-full mt-2 z-20 min-w-[220px] rounded-lg border border-border bg-surface p-2 shadow-xl">
                   <a
-                    href="/ART_SER_Portfolio_EN.pdf"
+                    href="/portfolio/ART_SER_Portfolio_EN .pdf"
                     download="ART_SER_Portfolio_EN.pdf"
                     className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition hover:bg-accent/10 hover:text-accent"
                     onClick={() => setPortfolioOpen(false)}
@@ -151,7 +158,7 @@ export default function HomePage() {
                     Portfolio — English
                   </a>
                   <a
-                    href="/ART_SER_Portafoglio_IT.pdf"
+                    href="/portfolio/ART_SER_Portafoglio_IT.pdf"
                     download="ART_SER_Portafoglio_IT.pdf"
                     className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition hover:bg-accent/10 hover:text-accent"
                     onClick={() => setPortfolioOpen(false)}

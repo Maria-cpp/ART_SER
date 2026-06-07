@@ -10,7 +10,7 @@ interface Carousel3DProps {
 
 export function Carousel3D({ images, autoPlay = true, interval = 4000 }: Carousel3DProps) {
   const [current, setCurrent] = useState(0);
-  const [lightbox, setLightbox] = useState<string | null>(null);
+  const [hovered, setHovered] = useState(false);
   const touchStartX = useRef(0);
   const count = images.length;
 
@@ -42,89 +42,75 @@ export function Carousel3D({ images, autoPlay = true, interval = 4000 }: Carouse
   const radius = count <= 3 ? 220 : count <= 5 ? 280 : 320;
 
   return (
-    <>
+    <div
+      className="carousel-3d-wrapper"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div
-        className="carousel-3d-wrapper"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
+        className="carousel-3d-track"
+        style={{
+          transform: `rotateY(${-current * angle}deg)`,
+        }}
       >
-        <div
-          className="carousel-3d-track"
-          style={{
-            transform: `rotateY(${-current * angle}deg)`,
-          }}
-        >
-          {images.map((src, idx) => {
-            const isActive = idx === current;
-            return (
-              <div
-                key={src}
-                className={`carousel-3d-item ${isActive ? "carousel-3d-item-active" : ""}`}
-                style={{
-                  transform: `rotateY(${idx * angle}deg) translateZ(${radius}px)`,
-                }}
-                onClick={() => setLightbox(src)}
-              >
-                <img
-                  src={src}
-                  alt=""
-                  className="h-full w-full object-cover rounded-xl"
-                  loading="lazy"
-                />
-              </div>
-            );
-          })}
-        </div>
-
-        {count > 1 && (
-          <>
-            <button
-              onClick={prev}
-              className="carousel-3d-btn carousel-3d-btn-start"
-              aria-label="Previous"
+        {images.map((src, idx) => {
+          const isActive = idx === current;
+          return (
+            <div
+              key={src}
+              className={`carousel-3d-item ${isActive ? "carousel-3d-item-active" : ""} ${isActive && hovered ? "carousel-3d-item-hovered" : ""}`}
+              style={{
+                transform: `rotateY(${idx * angle}deg) translateZ(${radius}px)${isActive && hovered ? " scale(1.6)" : ""}`,
+              }}
+              onMouseEnter={() => isActive && setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
             >
-              <svg className="h-5 w-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              onClick={next}
-              className="carousel-3d-btn carousel-3d-btn-end"
-              aria-label="Next"
-            >
-              <svg className="h-5 w-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </>
-        )}
-
-        {count > 1 && (
-          <div className="carousel-3d-dots">
-            {images.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrent(idx)}
-                className={`carousel-3d-dot ${idx === current ? "carousel-3d-dot-active" : ""}`}
-                aria-label={`Slide ${idx + 1}`}
+              <img
+                src={src}
+                alt=""
+                className="h-full w-full object-cover rounded-xl"
+                loading="lazy"
               />
-            ))}
-          </div>
-        )}
+            </div>
+          );
+        })}
       </div>
 
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-pointer"
-          onClick={() => setLightbox(null)}
-        >
-          <img
-            src={lightbox}
-            alt=""
-            className="max-h-[85vh] max-w-[90vw] rounded-xl object-contain shadow-2xl"
-          />
+      {count > 1 && (
+        <>
+          <button
+            onClick={prev}
+            className="carousel-3d-btn carousel-3d-btn-start"
+            aria-label="Previous"
+          >
+            <svg className="h-5 w-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={next}
+            className="carousel-3d-btn carousel-3d-btn-end"
+            aria-label="Next"
+          >
+            <svg className="h-5 w-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </>
+      )}
+
+      {count > 1 && (
+        <div className="carousel-3d-dots">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrent(idx)}
+              className={`carousel-3d-dot ${idx === current ? "carousel-3d-dot-active" : ""}`}
+              aria-label={`Slide ${idx + 1}`}
+            />
+          ))}
         </div>
       )}
-    </>
+    </div>
   );
 }

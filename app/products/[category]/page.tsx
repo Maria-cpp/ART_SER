@@ -66,7 +66,7 @@ export default function ProductCategoryPage() {
   const introVariant = CATEGORY_INTRO_MAP[slug];
 
   return (
-    <PageIntro variant={introVariant || "doors"}>
+    <PageIntro key={slug} variant={introVariant || "doors"}>
     <div className="pb-16">
       <div className="container-x pt-6">
         <Breadcrumbs

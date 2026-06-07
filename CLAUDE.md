@@ -81,7 +81,20 @@ artser-website/
 │   ├── themes.ts                # theme definitions + type
 │   ├── i18n.ts                  # locale config, RTL map, translation loader
 │   └── data.ts                  # typed JSON loaders + file registry
-├── public/                      # static assets (logo, images)
+├── public/                      # static assets
+│   ├── logo/                    # logo images (ART_SER_logo.png, letter PNGs)
+│   ├── portfolio/               # downloadable portfolio PDFs
+│   ├── hero/                    # hero slideshow images
+│   ├── certificates/            # certification images
+│   ├── clients/                 # client logo images
+│   ├── doors/                   # product images — doors
+│   ├── facades/                 # product images — facades
+│   ├── featured/                # featured project images
+│   ├── manufacturing/           # manufacturing images
+│   ├── services_providers/      # supplier logo images
+│   ├── shelters and shades/     # product images — shelters & shades
+│   ├── stairs/                  # product images — stairs
+│   └── windows/                 # product images — windows
 ├── CLAUDE.md                    # this file
 ├── README.md
 └── config files (next, tailwind, tsconfig, postcss, eslint)

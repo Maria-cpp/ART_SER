@@ -39,11 +39,15 @@ Requires Node.js 18.18+ (20+ recommended).
 
 ```
 app/            App Router pages, layout, admin, API routes
-components/      Header, Footer, providers, theme & language switchers
+components/     Header, Footer, providers, theme & language switchers
 data/           JSON content (the CMS)
 translations/   UI strings per language (en, it, ar, ur)
 lib/            themes, i18n, typed data loaders
-public/         static assets (logo, images)
+public/
+  logo/         logo images (ART_SER_logo.png, letter PNGs)
+  portfolio/    downloadable portfolio PDFs
+  hero/         hero slideshow images
+  ...           product & client images
 ```
 
 See **CLAUDE.md** for the full architecture, conventions, and development guide.

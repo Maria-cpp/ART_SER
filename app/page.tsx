@@ -121,7 +121,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-1 flex flex-col items-center scroll-reveal">
-            <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-bold mb-3" style={{ color: "#2d3436" }}>
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-bold mb-3 text-foreground">
               {t("hero.slogan")}
             </p>
             <div className="w-8 h-[2px] bg-[#ef5e00]" />
@@ -180,11 +180,11 @@ export default function HomePage() {
             onClick={scrollToContent}
             className="mt-8 md:mt-16 hidden sm:flex flex-col items-center gap-2 text-muted transition hover:text-accent"
           >
-            <span className="text-xs tracking-widest uppercase">
+            <span className="text-xs tracking-widest uppercase text-foreground/70 font-bold">
               {t("hero.scrollToExplore")}
             </span>
-            <div className="scroll-indicator">
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="scroll-indicator text-foreground/70">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                 <path d="M12 5v14M5 12l7 7 7-7" />
               </svg>
             </div>

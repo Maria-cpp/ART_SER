@@ -7,7 +7,7 @@ const LOGO_HEIGHT = 40;
 
 export default function AnimatedLogo() {
   return (
-    <div className="flex items-center" style={{ height: LOGO_HEIGHT }}>
+    <div className="flex items-center shrink-0" style={{ height: LOGO_HEIGHT }}>
       <Image
         src={FULL_LOGO}
         alt="ARTSER"

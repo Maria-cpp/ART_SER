@@ -34,7 +34,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur supports-[backdrop-filter]:bg-surface/80">
       <div className="flex h-16 items-center justify-between px-4 lg:px-6">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
           <AnimatedLogo />
           <div className="hidden sm:flex flex-col items-start">
             <p className="text-[10px] tracking-[0.25em] uppercase font-bold leading-tight text-foreground">

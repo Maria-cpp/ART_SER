@@ -39,7 +39,7 @@ export const THEMES: ThemeMeta[] = [
   },
 ];
 
-export const DEFAULT_THEME: ThemeId = "obsidian";
+export const DEFAULT_THEME: ThemeId = "crane";
 
 export const THEME_STORAGE_KEY = "artser.theme";
 

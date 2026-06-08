@@ -37,7 +37,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3">
           <AnimatedLogo />
           <div className="hidden sm:flex flex-col items-start">
-            <p className="text-[10px] tracking-[0.25em] uppercase font-bold leading-tight" style={{ color: "#2d3436" }}>
+            <p className="text-[10px] tracking-[0.25em] uppercase font-bold leading-tight text-foreground">
               {t("hero.slogan")}
             </p>
             <div className="w-6 h-[1.5px] bg-[#ef5e00] mt-1" />

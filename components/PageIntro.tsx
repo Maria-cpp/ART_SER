@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
 export type PageIntroVariant =
   | "windows"
@@ -17,7 +18,13 @@ interface PageIntroProps {
 
 export function PageIntro({ variant, children }: PageIntroProps) {
   const [phase, setPhase] = useState<"showing" | "animating" | "done">("showing");
+  const [mounted, setMounted] = useState(false);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => {
+    setMounted(true);
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     timersRef.current.forEach(clearTimeout);
@@ -37,13 +44,15 @@ export function PageIntro({ variant, children }: PageIntroProps) {
 
   const isAnimating = phase === "animating";
 
+  const overlay = phase !== "done" ? (
+    <div className={`page-intro-overlay ${isAnimating ? "page-intro-animating" : ""}`}>
+      <PageIntroContent variant={variant} animating={isAnimating} />
+    </div>
+  ) : null;
+
   return (
     <>
-      {phase !== "done" && (
-        <div className={`page-intro-overlay ${isAnimating ? "page-intro-animating" : ""}`}>
-          <PageIntroContent variant={variant} animating={isAnimating} />
-        </div>
-      )}
+      {mounted ? overlay && createPortal(overlay, document.body) : overlay}
       {children}
     </>
   );

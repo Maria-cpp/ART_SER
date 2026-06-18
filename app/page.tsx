@@ -94,7 +94,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden w-full">
         {/* Background slideshow */}
         <div className="hero-slideshow">
           {heroImages.map((src, idx) => (

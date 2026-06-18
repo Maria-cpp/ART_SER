@@ -26,11 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Construction3DBackground />
         <ThemeProvider>
           <LanguageProvider>
-            <div className="flex min-h-screen flex-col">
+            <div className="flex min-h-screen flex-col overflow-x-hidden">
               <Header />
               <div className="flex flex-1">
                 <Sidebar />
-                <div className="flex flex-1 flex-col">
+                <div className="flex flex-1 flex-col min-w-0">
                   <main className="flex-1">{children}</main>
                   <Footer />
                 </div>

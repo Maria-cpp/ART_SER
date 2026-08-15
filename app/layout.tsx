@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Sidebar } from "@/components/Sidebar";
 import { DoorIntro } from "@/components/DoorIntro";
 import { Construction3DBackground } from "@/components/Construction3DBackground";
 
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" dir="ltr" data-theme="crane" suppressHydrationWarning>
+    <html lang="en" dir="ltr" data-theme="artser" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `history.scrollRestoration='manual';window.scrollTo(0,0);` }} />
       </head>
@@ -28,13 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LanguageProvider>
             <div className="flex min-h-screen flex-col overflow-x-hidden">
               <Header />
-              <div className="flex flex-1">
-                <Sidebar />
-                <div className="flex flex-1 flex-col min-w-0">
-                  <main className="flex-1">{children}</main>
-                  <Footer />
-                </div>
-              </div>
+              <main className="flex-1">{children}</main>
+              <Footer />
             </div>
           </LanguageProvider>
         </ThemeProvider>

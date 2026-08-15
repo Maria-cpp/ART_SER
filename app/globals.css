@@ -1,191 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /*
-  Theme system: each [data-theme] block defines color variables as space-separated
-  RGB triples so Tailwind's `rgb(var(--color-x) / <alpha-value>)` works.
-  ThemeProvider sets <html data-theme="...">. Default below = "government".
+  Theme system: CSS variables as space-separated RGB triples so Tailwind's
+  `rgb(var(--color-x) / <alpha-value>)` works. ThemeProvider sets <html data-theme="artser">.
 */
 
 :root {
   /* Typography */
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-arabic: "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
+  --font-serif: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Noto Sans Arabic", "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
 
-  /* Fallback palette (Corporate Government) */
-  --color-background: 248 250 252;
-  --color-surface: 255 255 255;
-  --color-surface-alt: 241 245 249;
-  --color-foreground: 15 23 42;
-  --color-muted: 100 116 139;
-  --color-accent: 30 64 138;
-  --color-accent-foreground: 255 255 255;
-  --color-border: 203 213 225;
+  /* Fallback — matches artser theme */
+  --color-background: 11 11 11;
+  --color-surface: 20 20 20;
+  --color-surface-alt: 30 30 30;
+  --color-foreground: 245 245 242;
+  --color-muted: 116 116 116;
+  --color-accent: 181 138 98;
+  --color-accent-foreground: 11 11 11;
+  --color-border: 42 42 42;
 
-  /* Glass & glow */
-  --glass-blur: 15px;
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.12);
-  --accent-glow: rgba(30, 64, 138, 0.25);
-  --neon-shadow: 0 4px 15px rgba(30, 64, 138, 0.15);
-}
+  /* Aluminium token — used in specific components */
+  --color-aluminium: 184 184 184;
 
-/* ============================================
-   THEME 1 — Obsidian Industrial
-   Deep black, graphite, warm gold accents
-   ============================================ */
-[data-theme="obsidian"] {
-  --color-background: 10 10 10;
-  --color-surface: 23 23 23;
-  --color-surface-alt: 38 38 38;
-  --color-foreground: 237 237 237;
-  --color-muted: 163 163 163;
-  --color-accent: 202 160 74;
-  --color-accent-foreground: 10 10 10;
-  --color-border: 64 64 64;
+  /* Glass & glow — dark premium */
   --glass-blur: 16px;
-  --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(202, 160, 74, 0.2);
-  --accent-glow: rgba(202, 160, 74, 0.45);
-  --neon-shadow: 0 0 20px rgba(202, 160, 74, 0.3);
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-border: rgba(181, 138, 98, 0.12);
+  --accent-glow: rgba(181, 138, 98, 0.35);
+  --neon-shadow: 0 4px 20px rgba(181, 138, 98, 0.2);
+
+  /* Design system tokens — animation */
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 700ms;
+  --duration-cinematic: 1200ms;
+  --duration-cinematic-long: 1600ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Design system tokens — shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 30px -5px rgba(181, 138, 98, 0.35);
+  --shadow-glow-lg: 0 0 50px -10px rgba(181, 138, 98, 0.45);
+
+  /* Design system tokens — radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Design system tokens — z-index */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 20;
+  --z-sticky: 30;
+  --z-overlay: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+  --z-tooltip: 70;
 }
 
 /* ============================================
-   THEME 2 — Corporate Government
-   Navy, steel gray, professional blue
+   ARTSER — Single Premium Theme
+   Black + Aluminium + Glass + Concrete + Bronze
    ============================================ */
-[data-theme="government"] {
-  --color-background: 248 250 252;
-  --color-surface: 255 255 255;
-  --color-surface-alt: 241 245 249;
-  --color-foreground: 15 23 42;
-  --color-muted: 100 116 139;
-  --color-accent: 30 64 138;
-  --color-accent-foreground: 255 255 255;
-  --color-border: 203 213 225;
-  --glass-blur: 12px;
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(30, 64, 138, 0.15);
-  --accent-glow: rgba(30, 64, 138, 0.2);
-  --neon-shadow: 0 4px 15px rgba(30, 64, 138, 0.12);
-}
-
-/* ============================================
-   THEME 3 — Minimal Luxury
-   Champagne gold, soft silver, clean white
-   ============================================ */
-[data-theme="luxury"] {
-  --color-background: 250 250 249;
-  --color-surface: 255 255 255;
-  --color-surface-alt: 245 244 242;
-  --color-foreground: 26 26 26;
-  --color-muted: 120 113 108;
-  --color-accent: 183 150 98;
-  --color-accent-foreground: 26 26 26;
-  --color-border: 224 220 214;
-  --glass-blur: 14px;
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(183, 150, 98, 0.2);
-  --accent-glow: rgba(183, 150, 98, 0.3);
-  --neon-shadow: 0 4px 18px rgba(183, 150, 98, 0.2);
-}
-
-/* ============================================
-   THEME 4 — Modern Architectural
-   Concrete gray, emerald accent, dark charcoal
-   ============================================ */
-[data-theme="architectural"] {
-  --color-background: 237 238 239;
-  --color-surface: 250 250 251;
-  --color-surface-alt: 226 228 230;
-  --color-foreground: 33 37 41;
-  --color-muted: 108 117 125;
-  --color-accent: 16 122 87;
-  --color-accent-foreground: 255 255 255;
-  --color-border: 200 204 208;
-  --glass-blur: 14px;
-  --glass-bg: rgba(255, 255, 255, 0.55);
-  --glass-border: rgba(16, 122, 87, 0.18);
-  --accent-glow: rgba(16, 122, 87, 0.25);
-  --neon-shadow: 0 4px 18px rgba(16, 122, 87, 0.15);
-}
-
-/* ============================================
-   THEME 5 — Construction Crane
-   Clean white, construction orange, warm accents
-   ============================================ */
-[data-theme="crane"] {
-  --color-background: 250 250 250;
-  --color-surface: 255 255 255;
-  --color-surface-alt: 245 240 235;
-  --color-foreground: 26 26 26;
-  --color-muted: 122 112 103;
-  --color-accent: 232 101 26;
-  --color-accent-foreground: 255 255 255;
-  --color-border: 224 214 204;
-  --glass-blur: 14px;
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(232, 101, 26, 0.18);
-  --accent-glow: rgba(232, 101, 26, 0.25);
-  --neon-shadow: 0 4px 18px rgba(232, 101, 26, 0.18);
-}
-
-/* Crane theme — component overrides */
-[data-theme="crane"] .card {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(232, 101, 26, 0.12);
-}
-[data-theme="crane"] .card:hover {
-  border-color: rgba(232, 101, 26, 0.4);
-  box-shadow:
-    0 20px 40px rgba(26, 26, 26, 0.06),
-    0 0 30px -10px rgba(232, 101, 26, 0.2);
-}
-
-[data-theme="crane"] .btn-accent {
-  box-shadow: 0 4px 18px -4px rgba(232, 101, 26, 0.4);
-}
-
-[data-theme="crane"] header {
-  border-bottom-color: rgba(232, 101, 26, 0.15) !important;
-}
-
-/* Crane silhouette decoration */
-[data-theme="crane"] body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: min(400px, 80vw);
-  height: 500px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500' fill='%23E8651A'%3E%3Crect x='190' y='80' width='20' height='420'/%3E%3Crect x='50' y='60' width='300' height='20'/%3E%3Crect x='50' y='60' width='8' height='40'/%3E%3Cpolygon points='200,80 210,80 350,60 350,80'/%3E%3Cpolygon points='190,80 200,80 50,60 50,80'/%3E%3Crect x='180' y='400' width='40' height='100'/%3E%3Crect x='160' y='480' width='80' height='20'/%3E%3Crect x='345' y='60' width='6' height='60'/%3E%3Crect x='330' y='120' width='36' height='8'/%3E%3Cline x1='200' y1='80' x2='348' y2='60' stroke='%23E8651A' stroke-width='3'/%3E%3Cline x1='200' y1='80' x2='53' y2='60' stroke='%23E8651A' stroke-width='3'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
-}
-
-[data-theme="crane"] body::after {
-  content: "";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  height: 400px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400' fill='%23E8651A'%3E%3Crect x='140' y='50' width='18' height='350'/%3E%3Crect x='30' y='35' width='240' height='16'/%3E%3Cpolygon points='149,50 158,50 270,35 270,51'/%3E%3Cpolygon points='140,50 149,50 30,35 30,51'/%3E%3Crect x='130' y='330' width='38' height='70'/%3E%3Crect x='115' y='385' width='68' height='15'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: contain;
-  transform: scaleX(-1);
+[data-theme="artser"] {
+  --color-background: 11 11 11;
+  --color-surface: 20 20 20;
+  --color-surface-alt: 30 30 30;
+  --color-foreground: 245 245 242;
+  --color-muted: 116 116 116;
+  --color-accent: 181 138 98;
+  --color-accent-foreground: 11 11 11;
+  --color-border: 42 42 42;
+  --color-aluminium: 184 184 184;
+  --glass-blur: 16px;
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-border: rgba(181, 138, 98, 0.12);
+  --accent-glow: rgba(181, 138, 98, 0.35);
+  --neon-shadow: 0 4px 20px rgba(181, 138, 98, 0.2);
 }
 
 /* ============================================
@@ -201,9 +109,12 @@
     font-family: var(--font-sans);
   }
 
-  html[lang="ar"],
-  html[lang="ur"] {
+  html[lang="ar"] {
     font-family: var(--font-arabic);
+  }
+
+  html[lang="ur"] {
+    font-family: var(--font-urdu);
   }
 
   body {
@@ -217,8 +128,9 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-serif);
-    letter-spacing: -0.01em;
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
 
   /* Mirror simple horizontal flips for RTL where logical utilities aren't enough. */
@@ -427,143 +339,41 @@
     transform: translateY(-4px);
   }
 
-  /* ---- Theme Switcher ---- */
-  .theme-switcher {
-    display: flex;
-    gap: 0.5rem;
-    background: rgb(var(--color-surface-alt));
-    padding: 0.3rem;
-    border-radius: 50px;
-    border: 1px solid var(--glass-border);
-  }
-
-  .theme-btn {
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    border: none;
-    background: transparent;
-    color: rgb(var(--color-muted));
-    cursor: pointer;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-  }
-
-  .theme-btn.active {
-    background: rgb(var(--color-accent));
-    color: rgb(var(--color-accent-foreground));
-    box-shadow: var(--neon-shadow);
-  }
 }
 
 /* ============================================
-   OBSIDIAN THEME — Dark enhancements
+   ARTSER THEME — Component Overrides
    ============================================ */
 
-[data-theme="obsidian"] .card {
-  background: rgba(23, 23, 23, 0.7);
-  border-color: rgba(202, 160, 74, 0.12);
+[data-theme="artser"] .card {
+  background: rgba(20, 20, 20, 0.7);
+  border-color: rgba(181, 138, 98, 0.1);
 }
-[data-theme="obsidian"] .card:hover {
-  border-color: rgba(202, 160, 74, 0.4);
+[data-theme="artser"] .card:hover {
+  border-color: rgba(181, 138, 98, 0.35);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.4),
-    0 0 40px -10px rgba(202, 160, 74, 0.25);
+    0 0 40px -10px rgba(181, 138, 98, 0.2);
 }
 
-[data-theme="obsidian"] .btn-accent {
-  box-shadow: 0 4px 20px -4px rgba(202, 160, 74, 0.4);
+[data-theme="artser"] .btn-accent {
+  box-shadow: 0 4px 20px -4px rgba(181, 138, 98, 0.4);
 }
-[data-theme="obsidian"] .btn-accent:hover {
+[data-theme="artser"] .btn-accent:hover {
   box-shadow:
-    0 8px 35px -4px rgba(202, 160, 74, 0.5),
-    0 0 20px rgba(202, 160, 74, 0.2);
+    0 8px 35px -4px rgba(181, 138, 98, 0.5),
+    0 0 20px rgba(181, 138, 98, 0.2);
 }
 
-[data-theme="obsidian"] header.sticky {
-  background: rgba(10, 10, 10, 0.85) !important;
+[data-theme="artser"] header.sticky {
+  background: rgba(11, 11, 11, 0.85) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom-color: rgba(202, 160, 74, 0.15) !important;
+  border-bottom-color: rgba(181, 138, 98, 0.12) !important;
 }
 
-[data-theme="obsidian"] footer {
-  border-top: 1px solid rgba(202, 160, 74, 0.1);
-}
-
-[data-theme="obsidian"] body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 50% 40% at 20% 15%, rgba(202, 160, 74, 0.05) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 35% at 80% 85%, rgba(202, 160, 74, 0.03) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ============================================
-   GOVERNMENT THEME — Professional enhancements
-   ============================================ */
-
-[data-theme="government"] .card {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(30, 64, 138, 0.1);
-}
-[data-theme="government"] .card:hover {
-  border-color: rgba(30, 64, 138, 0.35);
-  box-shadow:
-    0 20px 40px rgba(15, 23, 42, 0.06),
-    0 0 30px -10px rgba(30, 64, 138, 0.15);
-}
-
-[data-theme="government"] header {
-  border-bottom-color: rgba(30, 64, 138, 0.12) !important;
-}
-
-/* ============================================
-   LUXURY THEME — Warm elegant enhancements
-   ============================================ */
-
-[data-theme="luxury"] .card {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(183, 150, 98, 0.12);
-}
-[data-theme="luxury"] .card:hover {
-  border-color: rgba(183, 150, 98, 0.4);
-  box-shadow:
-    0 20px 40px rgba(26, 26, 26, 0.06),
-    0 0 30px -10px rgba(183, 150, 98, 0.2);
-}
-
-[data-theme="luxury"] .btn-accent {
-  box-shadow: 0 4px 18px -4px rgba(183, 150, 98, 0.35);
-}
-
-[data-theme="luxury"] header {
-  border-bottom-color: rgba(183, 150, 98, 0.15) !important;
-}
-
-/* ============================================
-   ARCHITECTURAL THEME — Modern clean enhancements
-   ============================================ */
-
-[data-theme="architectural"] .card {
-  background: rgba(250, 250, 251, 0.75);
-  border-color: rgba(16, 122, 87, 0.1);
-}
-[data-theme="architectural"] .card:hover {
-  border-color: rgba(16, 122, 87, 0.35);
-  box-shadow:
-    0 20px 40px rgba(33, 37, 41, 0.06),
-    0 0 30px -10px rgba(16, 122, 87, 0.18);
-}
-
-[data-theme="architectural"] .btn-accent {
-  box-shadow: 0 4px 18px -4px rgba(16, 122, 87, 0.3);
-}
-
-[data-theme="architectural"] header {
-  border-bottom-color: rgba(16, 122, 87, 0.12) !important;
+[data-theme="artser"] footer {
+  border-top: 1px solid rgba(181, 138, 98, 0.08);
 }
 
 /* ============================================
@@ -639,36 +449,6 @@
 
 .fade-in {
   animation: fadeInUp 0.8s ease forwards;
-}
-
-/* ============================================
-   THEME SWITCHER ANIMATIONS
-   ============================================ */
-
-@keyframes themeDropIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.theme-option {
-  animation: themeItemSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-@keyframes themeItemSlide {
-  from {
-    opacity: 0;
-    transform: translateX(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 /* ============================================
@@ -1552,12 +1332,6 @@ header.sticky {
    RESPONSIVE STYLES
    ============================================ */
 
-@media (max-width: 1024px) {
-  .theme-switcher {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
   .glass-nav {
     padding: 0.8rem 1rem;
@@ -1710,4 +1484,36 @@ header.sticky {
 
 [dir="rtl"] .flip-card-back {
   transform: rotateY(-180deg);
+}
+
+/* ============================================
+   REDUCED MOTION — Accessibility
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal-left,
+  .scroll-reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .stagger-children > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition-delay: 0ms !important;
+  }
+
+  .floating {
+    animation: none !important;
+  }
 }

@@ -37,6 +37,7 @@ export default function ProductCategoryPage() {
   const productData = getProductCategory(slug);
 
   const keyPrefix = CATEGORY_KEY_MAP[slug];
+  const localePath = (href: string) => `/${locale}${href}`;
 
   if (!category || !keyPrefix) {
     return (
@@ -171,7 +172,7 @@ export default function ProductCategoryPage() {
             {t("products.requestQuote")}
           </h2>
           <p className="mt-3 text-muted">{t("hero.subtitle")}</p>
-          <Link href="/request-quote" className="btn-accent mt-6 inline-flex">
+          <Link href={localePath("/request-quote")} className="btn-accent mt-6 inline-flex">
             {t("nav.requestQuote")}
           </Link>
         </div>
@@ -186,7 +187,7 @@ export default function ProductCategoryPage() {
           {otherCategories.map((c) => (
             <Link
               key={c.id}
-              href={c.href}
+              href={localePath(c.href)}
               className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition hover:border-accent hover:text-accent"
             >
               <CategoryIcon name={c.icon} className="h-4 w-4" />

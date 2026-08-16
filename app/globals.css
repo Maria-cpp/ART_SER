@@ -1517,3 +1517,81 @@ header.sticky {
     animation: none !important;
   }
 }
+
+/* ============================================
+   PHASE 2 — HOMEPAGE SECTION STYLES
+   ============================================ */
+
+/* Section label style — small uppercase tracking */
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgb(var(--color-muted));
+  font-weight: 500;
+}
+
+/* Project card image hover zoom */
+.project-image-hover {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-image-hover:hover {
+  transform: scale(1.02);
+}
+
+/* Timeline connector line */
+.timeline-line {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--color-accent) / 0.4),
+    rgb(var(--color-border)),
+    rgb(var(--color-accent) / 0.4)
+  );
+}
+
+/* Service card expand animation */
+.service-card-expand {
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.4s ease;
+}
+
+/* Process step hover accent */
+.process-step-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgb(var(--color-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .process-step-accent {
+  transform: scaleX(1);
+}
+
+/* Counter animation support */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reduced motion: simplify all homepage animations */
+@media (prefers-reduced-motion: reduce) {
+  .project-image-hover {
+    transition: none;
+  }
+  .project-image-hover:hover {
+    transform: none;
+  }
+  .service-card-expand {
+    transition: none;
+  }
+  .process-step-accent {
+    transition: none;
+  }
+}

@@ -1,32 +1,13 @@
-"use client";
+import type { Metadata } from "next";
+import { type Locale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/locale";
+import GalleryContent from "./GalleryContent";
 
-import { useLanguage } from "@/components/providers/LanguageProvider";
-import { Section } from "@/components/Section";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { getGallery } from "@/lib/data";
-import { useScrollReveal } from "@/lib/useScrollReveal";
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale as Locale, "meta.gallery.title", "meta.gallery.description", "/gallery");
+}
 
-export default function GalleryPage() {
-  const { t, localized } = useLanguage();
-  const items = getGallery();
-  useScrollReveal();
-  return (
-    <>
-      <div className="container-x pt-6">
-        <Breadcrumbs items={[{ label: "breadcrumb.home", href: "/" }, { label: "nav.gallery" }]} />
-      </div>
-      <Section title={t("gallery.title")} subtitle={t("gallery.subtitle")}>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-        {items.map((g) => (
-          <figure key={g.id} className="overflow-hidden rounded-lg border border-border">
-            <div className="aspect-[4/3] bg-surface-alt overflow-hidden">
-              <img src={g.image} alt={localized(g.caption)} className="h-full w-full object-cover" />
-            </div>
-            <figcaption className="bg-surface px-3 py-2 text-sm text-muted">{localized(g.caption)}</figcaption>
-          </figure>
-        ))}
-      </div>
-    </Section>
-    </>
-  );
+export default function Page() {
+  return <GalleryContent />;
 }

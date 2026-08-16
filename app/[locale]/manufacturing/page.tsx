@@ -1,34 +1,13 @@
-"use client";
+import type { Metadata } from "next";
+import { type Locale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/locale";
+import ManufacturingContent from "./ManufacturingContent";
 
-import { useLanguage } from "@/components/providers/LanguageProvider";
-import { Section } from "@/components/Section";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { getManufacturing } from "@/lib/data";
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale as Locale, "meta.manufacturing.title", "meta.manufacturing.description", "/manufacturing");
+}
 
-export default function ManufacturingPage() {
-  const { t, localized } = useLanguage();
-  const data = getManufacturing();
-  return (
-    <>
-      <div className="container-x pt-6">
-        <Breadcrumbs items={[{ label: "breadcrumb.home", href: "/" }, { label: "sidebar.projects", href: "/portfolio" }, { label: "nav.manufacturing" }]} />
-      </div>
-      <Section title={t("manufacturing.title")} subtitle={t("manufacturing.subtitle")}>
-      <p className="mb-10 max-w-3xl text-foreground">{localized(data.intro)}</p>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {data.capabilities.map((c) => (
-          <div key={c.id} className="card">
-            {c.image && (
-              <div className="mb-3 aspect-video rounded-md bg-surface-alt overflow-hidden">
-                <img src={c.image} alt={localized(c.title)} className="h-full w-full object-cover" />
-              </div>
-            )}
-            <h3 className="text-lg font-semibold text-foreground">{localized(c.title)}</h3>
-            <p className="mt-2 text-sm text-muted">{localized(c.description)}</p>
-          </div>
-        ))}
-      </div>
-    </Section>
-    </>
-  );
+export default function Page() {
+  return <ManufacturingContent />;
 }

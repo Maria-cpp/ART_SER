@@ -14,7 +14,8 @@ const PRODUCT_MATERIALS: Record<string, { application: string; material: string 
 };
 
 export function ProductsSection() {
-  const { t, localized } = useLanguage();
+  const { t, localized, locale } = useLanguage();
+  const localePath = (href: string) => `/${locale}${href}`;
   const categories = getCategories().filter((c) => c.id !== "all-products");
 
   return (
@@ -41,7 +42,7 @@ export function ProductsSection() {
             return (
               <Link
                 key={c.id}
-                href={c.href}
+                href={localePath(c.href)}
                 className="group relative border border-[#2A2A2A] bg-[#141414]/50 p-6 md:p-8 transition-all duration-500 hover:border-[#B58A62]/40 hover:bg-[#141414]"
               >
                 {/* Product name */}
@@ -77,7 +78,7 @@ export function ProductsSection() {
 
         <div className="mt-12 scroll-reveal">
           <Link
-            href="/products"
+            href={localePath("/products")}
             className="inline-flex items-center justify-center rounded-none border-2 border-[#B8B8B8]/30 px-8 py-3 text-sm font-semibold text-[#F5F5F2] uppercase tracking-[0.15em] transition-all duration-300 hover:border-[#B58A62] hover:text-[#B58A62]"
           >
             {t("common.viewAll") || "View all"}

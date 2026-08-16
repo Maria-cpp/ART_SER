@@ -6,7 +6,8 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { getProjects } from "@/lib/data";
 
 export function ProjectsSection() {
-  const { t, localized } = useLanguage();
+  const { t, localized, locale } = useLanguage();
+  const localePath = (href: string) => `/${locale}${href}`;
   const projects = getProjects().slice(0, 3);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
@@ -33,7 +34,7 @@ export function ProjectsSection() {
         {projects.map((p, i) => (
           <Link
             key={p.id}
-            href="/portfolio"
+            href={localePath("/portfolio")}
             className="group relative block w-full overflow-hidden"
             onMouseEnter={() => setHoveredIdx(i)}
             onMouseLeave={() => setHoveredIdx(null)}
@@ -100,7 +101,7 @@ export function ProjectsSection() {
 
       <div className="container-x mt-12 scroll-reveal">
         <Link
-          href="/portfolio"
+          href={localePath("/portfolio")}
           className="inline-flex items-center justify-center rounded-none border-2 border-[#B8B8B8]/30 px-8 py-3 text-sm font-semibold text-[#F5F5F2] uppercase tracking-[0.15em] transition-all duration-300 hover:border-[#B58A62] hover:text-[#B58A62]"
         >
           {t("projects.viewAll")}

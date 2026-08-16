@@ -15,7 +15,8 @@ const SERVICE_ICONS: Record<string, string> = {
 };
 
 export function ServicesSection() {
-  const { t, localized } = useLanguage();
+  const { t, localized, locale } = useLanguage();
+  const localePath = (href: string) => `/${locale}${href}`;
   const services = getServices().slice(0, 6);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
@@ -89,7 +90,7 @@ export function ServicesSection() {
 
         <div className="mt-12 scroll-reveal">
           <Link
-            href="/services"
+            href={localePath("/services")}
             className="inline-flex items-center justify-center rounded-none border-2 border-[#B8B8B8]/30 px-8 py-3 text-sm font-semibold text-[#F5F5F2] uppercase tracking-[0.15em] transition-all duration-300 hover:border-[#B58A62] hover:text-[#B58A62]"
           >
             {t("common.viewAll") || "View all"}

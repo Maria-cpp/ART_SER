@@ -15,7 +15,8 @@ const HeroScene = dynamic(
 );
 
 export function HeroSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+  const localePath = (href: string) => `/${locale}${href}`;
   const mouse = useMousePosition();
   const { containerRef, progress } = useGSAPScroll("top top", "bottom top");
   const [portfolioOpen, setPortfolioOpen] = useState(false);
@@ -107,7 +108,7 @@ export function HeroSection() {
             )}
           </div>
           <Link
-            href="/portfolio"
+            href={localePath("/portfolio")}
             className="inline-flex items-center justify-center rounded-none border-2 border-[#B8B8B8]/30 px-8 py-3.5 text-sm font-semibold text-[#F5F5F2] uppercase tracking-[0.15em] transition-all duration-300 hover:border-[#B58A62] hover:text-[#B58A62]"
           >
             {t("hero.ctaSecondary")}

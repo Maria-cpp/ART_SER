@@ -49,12 +49,14 @@ const LEGAL_LINKS = [
 ];
 
 export function Footer() {
-  const { t, localized } = useLanguage();
+  const { t, localized, locale } = useLanguage();
   const company = getCompany();
   const contact = getContact();
   const categories = getCategories();
   const year = new Date().getFullYear();
   const [expanded, setExpanded] = useState(false);
+
+  const localePath = (href: string) => `/${locale}${href}`;
 
   const socialEntries = Object.entries(contact.social ?? {}).filter(([k]) => SOCIAL_ICONS[k]);
 
@@ -136,7 +138,7 @@ export function Footer() {
                   .filter((c) => c.id !== "all-products")
                   .map((c) => (
                     <li key={c.id}>
-                      <Link href={c.href} className="text-sm opacity-90 transition hover:opacity-100">
+                      <Link href={localePath(c.href)} className="text-sm opacity-90 transition hover:opacity-100">
                         {localized(c.name)}
                       </Link>
                     </li>
@@ -150,7 +152,7 @@ export function Footer() {
               <ul className="space-y-1">
                 {COMPANY_LINKS.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="text-sm opacity-90 transition hover:opacity-100">
+                    <Link href={localePath(l.href)} className="text-sm opacity-90 transition hover:opacity-100">
                       {t(l.key)}
                     </Link>
                   </li>
@@ -163,7 +165,7 @@ export function Footer() {
               <h3 className="mb-2 text-sm font-bold">{t("contact.title")}</h3>
               <ul className="space-y-1">
                 <li>
-                  <Link href="/contact" className="text-sm opacity-90 transition hover:opacity-100">
+                  <Link href={localePath("/contact")} className="text-sm opacity-90 transition hover:opacity-100">
                     {t("footer.contactArtser")}
                   </Link>
                 </li>

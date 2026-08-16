@@ -33,14 +33,16 @@ const MOBILE_NAV = [
 ];
 
 export function Header() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const localePath = (href: string) => `/${locale}${href === "/" ? "" : href}`;
 
   return (
     <header className="sticky top-0 z-sticky border-b border-border/40 bg-background/90 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80">
       <div className="flex h-16 items-center justify-between px-4 lg:px-8 max-w-[1440px] mx-auto">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
+        <Link href={localePath("/")} className="flex items-center gap-3 shrink-0">
           <AnimatedLogo />
         </Link>
 
@@ -49,7 +51,7 @@ export function Header() {
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localePath(item.href)}
               className="text-xs font-semibold uppercase tracking-[0.15em] text-aluminium transition-colors duration-normal hover:text-foreground"
             >
               {t(item.key)}
@@ -61,7 +63,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
           <Link
-            href="/request-quote"
+            href={localePath("/request-quote")}
             className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-accent-foreground transition-all duration-normal hover:shadow-glow hover:translate-y-[-1px]"
           >
             {t("nav.requestQuote")}
@@ -85,7 +87,7 @@ export function Header() {
             {MOBILE_NAV.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={localePath(item.href)}
                 onClick={() => setMobileOpen(false)}
                 className="py-3 text-sm font-medium text-aluminium border-b border-border/20 last:border-0 transition-colors hover:text-foreground"
               >
@@ -93,7 +95,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/request-quote"
+              href={localePath("/request-quote")}
               onClick={() => setMobileOpen(false)}
               className="mt-3 mb-2 inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold uppercase tracking-wider text-accent-foreground"
             >

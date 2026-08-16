@@ -14,7 +14,9 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+
+  const localePath = (href: string) => `/${locale}${href}`;
 
   return (
     <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted">
@@ -32,7 +34,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
               )}
               {crumb.href && !isLast ? (
                 <Link
-                  href={crumb.href}
+                  href={localePath(crumb.href)}
                   className="transition hover:text-accent"
                 >
                   {label}

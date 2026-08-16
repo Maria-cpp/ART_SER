@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export function DoorIntro() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = /^\/[a-z]{2}\/?$/.test(pathname);
   // Start in "showing" on home so the doors cover content immediately (no flash)
   const [phase, setPhase] = useState<"idle" | "showing" | "animating" | "done">(
     isHome ? "showing" : "idle"

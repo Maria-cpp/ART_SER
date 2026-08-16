@@ -1,12 +1,13 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, useCallback, useMemo, ReactNode } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import {
   Locale,
   Direction,
   DEFAULT_LOCALE,
   LOCALE_STORAGE_KEY,
-  isLocale,
+  LOCALES,
   directionFor,
   translate,
   localized as localizedHelper,
@@ -17,32 +18,44 @@ interface LanguageContextValue {
   locale: Locale;
   dir: Direction;
   setLocale: (locale: Locale) => void;
-  /** Translate a UI string key. */
   t: (key: string) => string;
-  /** Read a localized content field from /data. */
   localized: (field: Localized | undefined) => string;
 }
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
+interface LanguageProviderProps {
+  children: ReactNode;
+  initialLocale?: Locale;
+}
 
-  // Hydrate from localStorage on mount.
-  useEffect(() => {
-    const stored = typeof window !== "undefined" ? window.localStorage.getItem(LOCALE_STORAGE_KEY) : null;
-    if (isLocale(stored)) setLocaleState(stored);
-  }, []);
+export function LanguageProvider({ children, initialLocale }: LanguageProviderProps) {
+  const [locale, setLocaleState] = useState<Locale>(initialLocale ?? DEFAULT_LOCALE);
+  const router = useRouter();
+  const pathname = usePathname();
 
-  // Reflect lang + dir on <html> and persist.
+  // Persist locale to localStorage when it changes
   useEffect(() => {
-    const dir = directionFor(locale);
-    document.documentElement.setAttribute("lang", locale);
-    document.documentElement.setAttribute("dir", dir);
-    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+    }
   }, [locale]);
 
-  const setLocale = useCallback((next: Locale) => setLocaleState(next), []);
+  const setLocale = useCallback(
+    (next: Locale) => {
+      setLocaleState(next);
+      // Navigate to the same page with the new locale prefix
+      const segments = pathname.split("/");
+      // Check if first segment is a valid locale
+      if (segments.length >= 2 && LOCALES.includes(segments[1] as Locale)) {
+        segments[1] = next;
+      } else {
+        segments.splice(1, 0, next);
+      }
+      router.push(segments.join("/") || `/${next}`);
+    },
+    [pathname, router]
+  );
 
   const value = useMemo<LanguageContextValue>(
     () => ({

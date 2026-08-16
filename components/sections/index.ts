@@ -1,5 +1,6 @@
 export { HeroSection } from "./HeroSection";
 export { MaterialSection } from "./MaterialSection";
+export { ProfileToArchitectureSection } from "./ProfileToArchitectureSection";
 export { ServicesSection } from "./ServicesSection";
 export { ProjectsSection } from "./ProjectsSection";
 export { ProcessSection } from "./ProcessSection";

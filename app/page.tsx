@@ -4,6 +4,7 @@ import { useScrollReveal } from "@/lib/useScrollReveal";
 import {
   HeroSection,
   MaterialSection,
+  ProfileToArchitectureSection,
   ServicesSection,
   ProjectsSection,
   ProcessSection,
@@ -25,6 +26,9 @@ export default function HomePage() {
 
       {/* 02 — MATERIAL / ENGINEERING */}
       <MaterialSection />
+
+      {/* 02b — FROM PROFILE TO ARCHITECTURE */}
+      <ProfileToArchitectureSection />
 
       {/* 03 — SERVICES */}
       <ServicesSection />

@@ -1315,20 +1315,6 @@ header.sticky {
 }
 
 /* ============================================
-   3D CONSTRUCTION BACKGROUND
-   ============================================ */
-
-.construction-3d-bg {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.25;
-}
-
-/* ============================================
    RESPONSIVE STYLES
    ============================================ */
 

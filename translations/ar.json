@@ -226,5 +226,15 @@
   "cta.subtitle": "لديك مشروع؟ دعنا نناقش كيف يمكن لـ ARTSER المساهمة.",
   "cta.action": "اطلب استشارة",
   "cta.secondaryAction": "تواصل معنا",
-  "cta.email": "أو راسلنا مباشرة"
+  "cta.email": "أو راسلنا مباشرة",
+  "process.profileLabel": "تجربة مميزة",
+  "process.profileTitle": "من البروفيل إلى العمارة",
+  "process.profileSubtitle": "شاهد التحول — من قضيب الألمنيوم الخام إلى العنصر المعماري المُثبّت.",
+  "process.profileStage1": "بروفيل خام",
+  "process.profileStage2": "قص",
+  "process.profileStage3": "تشغيل آلي",
+  "process.profileStage4": "تجميع",
+  "process.profileStage5": "دمج الزجاج",
+  "process.profileStage6": "نظام مكتمل",
+  "process.profileStage7": "مُثبّت"
 }

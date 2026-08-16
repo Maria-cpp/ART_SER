@@ -226,5 +226,15 @@
   "cta.subtitle": "کوئی منصوبہ ذہن میں ہے؟ آئیے بات کریں کہ ARTSER کیسے حصہ ڈال سکتا ہے۔",
   "cta.action": "مشاورت کی درخواست",
   "cta.secondaryAction": "رابطہ کریں",
-  "cta.email": "یا ہمیں براہ راست ای میل کریں"
+  "cta.email": "یا ہمیں براہ راست ای میل کریں",
+  "process.profileLabel": "خصوصی تجربہ",
+  "process.profileTitle": "پروفائل سے فن تعمیر تک",
+  "process.profileSubtitle": "تبدیلی دیکھیں — خام ایلومینیم پروفائل سے نصب شدہ تعمیراتی عنصر تک۔",
+  "process.profileStage1": "خام پروفائل",
+  "process.profileStage2": "کٹنگ",
+  "process.profileStage3": "مشینی کام",
+  "process.profileStage4": "اسمبلی",
+  "process.profileStage5": "شیشے کا انضمام",
+  "process.profileStage6": "مکمل نظام",
+  "process.profileStage7": "نصب شدہ"
 }

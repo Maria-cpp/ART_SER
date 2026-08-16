@@ -1,73 +1,96 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import dynamic from "next/dynamic";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { useMousePosition } from "@/lib/useMousePosition";
+import { useGSAPScroll } from "@/lib/useGSAPScroll";
+import { Scene } from "@/components/3d/Scene";
+
+const HeroScene = dynamic(
+  () => import("@/components/3d/HeroScene").then((m) => ({ default: m.HeroScene })),
+  { ssr: false }
+);
 
 export function HeroSection() {
   const { t } = useLanguage();
+  const mouse = useMousePosition();
+  const { containerRef, progress } = useGSAPScroll("top top", "bottom top");
   const [portfolioOpen, setPortfolioOpen] = useState(false);
 
-  const scrollToContent = () => {
-    document.getElementById("content-start")?.scrollIntoView({ behavior: "smooth" });
-  };
+  useEffect(() => {
+    if (!portfolioOpen) return;
+    const handler = () => setPortfolioOpen(false);
+    document.addEventListener("click", handler);
+    return () => document.removeEventListener("click", handler);
+  }, [portfolioOpen]);
 
   return (
-    <section className="relative overflow-hidden w-full bg-[#0B0B0B]">
-      {/* Dark gradient background — Phase 3 will add 3D here */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0B0B0B] via-[#141414] to-[#0B0B0B]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(181,138,98,0.08),transparent)]" />
-        {/* Subtle grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(184,184,184,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(184,184,184,0.3) 1px, transparent 1px)",
-            backgroundSize: "80px 80px",
-          }}
-        />
+    <section ref={containerRef} className="relative w-full min-h-screen overflow-hidden">
+      {/* 3D Background */}
+      <div className="absolute inset-0">
+        <Scene
+          className="h-full w-full"
+          fov={45}
+          cameraPosition={[0, 0.5, 8]}
+          fallbackContent={
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B] via-[#111] to-[#0B0B0B]" />
+          }
+        >
+          <HeroScene scrollProgress={progress} mouse={mouse} />
+        </Scene>
       </div>
 
-      <div className="container-x relative z-10 flex min-h-[90vh] flex-col items-center justify-center py-16 md:py-24 text-center">
-        {/* Logo */}
-        <div className="mb-8 scroll-reveal">
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60 pointer-events-none" />
+
+      {/* Content */}
+      <div className="container-x relative z-10 flex min-h-screen flex-col items-center justify-center py-20 text-center">
+        <div className="mb-4">
           <Image
-            src="/logo/ART_SER_logo.png"
+            src="/logo/ARTSER_logo.png"
             alt="ARTSER"
-            width={200}
-            height={72}
-            className="mx-auto h-auto w-auto max-h-16 md:max-h-20"
+            width={280}
+            height={100}
+            className="mx-auto h-auto w-auto max-h-20"
             priority
           />
         </div>
 
-        {/* Headline */}
-        <h1 className="scroll-reveal max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F5F5F2] leading-[1.1]">
+        <div className="mt-2 flex flex-col items-center">
+          <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-bold mb-4 text-foreground/70">
+            {t("hero.slogan")}
+          </p>
+          <div className="w-8 h-[2px] bg-[#B58A62]" />
+        </div>
+
+        <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight max-w-4xl">
           {t("hero.headline")}
         </h1>
 
-        {/* Subheadline */}
-        <p className="mt-6 md:mt-8 max-w-2xl text-base md:text-lg text-[#B8B8B8] leading-relaxed scroll-reveal">
+        <p className="mt-6 max-w-2xl text-base md:text-lg text-foreground/70">
           {t("hero.subheadline")}
         </p>
 
-        {/* CTA Buttons */}
-        <div className="mt-8 md:mt-12 flex flex-wrap items-center justify-center gap-4 scroll-reveal">
-          <div className="relative">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setPortfolioOpen((o) => !o)}
-              className="inline-flex items-center justify-center rounded-none border-2 border-[#B58A62] bg-[#B58A62] px-8 py-3.5 text-sm font-semibold text-[#0B0B0B] uppercase tracking-[0.15em] transition-all duration-300 hover:bg-transparent hover:text-[#B58A62]"
+              className="inline-flex items-center justify-center rounded-none border-2 border-[#B58A62] bg-[#B58A62] px-8 py-3.5 text-sm font-semibold text-[#0B0B0B] uppercase tracking-[0.15em] transition-all duration-300 hover:bg-transparent hover:text-[#B58A62] gap-2"
             >
-              {t("hero.ctaPrimary")}
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path d="M12 5v14M5 12l7 7 7-7" />
+              </svg>
+              {t("hero.downloadPortfolio")}
             </button>
             {portfolioOpen && (
-              <div className="absolute start-0 top-full mt-2 z-20 min-w-[220px] rounded-sm border border-[#2A2A2A] bg-[#141414] p-2 shadow-xl">
+              <div className="absolute start-0 top-full mt-2 z-20 min-w-[220px] rounded-lg border border-border bg-surface p-2 shadow-xl">
                 <a
                   href="/portfolio/ART_SER_Portfolio_EN .pdf"
                   download="ART_SER_Portfolio_EN.pdf"
-                  className="flex items-center gap-3 px-3 py-2.5 text-sm text-[#F5F5F2] transition hover:text-[#B58A62]"
+                  className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition hover:bg-accent/10 hover:text-accent"
                   onClick={() => setPortfolioOpen(false)}
                 >
                   Portfolio — English
@@ -75,7 +98,7 @@ export function HeroSection() {
                 <a
                   href="/portfolio/ART_SER_Portafoglio_IT.pdf"
                   download="ART_SER_Portafoglio_IT.pdf"
-                  className="flex items-center gap-3 px-3 py-2.5 text-sm text-[#F5F5F2] transition hover:text-[#B58A62]"
+                  className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition hover:bg-accent/10 hover:text-accent"
                   onClick={() => setPortfolioOpen(false)}
                 >
                   Portafoglio — Italiano
@@ -91,17 +114,16 @@ export function HeroSection() {
           </Link>
         </div>
 
-        {/* Scroll indicator */}
         <button
-          onClick={scrollToContent}
-          className="mt-16 md:mt-24 hidden sm:flex flex-col items-center gap-3 text-[#747474] transition hover:text-[#B58A62]"
+          onClick={() => document.getElementById("content-start")?.scrollIntoView({ behavior: "smooth" })}
+          className="mt-16 hidden sm:flex flex-col items-center gap-2 text-foreground/50 transition hover:text-accent"
         >
-          <span className="text-[10px] tracking-[0.3em] uppercase font-medium">
+          <span className="text-xs tracking-widest uppercase font-bold">
             {t("hero.scrollIndicator")}
           </span>
-          <div className="scroll-indicator">
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-              <path d="M12 5v14M5 12l7 7 7-7" />
+          <div className="animate-bounce">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path d="M19 14l-7 7m0 0l-7-7" />
             </svg>
           </div>
         </button>

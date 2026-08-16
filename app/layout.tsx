@@ -5,7 +5,6 @@ import { LanguageProvider } from "@/components/providers/LanguageProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { DoorIntro } from "@/components/DoorIntro";
-import { Construction3DBackground } from "@/components/Construction3DBackground";
 
 export const metadata: Metadata = {
   title: "ARTSER — Engineering, Manufacturing & Construction",
@@ -22,7 +21,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body suppressHydrationWarning>
         <DoorIntro />
-        <Construction3DBackground />
         <ThemeProvider>
           <LanguageProvider>
             <div className="flex min-h-screen flex-col overflow-x-hidden">

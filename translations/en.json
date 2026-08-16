@@ -226,5 +226,15 @@
   "cta.subtitle": "Have a project in mind? Let's discuss how ARTSER can contribute.",
   "cta.action": "Request a Consultation",
   "cta.secondaryAction": "Contact Us",
-  "cta.email": "Or email us directly"
+  "cta.email": "Or email us directly",
+  "process.profileLabel": "SIGNATURE EXPERIENCE",
+  "process.profileTitle": "From Profile to Architecture",
+  "process.profileSubtitle": "Watch the transformation — from raw aluminium extrusion to installed architectural element.",
+  "process.profileStage1": "Raw Profile",
+  "process.profileStage2": "Cutting",
+  "process.profileStage3": "Machining",
+  "process.profileStage4": "Assembly",
+  "process.profileStage5": "Glass Integration",
+  "process.profileStage6": "Finished System",
+  "process.profileStage7": "Installed"
 }

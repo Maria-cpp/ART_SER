@@ -226,5 +226,15 @@
   "cta.subtitle": "Hai un progetto? Parliamo di come ARTSER può contribuire.",
   "cta.action": "Richiedi una consulenza",
   "cta.secondaryAction": "Contattaci",
-  "cta.email": "Oppure scrivici direttamente"
+  "cta.email": "Oppure scrivici direttamente",
+  "process.profileLabel": "ESPERIENZA ESCLUSIVA",
+  "process.profileTitle": "Dal Profilo all'Architettura",
+  "process.profileSubtitle": "Osserva la trasformazione — dall'estruso grezzo in alluminio all'elemento architettonico installato.",
+  "process.profileStage1": "Profilo Grezzo",
+  "process.profileStage2": "Taglio",
+  "process.profileStage3": "Lavorazione",
+  "process.profileStage4": "Assemblaggio",
+  "process.profileStage5": "Integrazione Vetro",
+  "process.profileStage6": "Sistema Finito",
+  "process.profileStage7": "Installato"
 }
